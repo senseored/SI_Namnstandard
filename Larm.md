@@ -1,3 +1,3 @@
 # Larm
 
-[readme](Readme.md)
+[readme](README.md)
