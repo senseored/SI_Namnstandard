@@ -2,19 +2,7 @@
 
 ## Namnstandard
 
-PREFIX_SYSTEM_NAMN
-
-Exempel på namn till en varmvattenkrets:
-
-AI_VV1_GT_TILL_1
-
-AI_VV1_GT_RETUR_1
-
-AO_VV1_SV_1
-
-DO_VV1_P1
-
-DI_VV1_P1
+PREFIX_SYSTEM_TYP_NAMN
 
 ## PREFIX_
 
@@ -33,9 +21,35 @@ DI_VV1_P1
 | VVx | Varmvatten |
 | LBx | Luftbehandling |
 
+## _TYP (exempel)
+
+| Typ | Beskrivning |
+| --- | --- |
+| GT | Temperatur |
+| GP | Tryck |
+| SV | Ventil |
+| P | Pump |
+| GM | Fukt |
+| GX | CO/CO2 |
+| GF | Flöde |
+| TF | Tilluftsfläkt |
+| FF | Frånluftsfläkt |
+| CF | Cirkulationsfläkt |
+
 ## _NAMN (exempel)
 
 | Namn | Beskrivning |
 | --- | --- |
-| _TILL | Tillopp/Tilluft |
-| _RETUR | Retur |
+| TILL | Tillopp/Tilluft |
+| RETUR | Retur |
+| EXP | Expansion |
+
+## Exempel på namn till en varmvattenkrets:
+
+| Namn | Beskrivning |
+| --- | --- |
+| AI_VV1_GT_TILL_1 | Tappvarmvatten |
+| AI_VV1_GT_RETUR_1 | VVC-temperatur |
+| AO_VV1_SV_1 | Ventil |
+| DO_VV1_P1 | Utgång VVC-pump |
+| DI_VV1_P1 | Driftindikering VVC-pump |

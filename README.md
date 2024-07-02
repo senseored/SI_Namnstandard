@@ -4,7 +4,7 @@ Beskrivning av namnstandard i SI-programmering.
 
 ## Tankesätt
 
-Döp suffix på engelska, med så tydligt namn som möjligt. Undvik förkortningar och akronymer om möjligt.
+Döp suffix på engelska, med så tydligt namn som möjligt. Undvik förkortningar och akronymer om möjligt i suffix.
 
 ## Vanliga namn
 
