@@ -1,6 +1,6 @@
 # Larm
 
-[readme](README.md)
+[Readme](README.md)
 
 ## Givare/Mätvärden
 | Namn | Beskrivning |

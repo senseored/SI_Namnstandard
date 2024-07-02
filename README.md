@@ -4,7 +4,7 @@ Beskrivning av namnstandard i SI-programmering.
 
 ## Tankesätt
 
-Döp saker på engelska, med så tydligt namn som möjligt. Undvik förkortningar och akronymer om möjligt.
+Döp suffix på engelska, med så tydligt namn som möjligt. Undvik förkortningar och akronymer om möjligt.
 
 ## Vanliga namn
 
@@ -23,4 +23,4 @@ Exempel på vanliga namn:
 
 ## Standardnamn
 
-[Larm](Larm.md)
+[Larm](Larm.md) | [In/Utgångar](In_Utgangar.md)
