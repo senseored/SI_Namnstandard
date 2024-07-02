@@ -4,7 +4,7 @@ Beskrivning av namnstandard i SI-programmering.
 
 ## Tankesätt
 
-Döp saker på engelska, med så tydligt namn som möjligt. Undvik onödiga förkortningar. Använd 'SetPoint' istället för 'SetP'.
+Döp saker på engelska, med så tydligt namn som möjligt. Undvik förkortningar och akronymer om möjligt.
 
 ## Vanliga namn
 
@@ -17,6 +17,6 @@ Exempel på vanliga namn:
 | SetPoint | Analog inställningspunkt. |
 | LowAlarm | Låglarm. |
 | HighAlarm | Höglarm. |
-| DifferenceAlarm | Avvikelselarm. |
+| DiffAlarm | Avvikelselarm. |
 | StartLimit | Startgräns. |
 | StopLimit | Stoppgräns. |
