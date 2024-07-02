@@ -9,12 +9,11 @@
 | _HighAlarm | Höglarm |
 | _LowAlarm | Låglarm |
 | _DiffAlarm | Avvikelselarm |
-| --- | --- |
 | _HighAAlarm | Höglarm A-larm |
 | _LowAAlarm | Låglarm A-larm |
 | _DiffAAlarm | Avvikelselarm A-larm|
 
-## Utgångar/Styrsignaler
+## Utgångar/Styrsignaler/Ingångar
 | Namn | Beskrivning |
 | --- | --- |
 | _ManualAlarm | Handläge |
@@ -22,5 +21,5 @@
 | _MotorProtAlarm | Utlöst motorskydd |
 | _SumAlarm | Summalarm |
 | _MaintAlarm | Lång drifttid |
+| _BlockedAlarm | Funktion blockerad |
 
-## Ingångar/Summalarm

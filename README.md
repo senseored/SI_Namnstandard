@@ -20,3 +20,7 @@ Exempel på vanliga namn:
 | DiffAlarm | Avvikelselarm. |
 | StartLimit | Startgräns. |
 | StopLimit | Stoppgräns. |
+
+## Standardnamn
+
+[Larm](Larm.md)
