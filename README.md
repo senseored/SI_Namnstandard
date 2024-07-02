@@ -23,4 +23,4 @@ Exempel på vanliga namn:
 
 ## Standardnamn
 
-[Larm](Larm.md) | [In/Utgångar](In_Utgangar.md) | [System](System.md)
+[Station](Station.md) | [DUC](Duc.md) | [Larm](Larm.md) | [In/Utgångar](In_Utgangar.md) | [System](System.md)
