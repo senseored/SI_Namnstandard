@@ -9,3 +9,4 @@ Försök att ha allt som skall presenteras i bild/display inne i systemnamnet ut
 ## Exempel på namn
 
 VV1_GT_TILL_1 => Block för tappvarmvatten som tar in AI_VV1_GT_TILL_1.
+VV1_P1 => Block för tappvarmvatten som styr DO_VV1_P1.
