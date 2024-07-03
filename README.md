@@ -29,4 +29,4 @@ Exempel på vanliga namn:
 
 ## Funktionsblock
 
-[AI/Analog Ingång](Functionsblock/AI.md)
+[AI/Analog Ingång](Funktionsblock/AI.md)
