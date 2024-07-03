@@ -55,14 +55,9 @@ SYSTEM_TYP_NAMN
 | --- | --- |
 | GT | Temperatur |
 | GP | Tryck |
-| SV | Ventil |
-| P | Pump |
 | GM | Fukt |
 | GX | CO/CO2 |
 | GF | Flöde |
-| TF | Tilluftsfläkt |
-| FF | Frånluftsfläkt |
-| CF | Cirkulationsfläkt |
 
 ## NAMN (exempel)
 
