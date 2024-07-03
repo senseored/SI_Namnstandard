@@ -13,6 +13,7 @@
 | Name | S | Namn på blocket (ex. SV_1) |
 | User title | S | Namn på ställdon/utsignal (ex. SV11). Kommer användas i larm per automatik. |
 | Select | X | Från/Manuell/Auto |
+| Invert | L | Inverterar _Output mot _Input, men låter _DisplayOutput = _Input. |
 
 | Larm | Beskrivning |
 | --- | --- |
