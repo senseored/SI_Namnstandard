@@ -2,33 +2,33 @@
 
 ## Beskrivning
 
-| Ingång | Beskrivning |
-| --- | --- |
-| Input | Ingång, binds till AI_-ingång. |
-| SetPoint | Börvärde, binds till aktuellt börvärde. Används för presentation av aktuellt börvärde i display, bild, loggning och uträkning av larm. |
-| BlockLow | Blockering av låglarm. |
-| BlockHigh | Blockering av höglarm. |
-| BlockDiff | Blockering av differenslarm. |
+| Ingång | Signaltyp | Beskrivning |
+| --- | --- | --- |
+| Input | R | Ingång, binds till AI_-ingång. |
+| SetPoint | R | Börvärde, binds till aktuellt börvärde. Används för presentation av aktuellt börvärde i display, bild, loggning och uträkning av larm. |
+| BlockLow | L | Blockering av låglarm. |
+| BlockHigh | L | Blockering av höglarm. |
+| BlockDiff | L | Blockering av differenslarm. |
 
-| Inställningar | Beskrivning |
-| --- | --- |
-| Name | Namn på blocket (ex. GT_TILL_1) |
-| User title | Namn på givare (ex. GT11). Kommer användas i larm per automatik. |
-| LowAlarmLimit | Låglarmsgräns. |
-| HighAlarmLimit | Höglarmsgräns. |
-| DiffAlarmLimit | Avvikelselarmgräns. |
-| LowAAlarmLimit | Låglarmsgräns A-larm. |
-| HighAAlarmLimit | Höglarmsgräns A-larm. |
-| DiffAAlarmLimit | Avvikelselarmgräns A-larm. |
-| AlarmHysteresis | Larmhysteres. |
-| EnableHLDiff | Hög/låglarm som avvikelse mot börvärde. |
-| AllowNaN | Tillåt !NaN. |
-| Offset | Kalibrering. |
-| MinOutput | Min utsignal. |
-| MaxOutput | Max utsignal. |
-| LowSensorLimit | Låggräns givarfel. |
-| HighSensorLimit | Höggräns givarfel. |
-| SensorCnt | Inställbar tid för oförändrat värde, -1 = inaktiverat. |
+| Inställningar | Signaltyp | Beskrivning |
+| --- | --- | --- |
+| Name | S | Namn på blocket (ex. GT_TILL_1) |
+| User title | S | Namn på givare (ex. GT11). Kommer användas i larm per automatik. |
+| LowAlarmLimit | R | Låglarmsgräns. |
+| HighAlarmLimit | R | Höglarmsgräns. |
+| DiffAlarmLimit | R | Avvikelselarmgräns. |
+| LowAAlarmLimit | R | Låglarmsgräns A-larm. |
+| HighAAlarmLimit | R | Höglarmsgräns A-larm. |
+| DiffAAlarmLimit | R | Avvikelselarmgräns A-larm. |
+| AlarmHysteresis | R | Larmhysteres. |
+| EnableHLDiff | L | Hög/låglarm som avvikelse mot börvärde. |
+| AllowNaN | L | Tillåt !NaN. |
+| Offset | R | Kalibrering. |
+| MinOutput | R | Min utsignal. |
+| MaxOutput | R | Max utsignal. |
+| LowSensorLimit | R | Låggräns givarfel. |
+| HighSensorLimit | R | Höggräns givarfel. |
+| SensorCnt | I | Inställbar tid för oförändrat värde, -1 = inaktiverat. |
 
 | Larm | Beskrivning |
 | --- | --- |
@@ -40,10 +40,10 @@
 | LowAAlarm | Låglarm A-larm. Beroende på EnableHLDiff används absolut larmgräns eller relativ mot börvärde. |
 | DiffAAlarm | Avvikelselarm A-larm |
 
-| Utgångar | Beskrivning |
-| --- | --- |
-| Output | Skalat värde för visning och länkning till andra block. |
-| OP | Summalarmsutgång (för färgändring givarsymbol, användning i Webport och liknande. |
+| Utgångar | Signaltyp | Beskrivning |
+| --- | --- | --- |
+| Output | R | Skalat värde för visning och länkning till andra block. |
+| OP | L | Summalarmsutgång (för färgändring givarsymbol, användning i Webport och liknande. |
 
 ## Namnstandard
 
