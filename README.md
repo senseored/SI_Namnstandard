@@ -15,8 +15,8 @@ Exempel på vanliga namn:
 | Input | Analog ingång i ett objekt. |
 | Output | Analog utgång i ett objekt. |
 | SetPoint | Analog inställningspunkt. |
-| DigitalInput | Digital ingång i ett objekt. |
-| Command | Digital utgång i ett objekt. |
+| StartIn | Digital ingång i ett objekt. |
+| StartOut | Digital utgång i ett objekt. |
 | LowAlarm | Låglarm. |
 | HighAlarm | Höglarm. |
 | DiffAlarm | Avvikelselarm. |
