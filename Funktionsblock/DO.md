@@ -4,7 +4,7 @@
 
 | Ingång | Signaltyp | Beskrivning |
 | --- | --- | --- |
-| DigitalInput | L | Ingång, från ex. PID_VV1_GT_TILL_1_Output |
+| StartIn | L | Ingång, från ex. PID_VV1_GT_TILL_1_Output |
 | Blocked | L | Blockerad utgång, vid 1 forcera till 0. |
 
 | Inställningar | Signaltyp | Beskrivning |
@@ -22,8 +22,8 @@
 
 | Utgångar | Signaltyp | Beskrivning |
 | --- | --- | --- |
-| Command | L | Värde för länkning till andra block och/eller analog utgång. |
-| DisplayCommand | L | Skalat värde för visning och loggning. |
+| StartOut | L | Värde för länkning till andra block och/eller analog utgång. |
+| DisplayOut | L | Skalat värde för visning och loggning. |
 | OP | L | Summalarmsutgång (för färgändring symbol, användning i Webport och liknande. |
 
 ## Namnstandard
