@@ -71,6 +71,6 @@ SYSTEM_TYP_NAMN
 
 | Namn | Beskrivning |
 | --- | --- |
-| VV1_GT_TILL_1 | Tappvarmvatten |
-| VV1_GT_RETUR_1 | VVC-temperatur |
+| VV_1_GT_TILL_1 | Tappvarmvatten |
+| VV_1_GT_RETUR_1 | VVC-temperatur |
 

@@ -48,8 +48,8 @@ PREFIX_SYSTEM_TYP_NAMN
 
 | Namn | Beskrivning |
 | --- | --- |
-| AI_VV1_GT_TILL_1 | Tappvarmvatten |
-| AI_VV1_GT_RETUR_1 | VVC-temperatur |
-| AO_VV1_SV_1 | Ventil |
-| DO_VV1_P1 | Utgång VVC-pump |
-| DI_VV1_P1 | Driftindikering VVC-pump |
+| AI_VV_1_GT_TILL_1 | Tappvarmvatten |
+| AI_VV_1_GT_RETUR_1 | VVC-temperatur |
+| AO_VV_1_SV_1 | Ventil |
+| DO_VV_1_P1 | Utgång VVC-pump |
+| DI_VV_1_P1 | Driftindikering VVC-pump |

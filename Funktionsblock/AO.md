@@ -45,5 +45,5 @@ SYSTEM_TYP
 
 | Namn | Beskrivning |
 | --- | --- |
-| VV1_SV_1 | Varmvattenventil |
+| VV_1_SV_1 | Varmvattenventil |
 

@@ -31,7 +31,7 @@ Alla larmsuffix skall sluta med "Alarm", för att föeenkla larmhantering i bild
 
 | Namn | Beskrivning |
 | --- | --- |
-| VV1_GT_TILL_1_HighAlarm | Tappvarmvatten höglarm |
-| VV1_GT_TILL_1_LowAlarm | Tappvarmvatten låglarm |
-| VV1_P1_SumAlarm | VVC-pump summalarm |
-| VV1_SV_1_ManualAlarm | Varmvattenventil handläge |
+| VV_1_GT_TILL_1_HighAlarm | Tappvarmvatten höglarm |
+| VV_1_GT_TILL_1_LowAlarm | Tappvarmvatten låglarm |
+| VV_1_P1_SumAlarm | VVC-pump summalarm |
+| VV_1_SV_1_ManualAlarm | Varmvattenventil handläge |
