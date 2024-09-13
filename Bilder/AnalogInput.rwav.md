@@ -8,7 +8,7 @@ Inställningsvy för analoga ingångar i DUC. Visar givartyp, skalning, offset, 
 | Namn | Beskrivning | Exempel |
 | --- | --- | --- |
 | Title | Namn på vy | Givare |
-| File | Filnamn | AnalogInput.rwav
+| File | Filnamn | AnalogInput.rwav |
 | Controller | Duc | %Controller%. |
 | Object | Givare | %VS1%_GT_TILL_1 |
 | Setting | Enhet | kPa |

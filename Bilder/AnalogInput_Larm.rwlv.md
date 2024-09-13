@@ -8,7 +8,7 @@ Visar aktiverade larm för standardgivare (AI).
 | Namn | Beskrivning | Exempel |
 | --- | --- | --- |
 | Title | Namn på vy | Larmgränser |
-| File | Filnamn | AnalogInput_Larm.rwlv
+| File | Filnamn | AnalogInput_Larm.rwlv |
 | Controller | Duc | %Controller%. |
 | Object | Givare | %VS1%_GT_TILL_1 |
 | Setting | [Enhet;Decimaler] | [kPa;0] |
