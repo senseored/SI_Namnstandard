@@ -16,6 +16,6 @@ Värden skapas genom %SubView_Controller%%SubView_Object%%SubView_Setting#X% dä
 3: Antal decimaler som visas i nummervisning (t.ex. "2" för 0.00)
 4: Variabel som ska visas (enligt beskrivning)
 5: 0 = Ej ändringsbar siffra
-    1 = Ändringsbar siffra
-    2 = Ej ändringsbar lista
-    3 = Ändringsbar lista
+   1 = Ändringsbar siffra
+   2 = Ej ändringsbar lista
+   3 = Ändringsbar lista
