@@ -1,0 +1,647 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigTemplate format="ControllerBuilder">
+  <Name>PID SI</Name>
+  <Type>Block</Type>
+  <Description />
+  <Icon>User:\Controller Builder\Icons\PID.ico</Icon>
+  <Advanced>No</Advanced>
+  <Revision />
+  <About />
+  <Parameter name="EmbeddAllSubBlocksInThisTemplate">True</Parameter>
+  <Parameter name="EmbeddAllPicturesInThisTemplate">False</Parameter>
+  <Object type="Block">
+    <Name>GT_TILL_1_PID</Name>
+    <Attribute name="ConnectionPoints">
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Enable</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Blocked</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Freeze</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Input</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Setpoint</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">BlockedOutput</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Reset</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Output</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">PAction</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">IAction</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">DAction</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">ManualAlarm</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">BlockedAlarm</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SumAlarm</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Select</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">OutputManual</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">PGain</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">ITime</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">DTime</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">MaxDGain</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">ResetPoint</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Mode</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">MinOutput</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">MaxOutput</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SampPer</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">DeadBandOutput</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">DeadBandControlDev</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">PIDNo</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+    </Attribute>
+    <Attribute name="Top">1545</Attribute>
+    <Attribute name="Left">275</Attribute>
+    <Attribute name="Width">180</Attribute>
+    <Object type="TypeInfo">
+      <Attribute name="TypeName">PID SI</Attribute>
+      <Attribute name="TypeTitle">PID</Attribute>
+      <Attribute name="Icon">Device:\Icons\PID.ico</Attribute>
+      <Attribute name="Description">Blocks of the type PID Control are traditional analog PID-regulators. You can switch the regulator between automatic and manual mode, and set various PID-parameters, limits on the control signals and the sample period.</Attribute>
+      <Attribute name="ObjectsModified">Yes</Attribute>
+      <Attribute name="ChangedDate">2024-07-09 07:27:29</Attribute>
+      <Attribute name="ChangedBy">tobiasg</Attribute>
+      <Attribute name="TemplateFile">ALib:\Controller Builder\Templates\BlockTypes\PID.ect</Attribute>
+      <Attribute name="TemplateRevision">1.0-1-03</Attribute>
+      <Attribute name="TemplateDate">2015-04-08 08:53:48</Attribute>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>Operation</Name>
+      <Object type="Signal">
+        <Name>Enable</Name>
+        <Attribute name="Description">This parameter enables (1) or disables (0) the function. </Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Default">Yes [1]</Attribute>
+        <Attribute name="Suggests">No [0], Yes [1]</Attribute>
+        <Attribute name="Top">10</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Blocked</Name>
+        <Attribute name="ToolTitle">Blocked</Attribute>
+        <Attribute name="Description">Blocks Function block. Output = 0</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">35</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Freeze</Name>
+        <Attribute name="ToolTitle">Freeze</Attribute>
+        <Attribute name="Description">Freezes the PID control loop</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">60</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Input</Name>
+        <Attribute name="ToolTitle">Input</Attribute>
+        <Attribute name="Description">The PID input.</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Top">85</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Setpoint</Name>
+        <Attribute name="ToolTitle">Setpoint</Attribute>
+        <Attribute name="Description">The PID setpoint.</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Top">110</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>BlockedOutput</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">Blocked Setting</Attribute>
+        <Attribute name="Description">The PID output when it is in blocked mode.</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Top">135</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Reset</Name>
+        <Attribute name="ToolTitle">Reset</Attribute>
+        <Attribute name="Description">Resets the internal states of the PID, I.e. a WarmStart. WarmStart is ordered by setting this signal To 1. The signal returns To 0 when the WarmStart is done.</Attribute>
+        <Attribute name="SignalType">Command</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="Top">160</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Output</Name>
+        <Attribute name="ToolTitle">Output</Attribute>
+        <Attribute name="Description">The output of the PID.</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="Top">85</Attribute>
+        <Attribute name="Left">705</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>PAction</Name>
+        <Attribute name="ToolTitle">P-action</Attribute>
+        <Attribute name="Description">The current P-action of the PID.</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="Top">125</Attribute>
+        <Attribute name="Left">705</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>IAction</Name>
+        <Attribute name="ToolTitle">I-action</Attribute>
+        <Attribute name="Description">The current I-action of the PID.</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="Top">150</Attribute>
+        <Attribute name="Left">705</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>DAction</Name>
+        <Attribute name="ToolTitle">D-action</Attribute>
+        <Attribute name="Description">The current D-action of the PID.</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="Top">175</Attribute>
+        <Attribute name="Left">705</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>Alarms</Name>
+      <Attribute name="ObjectChanged">Modified</Attribute>
+      <Object type="Signal">
+        <Name>ManualAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">Alarm Manual Mode</Attribute>
+        <Attribute name="Description">Alarm Output: Manual mode</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">35</Attribute>
+        <Attribute name="Left">705</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>BlockedAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">Alarm Blocked Output</Attribute>
+        <Attribute name="Description">Alarm Output: Blocked Output</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">10</Attribute>
+        <Attribute name="Left">705</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>SumAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">Alarm Summary of function</Attribute>
+        <Attribute name="Description">Alarm Output: Function is alarming</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">60</Attribute>
+        <Attribute name="Left">705</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>ManAuto</Name>
+      <Attribute name="Title">Manual/Auto</Attribute>
+      <Object type="Signal">
+        <Name>Select</Name>
+        <Attribute name="ToolTitle">Man Auto Select</Attribute>
+        <Attribute name="Description">Man Auto Select, Off[0], Manual[1], Auto[2]</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">X</Attribute>
+        <Attribute name="Default">Auto [2]</Attribute>
+        <Attribute name="Suggests">Off [0],Manual [1],Auto [2]</Attribute>
+        <Attribute name="Top">200</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>OutputManual</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">Manual Setting</Attribute>
+        <Attribute name="Description">The PID output when it is in manual mode.</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Top">225</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>Settings</Name>
+      <Object type="Signal">
+        <Name>PGain</Name>
+        <Attribute name="ToolTitle">P Gain</Attribute>
+        <Attribute name="Description">The proportional gain of the PID.</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">1</Attribute>
+        <Attribute name="Top">260</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>ITime</Name>
+        <Attribute name="ToolTitle">I Time</Attribute>
+        <Attribute name="Description">The Integral time of the PID. Integral action is disabled by setting it to zero.</Attribute>
+        <Attribute name="Unit">s</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">100</Attribute>
+        <Attribute name="Top">285</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>DTime</Name>
+        <Attribute name="ToolTitle">D Time</Attribute>
+        <Attribute name="Description">The Derivative time of the PID. Derivative action is disabled by setting it to zero.</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="Top">310</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>MaxDGain</Name>
+        <Attribute name="ToolTitle">Max D Gain</Attribute>
+        <Attribute name="Description">Maximum derivative gain of the PID.</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">10</Attribute>
+        <Attribute name="Top">335</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>ResetPoint</Name>
+        <Attribute name="ToolTitle">Reset Point</Attribute>
+        <Attribute name="Description">Point from where the PID starts after a Reset.</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="MinValue">0</Attribute>
+        <Attribute name="MaxValue">100</Attribute>
+        <Attribute name="Top">360</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>Configuration</Name>
+      <Object type="Signal">
+        <Name>Mode</Name>
+        <Attribute name="ToolTitle">Control Mode</Attribute>
+        <Attribute name="Description">Control mode, Heating / Cooling</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">X</Attribute>
+        <Attribute name="Default">Heating [0]</Attribute>
+        <Attribute name="Suggests">Heating [0],Cooling [1]</Attribute>
+        <Attribute name="Top">395</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>MinOutput</Name>
+        <Attribute name="ToolTitle">Min output</Attribute>
+        <Attribute name="Description">Minimum output of the PID.</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="Top">420</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>MaxOutput</Name>
+        <Attribute name="ToolTitle">Max output</Attribute>
+        <Attribute name="Description">Maximum output of the PID.</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">100</Attribute>
+        <Attribute name="Top">445</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>SampPer</Name>
+        <Attribute name="ToolTitle">Sample Period</Attribute>
+        <Attribute name="Description">The sample period of the PID. Graded in [100ms].</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">I</Attribute>
+        <Attribute name="Default">20</Attribute>
+        <Attribute name="Top">470</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>DeadBandOutput</Name>
+        <Attribute name="ToolTitle">Dead Band Output</Attribute>
+        <Attribute name="Description">Deadband of the Output (%).</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="Top">525</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>DeadBandControlDev</Name>
+        <Attribute name="ToolTitle">Dead Band Control Dev.</Attribute>
+        <Attribute name="Description">Deadband of the control deviation between Input and Setpoint. [Unit of Input]</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="Top">500</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+    </Object>
+    <Object type="Group">
+      <Name>Internal</Name>
+      <Object type="EXOLVariables">
+        <Name>Variables</Name>
+        <Attribute name="Variables">X Temp
+R PidErrOld
+R PidIIOld
+R PidZZOld
+R PidVVOld 
+L BlockedState</Attribute>
+        <Attribute name="Top">10</Attribute>
+        <Attribute name="Left">300</Attribute>
+      </Object>
+      <Object type="EXOLCode">
+        <Name>Code</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="Code">
+If Enable AND Not Blocked
+; Choose the PID to work with...
+  Page PidPac = PIDNo-1    
+ 
+  If StartUpFlag Or EdgeI(SampPer)
+    Delay 10                             ;New 090216
+    X Temp = CvI(SampPer) / CycleX!
+    If CmpX( Temp=0 )
+      X PidSampFact = 1
+    Else
+      X PidSampFact = Temp
+    EndIf
+  EndIf
+
+  If StartUpFlag Or EdgeR( MaxDGain ) Or EdgeR( MaxOutput ) Or EdgeR( MinOutput )
+    R PidMDGain = MaxDGain
+    If CmpX(Select = 2) And ( CmpR(MaxOutput &gt; PidHLim) Or CmpR(MinOutput &lt; PidLLim) )  ;if-statement added 2012-11-23, for bumpless transfer at change of Min/max output  
+        R PidHLim = MaxOutput 
+        R PidLLim = MinOutput
+        PidManSet = PidOutput
+        PidAuto = False!
+        PID PidOn 
+        PidAuto = True!    
+    Else   
+        R PidHLim = MaxOutput
+        R PidLLim = MinOutput
+    EndIf 
+  EndIf
+
+  ; Pre-Calculate PID constants?
+  If StartUpFlag Or EdgeR( PGain ) Or EdgeR( ITime ) Or EdgeR( DTime ) Or EdgeX(PidSampFact)  ; Added PidSampFact 110509
+    ; if parameter changes
+    R PidPConst = PGain
+    R PidITime = ITime
+    R PidDTime = DTime
+    L PidParFlg = 0
+  EndIf
+
+  If Reset
+    ; if reset ordered...
+    PidAuto = False!	
+    If BlockedState ; Comming from blocked
+        PidManSet = BlockedOutput
+    Else
+        PidManSet = ResetPoint						
+    EndIf
+    PID PidOn 								
+    PidAuto = True!							
+    If CmpR(ResetPoint = 0)	 AND NOT BlockedState			
+      R PidZZ = 0 ; Clear derivative action		
+      R PidII = 0 ; Clear integration action		
+    EndIf        
+    L BlockedState = False!
+    L Reset = 0 ; Reset is done                 
+  EndIf
+
+  R PidIIOld = PidII
+  R PidErrOld = PidErr  
+  R PidZZOld = PidZZ
+  R PidVVOld = PidVV
+
+  Switch Select         ; PID is Off
+    L PidAuto = False!
+    R PidManSet = 0
+    R Output = 0
+  Pole 1                ; PID in manual mode
+    L PidAuto = False!
+	If EdgeX(Select)
+		R OutputManual = PidOutput
+	EndIf
+	If CmpR( OutputManual &lt; MinOutput )
+		R Output = MinOutput
+	Else
+		If CmpR( OutputManual &gt; MaxOutput )
+			R Output = MaxOutput
+		Else
+			R Output = OutputManual
+		EndIf
+	EndIf
+	R PidManSet = Output
+  Pole 2                ; PID is On  
+    If CmpT(0,PidOutput = NaN!)  ; Added 2013-05-07 to work around unusual PidOutput startup behavior in VeryFast task
+        PidManSet = 0.1
+        PidAuto = False!
+        PID PidOn 
+        PidAuto = True!
+    Else
+        ;L PidAuto = Not Blocked
+        L PidAuto = True!
+        ; Input to the PID...
+        If CmpX( Mode = 0)    ; Heating
+          R PidSetp = Setpoint
+		 If CmpT(DeadBandControlDev, Input &lt;&gt; Setpoint) 
+			R PidInput = Input
+		 Else
+			R PidInput = Setpoint
+          EndIf
+        Else                  ; Cooling
+		 If CmpT(DeadBandControlDev, Input &lt;&gt; Setpoint) 
+			R PidSetp = Input
+		 Else
+			R PidSetp = Setpoint
+		 EndIf
+          R PidInput = Setpoint
+        EndIf
+
+        ; Output from the PID...
+        ;If Blocked
+        ;   R PidManSet = BlockedOutput
+        ;EndIf
+        L PidOn = Not Freeze
+        PID PidOn ;Added 2011-01-04
+        If CmpT(DeadBandOutput, Output &lt;&gt; PidOutput) Or CmpR(PidOutput &lt; MinOutput + 0.1) Or CmpR(PidOutput &gt; MaxOutput - 0.1)
+           R Output = PidOutput
+        EndIf   
+    EndIf
+  EndSwitch  
+
+  If CmpX(Select &lt; 2)   ; if auto the pid is run above
+     PID PidOn          ; Added 2011-05-19
+  EndIf
+
+  If CmpR(Output = MinOutput) 		; Added 2014-04-11
+	PidVV = MinOutput				;
+  Else							;
+    If CmpR(Output = MaxOutput) 	;
+      PidVV = MaxOutput			;
+    EndIf						;
+  EndIf							;
+  
+  If StartUpFlag        ; New 090216
+    Reset = 1           ; New 090216
+  EndIf                 ; New 090216       
+
+  L ManualAlarm = CmpX(Select &lt;&gt; 2)
+  
+  R PAction = PidErrOld * PidPConst
+  R IAction = PidIIOld
+  R DAction = (PidVVOld  - PAction - IAction) * CvX(CvL(CmpR(DTime &lt;&gt; 0)))
+Else
+	If Enable AND Blocked
+         Page PidPac = PIDNo-1 
+		R Output = BlockedOutput
+         L BlockedState = True!
+         L PidAuto = False!
+         R PidManSet = BlockedOutput
+         PID PidOn
+	Else
+		R Output = 0
+         L BlockedState = False!
+	EndIf
+	L ManualAlarm = False!
+	L Reset = 1  
+    R PAction = 0
+    R IAction = 0
+    R DAction = 0
+EndIf
+L BlockedAlarm = Blocked AND Enable AND CmpR(Output = BlockedOutput)
+L SumAlarm = Enable AND (ManualAlarm OR BlockedAlarm)
+
+		</Attribute>
+        <Attribute name="Top">10</Attribute>
+        <Attribute name="Left">410</Attribute>
+      </Object>
+    </Object>
+    <Object type="Signal">
+      <Name>PIDNo</Name>
+      <Attribute name="ToolTitle">PID number</Attribute>
+      <Attribute name="Description">The PID number. Must be From 1 And upward. 
+Each PID in the module must have an unique number.
+		</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">X</Attribute>
+      <Attribute name="Default">%PIDNo%</Attribute>
+      <Attribute name="Style">Virtual</Attribute>
+      <Attribute name="Top">555</Attribute>
+      <Attribute name="Left">10</Attribute>
+      <Attribute name="Width">120</Attribute>
+    </Object>
+  </Object>
+  <Action type="Copy">
+    <Source>User:\Controller Builder\Templates\PID SI\PID.ico</Source>
+    <Destination>Device:\Icons\PID.ico</Destination>
+  </Action>
+</EXOconfigTemplate>

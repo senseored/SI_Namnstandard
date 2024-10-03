@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigTemplate format="ControllerBuilder">
+  <Name>Season Control SI</Name>
+  <Type>Block</Type>
+  <Description />
+  <Icon>User:\Controller Builder\Icons\Calendar.Ico</Icon>
+  <Advanced>No</Advanced>
+  <Revision />
+  <About />
+  <Parameter name="EmbeddAllSubBlocksInThisTemplate">True</Parameter>
+  <Parameter name="EmbeddAllPicturesInThisTemplate">False</Parameter>
+  <Object type="Block">
+    <Name>P_1_SC</Name>
+    <Attribute name="ConnectionPoints">
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Enable</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Blocked</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">ForcedON</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StartOut</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StartMonth</Attribute>
+        <Attribute name="InitValue">Jul [7]</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StartDate</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StopMonth</Attribute>
+        <Attribute name="InitValue">Sep [9]</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StopDate</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">AlaBlocked</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">AlaForcedON</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">AlaSum</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+    </Attribute>
+    <Attribute name="Top">1675</Attribute>
+    <Attribute name="Left">710</Attribute>
+    <Object type="TypeInfo">
+      <Attribute name="TypeName">Season/Date Control SI</Attribute>
+      <Attribute name="TypeTitle">Date Start/Stop Control </Attribute>
+      <Attribute name="Icon">Device:\Icons\Calendar.Ico</Attribute>
+      <Attribute name="Description">Block type for setting a logic output if the date is within the set parameter limits.</Attribute>
+      <Attribute name="ObjectsModified">Yes</Attribute>
+      <Attribute name="ChangedDate">2024-07-08 13:27:54</Attribute>
+      <Attribute name="ChangedBy">tobiasg</Attribute>
+      <Attribute name="TemplateFile">ALib:\Controller Builder\Templates\BlockTypes\DateStartStop.ect</Attribute>
+      <Attribute name="TemplateRevision">1.0-1-01</Attribute>
+      <Attribute name="TemplateDate">2015-06-03 09:33:49</Attribute>
+      <Attribute name="Comment">1.0-1-01: Fixed an issue for switch-off when start and stop date is equal.</Attribute>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>Operation</Name>
+      <Object type="Signal">
+        <Name>Enable</Name>
+        <Attribute name="Description">This parameter enables (1) or disables (0) the function. </Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Default">Yes [1]</Attribute>
+        <Attribute name="Suggests">No [0], Yes [1]</Attribute>
+        <Attribute name="Top">10</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Blocked</Name>
+        <Attribute name="ToolTitle">Blocked</Attribute>
+        <Attribute name="Description">Blocks Function block. Output = 0</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">35</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>ForcedON</Name>
+        <Attribute name="ToolTitle">Forced ON</Attribute>
+        <Attribute name="Description">Force the function output to its ON state.</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">60</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>StartOut</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">Start Out</Attribute>
+        <Attribute name="Description">ON if the current date is within the set parameter limits.</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">85</Attribute>
+        <Attribute name="Left">530</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>AlarmOutputs</Name>
+      <Object type="Signal">
+        <Name>AlaBlocked</Name>
+        <Attribute name="ToolTitle">Alarm Blocked Output</Attribute>
+        <Attribute name="Description">Alarm Output: Blocked Output</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">10</Attribute>
+        <Attribute name="Left">530</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>AlaForcedON</Name>
+        <Attribute name="ToolTitle">Alarm Forced Output ON</Attribute>
+        <Attribute name="Description">Alarm Output: Forced Output ON</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">35</Attribute>
+        <Attribute name="Left">530</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>AlaSum</Name>
+        <Attribute name="ToolTitle">Alarm Summary of function</Attribute>
+        <Attribute name="Description">Alarm Output: Function is alarming.</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">60</Attribute>
+        <Attribute name="Left">530</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>Settings</Name>
+      <Attribute name="Title">Settings</Attribute>
+      <Attribute name="Comment">Block for setting a logic output if the date is within the set parameter limits. </Attribute>
+      <Object type="Signal">
+        <Name>StartMonth</Name>
+        <Attribute name="ToolTitle">Start Month</Attribute>
+        <Attribute name="Description">Month for Start of Season.</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">X</Attribute>
+        <Attribute name="Default">Sep [9]</Attribute>
+        <Attribute name="MinValue">1</Attribute>
+        <Attribute name="MaxValue">12</Attribute>
+        <Attribute name="Suggests">Jan [1],Feb [2],Mar [3],Apr [4],May [5],Jun [6],Jul [7],Aug [8],Sep [9],Oct [10],Nov [11],Dec [12] </Attribute>
+        <Attribute name="Top">95</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>StartDate</Name>
+        <Attribute name="ToolTitle">Start Date</Attribute>
+        <Attribute name="Description">Date for Start of Season.</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">X</Attribute>
+        <Attribute name="Default">1</Attribute>
+        <Attribute name="MinValue">1</Attribute>
+        <Attribute name="MaxValue">31</Attribute>
+        <Attribute name="Suggests">1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31</Attribute>
+        <Attribute name="Top">120</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>StopMonth</Name>
+        <Attribute name="ToolTitle">Stop Month</Attribute>
+        <Attribute name="Description">Month for End of Season.</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">X</Attribute>
+        <Attribute name="Default">Apr [4]</Attribute>
+        <Attribute name="MinValue">1</Attribute>
+        <Attribute name="MaxValue">12</Attribute>
+        <Attribute name="Suggests">Jan [1],Feb [2],Mar [3],Apr [4],May [5],Jun [6],Jul [7],Aug [8],Sep [9],Oct [10],Nov [11],Dec [12] </Attribute>
+        <Attribute name="Top">145</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>StopDate</Name>
+        <Attribute name="ToolTitle">Stop Date</Attribute>
+        <Attribute name="Description">Date for End of Season.</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">X</Attribute>
+        <Attribute name="Default">1</Attribute>
+        <Attribute name="MinValue">1</Attribute>
+        <Attribute name="MaxValue">31</Attribute>
+        <Attribute name="Suggests">1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31</Attribute>
+        <Attribute name="Top">170</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+    </Object>
+    <Object type="Group">
+      <Name>Internal</Name>
+      <Object type="EXOLVariables">
+        <Name>Variables</Name>
+        <Attribute name="Variables">  X OldMonth ; Internal
+  X OldDate ; Internal
+  I StartTime
+  I StopTime
+  I Today</Attribute>
+        <Attribute name="Top">10</Attribute>
+        <Attribute name="Left">230</Attribute>
+      </Object>
+      <Object type="EXOLCode">
+        <Name>Code</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="Code">If Enable
+  If EdgeX(StartMonth) Or EdgeX(StartDate)                               
+       I StartTime = CvX(StartMonth)*31 + CvX(StartDate)  ; Start date     
+    EndIf                                                                  
+    If EdgeX(StopMonth) Or EdgeX(StopDate)                                 
+       I StopTime  = CvX(StopMonth)*31 + CvX(StopDate)   ; Stop date       
+    EndIf                                                                  
+    If CmpX(Month &lt;&gt; OldMonth) Or CmpX(Date &lt;&gt; OldDate)                    
+       I Today = CvX(Month)*31 + CvX(Date)            ; Today              
+       X OldMonth  = Month                                                 
+       X OldDate   = Date                                                  
+    EndIf                                                                  
+    IfNot Blocked                                                          
+      If Not StartOut                                                        
+         If CmpI(StartTime &lt;= StopTime) OR ForcedON                                    
+            If CmpI(Today &gt;= StartTime) And CmpI(Today &lt;= StopTime) OR ForcedON   
+               L StartOut = 1                                                
+            EndIf                                                          
+         Else                                                              
+            If CmpI(Today &lt;= StopTime) Or CmpI(Today &gt;= StartTime)         
+               L StartOut = 1                                                
+            EndIf                                                          
+         EndIf                                                             
+      Else                                                                 
+         If CmpI(StartTime &lt;= StopTime) AND NOT ForcedON                                    
+            If CmpI(Today &gt; StopTime) Or CmpI(Today &lt; StartTime)           
+               L StartOut = 0                                                
+            EndIf                                                          
+         Else                                                              
+            If CmpI(Today &gt; StopTime) And CmpI(Today &lt; StartTime) AND NOT ForcedON  
+               L StartOut = 0                                                
+            EndIf                                                          
+         EndIf                                                             
+      EndIf                                                                
+    Else                                                                   
+      L StartOut = 0                                                         
+    EndIf                                                                  
+
+Else
+  L StartOut = 0 
+EndIf
+L AlaBlocked = Enable AND Blocked AND NOT StartOut
+L AlaForcedON = Enable AND NOT Blocked AND ForcedON AND StartOut
+L AlaSum = AlaBlocked OR AlaForcedON</Attribute>
+        <Attribute name="Top">10</Attribute>
+        <Attribute name="Left">340</Attribute>
+      </Object>
+    </Object>
+  </Object>
+  <Action type="Copy">
+    <Source>User:\Controller Builder\Templates\Season Control SI\Calendar.Ico</Source>
+    <Destination>Device:\Icons\Calendar.Ico</Destination>
+  </Action>
+</EXOconfigTemplate>

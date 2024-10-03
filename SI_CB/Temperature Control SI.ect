@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigTemplate format="ControllerBuilder">
+  <Name>Temperature Control SI</Name>
+  <Type>Block</Type>
+  <Description />
+  <Icon>User:\Controller Builder\Icons\DegreeDays.Ico</Icon>
+  <Advanced>No</Advanced>
+  <Revision />
+  <About />
+  <Parameter name="EmbeddAllSubBlocksInThisTemplate">True</Parameter>
+  <Parameter name="EmbeddAllPicturesInThisTemplate">False</Parameter>
+  <Object type="Block">
+    <Name>P_1_TC</Name>
+    <Attribute name="ConnectionPoints">
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Input</Attribute>
+        <Attribute name="Binding">*GT_UTE</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StartTemp</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StartTempDirect</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Hysteresis</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StopDelay</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StartDelay</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StartOut</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StartOutDirect</Attribute>
+      </Attribute>
+    </Attribute>
+    <Attribute name="Top">1530</Attribute>
+    <Attribute name="Left">670</Attribute>
+    <Object type="TypeInfo">
+      <Attribute name="TypeName">Temperature Control SI</Attribute>
+      <Attribute name="TypeTitle">Temperaturstyrd via utetemp med direkstart</Attribute>
+      <Attribute name="Icon">Mod:\Icons\DegreeDays.Ico</Attribute>
+      <Attribute name="Description">Utgång styrd via utetemp start/stoppfördröjning i minuter och direktstart under inställd utetemperatur</Attribute>
+      <Attribute name="ObjectsModified">Yes</Attribute>
+      <Attribute name="ChangedDate">2024-07-08 14:43:47</Attribute>
+      <Attribute name="ChangedBy">tobiasg</Attribute>
+      <Attribute name="TemplateFile">Workgroup:\Controller Builder\Templates\BlockTypes\SI_Temp_Ood_Tdirect.ect</Attribute>
+      <Attribute name="TemplateDate">2019-01-16 09:53:14</Attribute>
+    </Object>
+    <Object type="EXOLVariables">
+      <Name>ObjectVariables</Name>
+      <Attribute name="Variables">
+  ;L Output ; Start output
+  I StartCnt ; Internal Start Delay Counter
+  I StopCnt ; Internal Stop Delay Counter
+  L Startup = 1 ; Internal
+</Attribute>
+      <Attribute name="Top">10</Attribute>
+      <Attribute name="Left">230</Attribute>
+    </Object>
+    <Object type="EXOLCode">
+      <Name>Code</Name>
+      <Attribute name="ObjectChanged">Modified</Attribute>
+      <Attribute name="Code">
+If StartUp
+  L Startup=0
+  If CmpR(Input &gt; StartTemp)
+    L StartOut = 0
+   Else        
+    L StartOut = 1
+  Endif  
+Endif  
+
+
+; Pump starts at low temp.
+If CmpR(Input &lt; StartTemp) Or CmpR(Input &lt; StartTempDirect)
+    If (CmpI(StartCnt &lt; StartDelay*60) And CmpI(StartCnt &lt; 32000-CvX(SecDiff))) and /CmpR(Input &lt; StartTempDirect)
+         I StartCnt = StartCnt + CvX(SecDiff)
+      Else
+        L StartOut = 1
+    EndIf
+   I StopCnt = 0
+ Else
+  If CmpR(Input &gt; StartTemp+Hysteresis)
+      ; delayed stop of pump
+     If CmpI(StopCnt &lt; StopDelay*60) And CmpI(StopCnt &lt; 32000-CvX(SecDiff))
+     I StopCnt = StopCnt + CvX(SecDiff)
+    Else
+        L StartOut = 0
+     EndIf
+    I StartCnt = 0
+ EndIf
+EndIf
+
+if CmpR(Input &lt; StartTempDirect)
+  L StartOutDirect=1
+ else 
+  if CmpR(Input &gt; StartTempDirect+Hysteresis)
+    L StartOutDirect=0
+  endif  
+endif  
+
+</Attribute>
+      <Attribute name="Top">10</Attribute>
+      <Attribute name="Left">340</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>Input</Name>
+      <Attribute name="ObjectChanged">Modified</Attribute>
+      <Attribute name="ToolTitle">Temperature</Attribute>
+      <Attribute name="Description">Utetemperatur</Attribute>
+      <Attribute name="SignalType">Input</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Top">10</Attribute>
+      <Attribute name="Left">10</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>StartTemp</Name>
+      <Attribute name="ToolTitle">Start Temp</Attribute>
+      <Attribute name="Description">Temperature Limit for Pump Start</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">17</Attribute>
+      <Attribute name="Top">35</Attribute>
+      <Attribute name="Left">10</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>StartTempDirect</Name>
+      <Attribute name="ToolTitle">Start Temp Direct</Attribute>
+      <Attribute name="Description">Temperature Limit for Pump Start Direct</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">8</Attribute>
+      <Attribute name="Top">60</Attribute>
+      <Attribute name="Left">10</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>Hysteresis</Name>
+      <Attribute name="ToolTitle">Diff</Attribute>
+      <Attribute name="Description">Temperature Diff for stop</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">2</Attribute>
+      <Attribute name="Top">85</Attribute>
+      <Attribute name="Left">10</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>StopDelay</Name>
+      <Attribute name="ToolTitle">Stop Delay</Attribute>
+      <Attribute name="Description">Time Delay at Stop of Pump (minutes)</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">I</Attribute>
+      <Attribute name="Default">60</Attribute>
+      <Attribute name="Top">110</Attribute>
+      <Attribute name="Left">10</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>StartDelay</Name>
+      <Attribute name="ToolTitle">Start Delay</Attribute>
+      <Attribute name="Description">Time Delay at Stop of Pump (minutes)</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">I</Attribute>
+      <Attribute name="Default">120</Attribute>
+      <Attribute name="Top">135</Attribute>
+      <Attribute name="Left">10</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>StartOut</Name>
+      <Attribute name="ObjectChanged">Modified</Attribute>
+      <Attribute name="ToolTitle">Start Out</Attribute>
+      <Attribute name="Description">Start of output</Attribute>
+      <Attribute name="SignalType">Output</Attribute>
+      <Attribute name="DataType">L</Attribute>
+      <Attribute name="Top">10</Attribute>
+      <Attribute name="Left">530</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>StartOutDirect</Name>
+      <Attribute name="ObjectChanged">Modified</Attribute>
+      <Attribute name="ToolTitle">Start Direkt</Attribute>
+      <Attribute name="Description">Start via direktstart</Attribute>
+      <Attribute name="SignalType">Output</Attribute>
+      <Attribute name="DataType">L</Attribute>
+      <Attribute name="Top">35</Attribute>
+      <Attribute name="Left">530</Attribute>
+    </Object>
+  </Object>
+  <Action type="Copy">
+    <Source>User:\Controller Builder\Icons\DegreeDays.Ico</Source>
+    <Destination>Mod:\Icons\DegreeDays.Ico</Destination>
+  </Action>
+</EXOconfigTemplate>
