@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <EXOconfigTemplate format="ControllerBuilder">
   <Name>Analog Output SI</Name>
   <Type>Block</Type>
   <Description>Analog utsignal (AAM_)</Description>
-  <Icon>User:\Controller Builder\Icons\ManAuto (Small).ico</Icon>
+  <Icon>Alib:\Controller Builder\Icons\ManAuto (Small).ico</Icon>
   <Advanced>No</Advanced>
   <Revision />
   <About />
@@ -66,14 +66,14 @@
     <Object type="TypeInfo">
       <Attribute name="TypeName">SIAnaAutoMan</Attribute>
       <Attribute name="TypeTitle">Analog Auto/Manual SI</Attribute>
-      <Attribute name="Icon">Device:\Icons\ManAuto (Small).ico</Attribute>
+      <Attribute name="Icon">Alib:\Controller Builder\Icons\ManAuto (Small).ico</Attribute>
       <Attribute name="Description">Blocks of the type Analog Auto/Manual Switch select an automatic or manual data channel, or a constant zero.</Attribute>
       <Attribute name="ObjectsAdded">Yes</Attribute>
       <Attribute name="ObjectsDeleted">Yes</Attribute>
       <Attribute name="ObjectsModified">Yes</Attribute>
       <Attribute name="ChangedDate">2024-08-20 08:24:09</Attribute>
       <Attribute name="ChangedBy">Administrator</Attribute>
-      <Attribute name="TemplateFile">User:\Controller Builder\Templates\BlockTypes\Analog Output SI.ect</Attribute>
+      <Attribute name="TemplateFile">Alib:\Controller Builder\Templates\SI_CB\Analog Output SI.ect</Attribute>
       <Attribute name="TemplateRevision">1.0-1-00</Attribute>
       <Attribute name="TemplateDate">2024-10-03 08:36:23</Attribute>
     </Object>
@@ -288,7 +288,6 @@ DisplayOutput = OutputTemp
           <Attribute name="Binding">*AlaManual</Attribute>
         </Attribute>
         <Attribute name="Comment">Alarm Output: Manual mode</Attribute>
-        <Attribute name="UserArea">ET134_Byggnad_1_UC</Attribute>
         <Attribute name="ShowStyle">Compact</Attribute>
         <Attribute name="Top">235</Attribute>
         <Attribute name="Left">560</Attribute>
@@ -306,7 +305,6 @@ DisplayOutput = OutputTemp
           <Attribute name="Binding">*AlaBlocked</Attribute>
         </Attribute>
         <Attribute name="Comment">Alarm Output: Pump operation blocked</Attribute>
-        <Attribute name="UserArea">ET134_Byggnad_1_UC</Attribute>
         <Attribute name="ShowStyle">Compact</Attribute>
         <Attribute name="Top">360</Attribute>
         <Attribute name="Left">560</Attribute>
@@ -321,7 +319,6 @@ DisplayOutput = OutputTemp
         </Attribute>
         <Attribute name="Active">No</Attribute>
         <Attribute name="Comment">Alarm Output: Summarized function alarm. Alarms if any of the block alarm points are triggered.</Attribute>
-        <Attribute name="UserArea">ET134_Byggnad_1_UC</Attribute>
         <Attribute name="ShowStyle">Compact</Attribute>
         <Attribute name="Top">355</Attribute>
         <Attribute name="Left">880</Attribute>
@@ -330,8 +327,4 @@ DisplayOutput = OutputTemp
       </Object>
     </Object>
   </Object>
-  <Action type="Copy">
-    <Source>User:\Controller Builder\Templates\Analog Output SI\ManAuto (Small).ico</Source>
-    <Destination>Device:\Icons\ManAuto (Small).ico</Destination>
-  </Action>
 </EXOconfigTemplate>
