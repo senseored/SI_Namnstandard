@@ -2,6 +2,8 @@
 
 ## Beskrivning
 
+![Alt text](img/PIDSI.PNG?raw=true "Bild")
+
 | Ingång | Signaltyp | Beskrivning |
 | --- | --- | --- |
 | Input | R | Värde som skall regleras |

@@ -2,6 +2,8 @@
 
 ## Beskrivning
 
+![Alt text](img/CurveSI.PNG?raw=true "Bild")
+
 | Ingång | Signaltyp | Beskrivning |
 | --- | --- | --- |
 | Input | R | Ingång, ex. GT_UTE |

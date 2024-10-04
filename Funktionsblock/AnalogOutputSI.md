@@ -2,6 +2,8 @@
 
 ## Beskrivning
 
+![Alt text](img/AnalogOutputSI.PNG?raw=true "Bild")
+
 | Ingång | Signaltyp | Beskrivning |
 | --- | --- | --- |
 | Input | R | Ingång, från ex. PID_VV1_GT_TILL_1_Output |

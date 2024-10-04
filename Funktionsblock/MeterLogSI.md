@@ -3,6 +3,8 @@
 ## Beskrivning
 Loggning av mätare/annan signal
 
+![Alt text](img/MeterLogSI.PNG?raw=true "Bild")
+
 | Ingång | Signaltyp | Beskrivning |
 | --- | --- | --- |
 | Input | R | Ingång, från ex. VMM1_Energy |
