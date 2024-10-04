@@ -2,7 +2,7 @@
 
 ## Beskrivning
 
-![alt text](img/Analog Input SI.png)
+![alt text](/img/Analog Input SI.png?raw=true)
 
 | Ingång | Signaltyp | Beskrivning |
 | --- | --- | --- |
