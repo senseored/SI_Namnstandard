@@ -2,6 +2,8 @@
 
 ## Beskrivning
 
+![Alt text](img/SeasonControlSI.PNG?raw=true "Bild")
+
 | Inställningar | Signaltyp | Beskrivning |
 | --- | --- | --- |
 | Name | S | Namn på blocket (ex. VS_1_P1_SC) |

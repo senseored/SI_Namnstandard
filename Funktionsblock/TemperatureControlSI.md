@@ -2,6 +2,8 @@
 
 ## Beskrivning
 
+![Alt text](img/TemperatureControlSI.PNG?raw=true "Bild")
+
 | Ingång | Signaltyp | Beskrivning |
 | --- | --- | --- |
 | Input | R | Startsignal/Utetemperatur |
