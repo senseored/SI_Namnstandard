@@ -2,7 +2,9 @@
 SI_CB\Views\SubView\AnalogInput_Larm.rwlv
 
 ## Beskrivning
+
 ![Alt text](img/AnalogInput_Larm.PNG?raw=true "Bild")
+
 Visar aktiverade larm för standardgivare (AI).
 
 ## SubView

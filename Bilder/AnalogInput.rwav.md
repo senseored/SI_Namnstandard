@@ -2,7 +2,9 @@
 SI_CB\Views\SubView\AnalogInput.rwav
 
 ## Beskrivning
+
 ![Alt text](img/AnalogInput.PNG?raw=true "Bild")
+
 Inställningsvy för analoga ingångar i DUC. Visar givartyp, skalning, offset, etc.
 
 ## SubView

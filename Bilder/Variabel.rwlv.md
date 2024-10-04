@@ -2,7 +2,9 @@
 SI_CB\Views\SubView\Variabel.rwlv
 
 ## Beskrivning
+
 ![Alt text](img/Variabel.PNG?raw=true "Bild")
+
 Vy för lista för upp till 10 st värden.
 
 Värden skapas genom %SubView_Controller%%SubView_Object%%SubView_Setting#X% där X är 4 för första visning, 9 för andra, 14 för tredje, 19 för fjärde etc.
