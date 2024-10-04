@@ -1,7 +1,7 @@
 # AI/Analog Ingång
 
 ## Beskrivning
-
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 ![alt text](/img/Analog Input SI.PNG?raw=true)
 
 | Ingång | Signaltyp | Beskrivning |
