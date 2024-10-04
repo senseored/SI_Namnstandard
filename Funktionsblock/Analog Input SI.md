@@ -3,7 +3,7 @@
 ## Beskrivning
 ![Alt text](img/AnalogInputSI.PNG?raw=true "Optional Title")
 ![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
-![alt text](img/Analog Input SI.PNG?raw=true)
+![alt text]("img/Analog Input SI.PNG?raw=true")
 ![alt text](img/Temperature Control SI.jpg?raw=true)
 
 | Ingång | Signaltyp | Beskrivning |
