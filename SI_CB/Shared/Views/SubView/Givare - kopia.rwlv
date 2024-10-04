@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwlv" version="2024.1.100.32">
+  <Object type="ListView">
+    <Attribute name="Name">Givare</Attribute>
+    <Attribute name="Title">%Subview_Title%</Attribute>
+    <Attribute name="ShowLines">Yes</Attribute>
+    <Attribute name="MaxColumnWidth">565</Attribute>
+    <Attribute name="AllowViewColumns">Yes</Attribute>
+    <Attribute name="AlwaysShowSpaceForIcons">No</Attribute>
+    <Attribute name="MoreCommandIcon"></Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the listview file. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Setting</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all elements for the listview file.</Attribute>
+      <Object type="List">
+        <Attribute name="Name">Title</Attribute>
+        <Object type="Text">
+          <Attribute name="Name">TitleText</Attribute>
+          <Attribute name="ShowTitle">No</Attribute>
+          <Attribute name="Value">%SubView_Title%</Attribute>
+          <Attribute name="FontSize">ExtraFont2</Attribute>
+          <Attribute name="VisualStyle">Shady</Attribute>
+          <Attribute name="TitleColor">Dark</Attribute>
+        </Object>
+      </Object>
+      <Object type="List">
+        <Attribute name="Name">ListSelection</Attribute>
+        <Attribute name="SelectionContainer">this.view.parent.view.SubView_ViewContainer</Attribute>
+        <Object type="Numeric">
+          <Attribute name="Name">Raw</Attribute>
+          <Attribute name="Title">Råvärde:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Raw</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Filter</Attribute>
+          <Attribute name="Title">Filtertid:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%FilterTime</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Scale</Attribute>
+          <Attribute name="Title">Skalning:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Scale</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Offset</Attribute>
+          <Attribute name="Title">Offset:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Offset</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">Type</Attribute>
+          <Attribute name="Title">Givartyp:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Type</Attribute>
+          <Attribute name="Texts">Av[0],Pt1000[1],Ni1000 LG[2],800-1600 Ohm[3],0-4000 Ohm[4],[5],[6],[7],Ni1000[8],0-10V[9],0-0.2V[10],0-20mA[11]</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Output</Attribute>
+          <Attribute name="Title">Utsignal:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+      </Object>
+      <Object type="List">
+        <Attribute name="Name">Title_1</Attribute>
+        <Object type="Text">
+          <Attribute name="Name">TitleText_1</Attribute>
+          <Attribute name="ShowTitle">No</Attribute>
+          <Attribute name="Value">%SubView_Title%</Attribute>
+          <Attribute name="FontSize">ExtraFont2</Attribute>
+          <Attribute name="VisualStyle">Shady</Attribute>
+          <Attribute name="TitleColor">Dark</Attribute>
+        </Object>
+      </Object>
+      <Object type="List">
+        <Attribute name="Name">ListSelection_1</Attribute>
+        <Attribute name="SelectionContainer">this.view.parent.view.SubView_ViewContainer</Attribute>
+        <Object type="Numeric">
+          <Attribute name="Name">Raw_1</Attribute>
+          <Attribute name="Title">Råvärde:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Raw</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Filter_1</Attribute>
+          <Attribute name="Title">Filtertid:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%FilterTime</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Scale_1</Attribute>
+          <Attribute name="Title">Skalning:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Scale</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Offset_1</Attribute>
+          <Attribute name="Title">Offset:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Offset</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">Type_1</Attribute>
+          <Attribute name="Title">Givartyp:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Type</Attribute>
+          <Attribute name="Texts">Av[0],Pt1000[1],Ni1000 LG[2],800-1600 Ohm[3],0-4000 Ohm[4],[5],[6],[7],Ni1000[8],0-10V[9],0-0.2V[10],0-20mA[11]</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Output_1</Attribute>
+          <Attribute name="Title">Utsignal:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

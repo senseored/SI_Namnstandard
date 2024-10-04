@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwlv" version="2019.4.100.269">
+  <Object type="ListView">
+    <Attribute name="Name">Larm1_HLK_BLOCK_UTE</Attribute>
+    <Attribute name="Title">%Subview_Title%</Attribute>
+    <Attribute name="ShowLines">No</Attribute>
+    <Attribute name="MaxColumnWidth">565</Attribute>
+    <Attribute name="AlwaysShowSpaceForIcons">No</Attribute>
+    <Attribute name="MoreCommandIcon"></Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the listview file. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Setting</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all elements for the listview file.</Attribute>
+      <Object type="List">
+        <Attribute name="Name">Title</Attribute>
+        <Object type="Text">
+          <Attribute name="Name">TitleText</Attribute>
+          <Attribute name="ShowTitle">No</Attribute>
+          <Attribute name="Value">%SubView_Title%</Attribute>
+          <Attribute name="FontSize">ExtraFont2</Attribute>
+          <Attribute name="VisualStyle">Shady</Attribute>
+          <Attribute name="TitleColor">Dark</Attribute>
+        </Object>
+      </Object>
+      <Object type="List">
+        <Attribute name="Name">ListSelection</Attribute>
+        <Attribute name="SelectionContainer">this.view.parent.view.SubView_ViewContainer</Attribute>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_1</Attribute>
+          <Attribute name="Title">Höglarm över börvärde:</Attribute>
+          <Attribute name="Value">*%SubView_Object%_HiAlaLimit</Attribute>
+          <Attribute name="Unit">%SubView_Setting#1%</Attribute>
+          <Attribute name="Format">%SubView_Setting#2%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_2</Attribute>
+          <Attribute name="Title">Fördröjning:</Attribute>
+          <Attribute name="Value">*%SubView_Object%_AlaOnDelayHigh</Attribute>
+          <Attribute name="Unit">%SubView_Setting#3%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">TextSelect_1</Attribute>
+          <Attribute name="Title">Larm blockerat:</Attribute>
+          <Attribute name="Value">*%SubView_Object%_Block_Hi</Attribute>
+          <Attribute name="Texts">Nej,Ja</Attribute>
+        </Object>
+        <Object type="Separator">
+          <Attribute name="Name">Separator_1</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_3</Attribute>
+          <Attribute name="Title">Låglarm under börvärde:</Attribute>
+          <Attribute name="Value">*%SubView_Object%_LoAlaLimit</Attribute>
+          <Attribute name="Unit">%SubView_Setting#1%</Attribute>
+          <Attribute name="Format">%SubView_Setting#2%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_4</Attribute>
+          <Attribute name="Title">Fördröjning:</Attribute>
+          <Attribute name="Value">*%SubView_Object%_AlaOnDelayLow</Attribute>
+          <Attribute name="Unit">%SubView_Setting#3%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">TextSelect_2</Attribute>
+          <Attribute name="Title">Larm blockerat:</Attribute>
+          <Attribute name="Value">*%SubView_Object%_Block_Lo</Attribute>
+          <Attribute name="Texts">Nej,Ja</Attribute>
+        </Object>
+        <Object type="Separator">
+          <Attribute name="Name">Separator_2</Attribute>
+        </Object>
+        <Object type="Text">
+          <Attribute name="Name">Text_1</Attribute>
+          <Attribute name="ShowTitle">No</Attribute>
+          <Attribute name="Value">Blockera höglarm vid för hög utetemperatur</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_5</Attribute>
+          <Attribute name="Title">Utetemperatur:</Attribute>
+          <Attribute name="Value">*%ControllerSelected%.BLOCK_UTE_AVV</Attribute>
+          <Attribute name="Unit">°C</Attribute>
+          <Attribute name="Format">1</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

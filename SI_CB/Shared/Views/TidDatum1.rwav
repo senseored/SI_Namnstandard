@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwav" version="2023.1.100.198">
+  <Object type="View">
+    <Attribute name="Name">TidDatum1</Attribute>
+    <Attribute name="Width">149</Attribute>
+    <Attribute name="Height">70</Attribute>
+    <Attribute name="Zoom">100%</Attribute>
+    <Attribute name="ScaleValue">1.00</Attribute>
+    <Attribute name="ServerSideFunctionRPC">accounts.%account%.services.ssf.execute</Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the view. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+        <Attribute name="Default">%Controller%</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all visual elements for the view.</Attribute>
+      <Object type="Symbol">
+        <Attribute name="Name">Controller_Driftfall_NattkRum_Symbol</Attribute>
+        <Attribute name="Pictures">Shared:\SI1\Symbols\banner1.svg</Attribute>
+        <Attribute name="SizeMode">Stretch</Attribute>
+        <Attribute name="Left">0</Attribute>
+        <Attribute name="Top">0</Attribute>
+        <Attribute name="Width">98</Attribute>
+        <Attribute name="Height">70</Attribute>
+      </Object>
+      <Object type="Symbol">
+        <Attribute name="Name">Controller_Driftfall_NattkRum_Symbol_1</Attribute>
+        <Attribute name="Pictures">Shared:\SI1\Symbols\banner1.svg</Attribute>
+        <Attribute name="SizeMode">Stretch</Attribute>
+        <Attribute name="Left">100</Attribute>
+        <Attribute name="Top">0</Attribute>
+        <Attribute name="Width">50</Attribute>
+        <Attribute name="Height">70</Attribute>
+      </Object>
+      <Object type="Symbol">
+        <Attribute name="Name">klickyta1_3</Attribute>
+        <Attribute name="Title">Visa klickytor:</Attribute>
+        <Attribute name="Pictures">Shared:\SI1\Animations\VisaKlickyta.svg</Attribute>
+        <Attribute name="ManeuverStyle">SVGInteraction</Attribute>
+        <Attribute name="Style">SVGAnimation</Attribute>
+        <Attribute name="VisualStyle">Normal</Attribute>
+        <Attribute name="SizeMode">Stretch</Attribute>
+        <Attribute name="Left">105</Attribute>
+        <Attribute name="Top">5</Attribute>
+        <Attribute name="Width">40</Attribute>
+        <Attribute name="Height">60</Attribute>
+      </Object>
+      <Object type="Symbol">
+        <Attribute name="Name">FastighetsKlocka</Attribute>
+        <Attribute name="Value">{ return {
+hour: *%Controller%.QSystem.Hour,
+minute: *%Controller%.QSystem.Minute,
+year: *%Controller%.QSystem.Year,
+month: *%Controller%.QSystem.Month,
+day: *%Controller%.QSystem.Date
+}
+}</Attribute>
+        <Attribute name="Pictures">Shared:\SI1\Animations\fastighetsKlocka.svg</Attribute>
+        <Attribute name="Style">SVGAnimation</Attribute>
+        <Attribute name="Left">0</Attribute>
+        <Attribute name="Top">0</Attribute>
+        <Attribute name="Width">98</Attribute>
+        <Attribute name="Height">70</Attribute>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

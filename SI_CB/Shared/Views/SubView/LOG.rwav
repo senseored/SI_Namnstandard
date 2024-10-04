@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwav" version="2024.1.100.32">
+  <Object type="View">
+    <Attribute name="Name">LOG</Attribute>
+    <Attribute name="Width">565</Attribute>
+    <Attribute name="Height">390</Attribute>
+    <Attribute name="Zoom">100%</Attribute>
+    <Attribute name="ScaleValue">1.00</Attribute>
+    <Attribute name="ServerSideFunctionRPC">accounts.%account%.services.ssf.execute</Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the view. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Title</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Controller</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_File</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Setting</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all visual elements for the view.</Attribute>
+      <Object type="Text">
+        <Attribute name="Name">Text_1</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">Innevarande</Attribute>
+        <Attribute name="FontSize">Medium</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">100</Attribute>
+        <Attribute name="Width">260</Attribute>
+        <Attribute name="Height">30</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">Text_2</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">Föregående</Attribute>
+        <Attribute name="FontSize">Medium</Attribute>
+        <Attribute name="Left">280</Attribute>
+        <Attribute name="Top">100</Attribute>
+        <Attribute name="Width">260</Attribute>
+        <Attribute name="Height">30</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_1</Attribute>
+        <Attribute name="Title">Totalt:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_AccumTotal</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">20</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_2</Attribute>
+        <Attribute name="Title">Timme:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_AccumHour</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">125</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_3</Attribute>
+        <Attribute name="Title">Dygn:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_AccumDay</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">150</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_4</Attribute>
+        <Attribute name="Title">Vecka:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_AccumWeek</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">175</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_5</Attribute>
+        <Attribute name="Title">Månad:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_AccumMonth</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">200</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_6</Attribute>
+        <Attribute name="Title">År:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_AccumYear</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">225</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_7</Attribute>
+        <Attribute name="Title">Timme:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LastHour</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="Left">340</Attribute>
+        <Attribute name="Top">125</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_8</Attribute>
+        <Attribute name="Title">Dygn:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LastDay</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="Left">340</Attribute>
+        <Attribute name="Top">150</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_9</Attribute>
+        <Attribute name="Title">Vecka:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LastWeek</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="Left">340</Attribute>
+        <Attribute name="Top">175</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_10</Attribute>
+        <Attribute name="Title">Månad:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LastMonth</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="Left">340</Attribute>
+        <Attribute name="Top">200</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_11</Attribute>
+        <Attribute name="Title">År:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LastYear</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="Left">340</Attribute>
+        <Attribute name="Top">225</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_12</Attribute>
+        <Attribute name="Title">Måndag:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LastMonday</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="TitlePosition">Above</Attribute>
+        <Attribute name="Left">5</Attribute>
+        <Attribute name="Top">75</Attribute>
+        <Attribute name="Width">100</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">70</Attribute>
+        <Attribute name="TitleHeight">20</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_13</Attribute>
+        <Attribute name="Title">Tisdag:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LastTuesday</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="TitlePosition">Above</Attribute>
+        <Attribute name="Left">85</Attribute>
+        <Attribute name="Top">75</Attribute>
+        <Attribute name="Width">100</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">70</Attribute>
+        <Attribute name="TitleHeight">20</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_14</Attribute>
+        <Attribute name="Title">Onsdag:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LastWednesday</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="TitlePosition">Above</Attribute>
+        <Attribute name="Left">165</Attribute>
+        <Attribute name="Top">75</Attribute>
+        <Attribute name="Width">100</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">70</Attribute>
+        <Attribute name="TitleHeight">20</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_15</Attribute>
+        <Attribute name="Title">Torsdag:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LastThursday</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="TitlePosition">Above</Attribute>
+        <Attribute name="Left">245</Attribute>
+        <Attribute name="Top">75</Attribute>
+        <Attribute name="Width">100</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">70</Attribute>
+        <Attribute name="TitleHeight">20</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_16</Attribute>
+        <Attribute name="Title">Fredag:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LastFriday</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="TitlePosition">Above</Attribute>
+        <Attribute name="Left">325</Attribute>
+        <Attribute name="Top">75</Attribute>
+        <Attribute name="Width">100</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">70</Attribute>
+        <Attribute name="TitleHeight">20</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_17</Attribute>
+        <Attribute name="Title">Lördag:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LastSaturday</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="TitlePosition">Above</Attribute>
+        <Attribute name="Left">405</Attribute>
+        <Attribute name="Top">75</Attribute>
+        <Attribute name="Width">100</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">70</Attribute>
+        <Attribute name="TitleHeight">20</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_18</Attribute>
+        <Attribute name="Title">Söndag:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LastSunday</Attribute>
+        <Attribute name="Unit">%Subview_Setting#1%</Attribute>
+        <Attribute name="Format">%Subview_Setting#2%</Attribute>
+        <Attribute name="TitlePosition">Above</Attribute>
+        <Attribute name="Left">485</Attribute>
+        <Attribute name="Top">75</Attribute>
+        <Attribute name="Width">100</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">70</Attribute>
+        <Attribute name="TitleHeight">20</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">Text_3</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">%SubView_Title%</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="Left">0</Attribute>
+        <Attribute name="Top">0</Attribute>
+        <Attribute name="Width">565</Attribute>
+      </Object>
+      <Object type="ViewContainer">
+        <Attribute name="Name">Alarms</Attribute>
+        <Attribute name="ViewFile">Shared:\SI_CB\Views\SubView\LOG_Larm.rwlv</Attribute>
+        <Attribute name="ViewFileArgumentArray">
+          <Attribute name="Argument">
+            <Attribute name="Name">Controller</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">ControllerSelected</Attribute>
+            <Attribute name="Value">%ControllerSelected%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">System</Attribute>
+            <Attribute name="Value">%System%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Title</Attribute>
+            <Attribute name="Value">%SubView_Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Controller</Attribute>
+            <Attribute name="Value">%SubView_Controller%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Object</Attribute>
+            <Attribute name="Value">%SubView_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Setting</Attribute>
+            <Attribute name="Value">%SubView_Setting%</Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="AllowScroll">No</Attribute>
+        <Attribute name="AllowZoom">No</Attribute>
+        <Attribute name="AllowThumbNailMode">No</Attribute>
+        <Attribute name="Left">0</Attribute>
+        <Attribute name="Top">275</Attribute>
+        <Attribute name="Width">565</Attribute>
+        <Attribute name="Height">115</Attribute>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

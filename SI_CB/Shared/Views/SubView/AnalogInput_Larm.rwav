@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwav" version="2024.1.100.32">
+  <Object type="View">
+    <Attribute name="Name">AnalogInput_Larm</Attribute>
+    <Attribute name="Width">565</Attribute>
+    <Attribute name="Height">390</Attribute>
+    <Attribute name="Zoom">100%</Attribute>
+    <Attribute name="ScaleValue">1.00</Attribute>
+    <Attribute name="ServerSideFunctionRPC">accounts.%account%.services.ssf.execute</Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the view. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Title</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Controller</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_File</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Setting</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all visual elements for the view.</Attribute>
+      <Object type="Text">
+        <Attribute name="Name">Title</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">%SubView_Title%</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="Left">0</Attribute>
+        <Attribute name="Top">0</Attribute>
+        <Attribute name="Width">565</Attribute>
+      </Object>
+      <Object type="ViewContainer">
+        <Attribute name="Name">Input</Attribute>
+        <Attribute name="ViewFile">Shared:\SI_CB\Views\SubView\AnalogInput_Input.rwlv</Attribute>
+        <Attribute name="ViewFileArgumentArray">
+          <Attribute name="Argument">
+            <Attribute name="Name">ControllerSelected</Attribute>
+            <Attribute name="Value">%ControllerSelected%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">System</Attribute>
+            <Attribute name="Value">%System%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Title</Attribute>
+            <Attribute name="Value">%SubView_Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Controller</Attribute>
+            <Attribute name="Value">%SubView_Controller%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Object</Attribute>
+            <Attribute name="Value">%SubView_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Setting</Attribute>
+            <Attribute name="Value">%SubView_Setting%</Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="AllowScroll">No</Attribute>
+        <Attribute name="AllowZoom">No</Attribute>
+        <Attribute name="Visible">No</Attribute>
+        <Attribute name="Left">5</Attribute>
+        <Attribute name="Top">25</Attribute>
+        <Attribute name="Width">275</Attribute>
+        <Attribute name="Height">360</Attribute>
+        <Attribute name="OnOpen">if (%SubView_Setting% == 2){
+    this.visible("Yes")
+}</Attribute>
+      </Object>
+      <Object type="ViewContainer">
+        <Attribute name="Name">Givarblock</Attribute>
+        <Attribute name="ViewFile">Shared:\SI_CB\Views\SubView\AnalogInput_Givare.rwlv</Attribute>
+        <Attribute name="ViewFileArgumentArray">
+          <Attribute name="Argument">
+            <Attribute name="Name">ControllerSelected</Attribute>
+            <Attribute name="Value">%ControllerSelected%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">System</Attribute>
+            <Attribute name="Value">%System%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Title</Attribute>
+            <Attribute name="Value">%SubView_Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Controller</Attribute>
+            <Attribute name="Value">%SubView_Controller%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Object</Attribute>
+            <Attribute name="Value">%SubView_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Setting</Attribute>
+            <Attribute name="Value">%SubView_Setting%</Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="AllowScroll">No</Attribute>
+        <Attribute name="AllowZoom">No</Attribute>
+        <Attribute name="Visible">No</Attribute>
+        <Attribute name="Left">285</Attribute>
+        <Attribute name="Top">25</Attribute>
+        <Attribute name="Width">275</Attribute>
+        <Attribute name="Height">360</Attribute>
+        <Attribute name="OnOpen">if (%SubView_Setting% == 1){
+    this.visible("Yes")
+}</Attribute>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwtv" version="1.0.0.0">
+  <Object type="Chart">
+    <Attribute name="Name">Trend_1</Attribute>
+    <Attribute name="Filters">{%Include("Shared:\SI1\Include\Chart_Filters.include")%}</Attribute>
+    <Attribute name="ServerSideFunctionRPC">accounts.%account%.services.ssf.execute</Attribute>
+    <Attribute name="ServerSideJS">{%Include("Shared:\SI1\Include\Chart_ServerSideJS.include")%}</Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+        <Attribute name="Default">VV_1</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System_Namn</Attribute>
+        <Attribute name="Default">VV1</Attribute>
+      </Object>
+    </Object>
+    <Object type="ChartsFolder">
+      <Attribute name="Name">Charts</Attribute>
+      <Object type="AnalogChart">
+        <Attribute name="Name">AnalogChart</Attribute>
+        <Object type="YAxis">
+          <Attribute name="Name">YAxisLeft</Attribute>
+          <Attribute name="Location">Left</Attribute>
+        </Object>
+        <Object type="YAxis">
+          <Attribute name="Name">YAxisRight</Attribute>
+          <Attribute name="Location">Right</Attribute>
+        </Object>
+        <Object type="AnalogSignal">
+          <Attribute name="Name">Tillopp</Attribute>
+          <Attribute name="Signal">%Controller%.%System%_GT_TILL_1_Output</Attribute>
+          <Attribute name="Title">Tillopp %System_Namn%:</Attribute>
+          <Attribute name="Unit">°C</Attribute>
+          <Attribute name="Color">PaleDarkGreen</Attribute>
+          <Attribute name="Decimals">1</Attribute>
+        </Object>
+        <Object type="AnalogSignal">
+          <Attribute name="Name">Tillopp_BV</Attribute>
+          <Attribute name="Signal">%Controller%.%System%_GT_TILL_1_SetPoint</Attribute>
+          <Attribute name="Title">Tillopp %System_Namn% Börvärde:</Attribute>
+          <Attribute name="Unit">°C</Attribute>
+          <Attribute name="Color">PaleDarkPurple</Attribute>
+          <Attribute name="Decimals">1</Attribute>
+        </Object>
+        <Object type="AnalogSignal">
+          <Attribute name="Name">Retur</Attribute>
+          <Attribute name="Signal">%Controller%.%System%_GT_RETUR_1_Output</Attribute>
+          <Attribute name="Title">Retur %System_Namn%:</Attribute>
+          <Attribute name="Unit">°C</Attribute>
+          <Attribute name="Color">PaleDarkRed</Attribute>
+          <Attribute name="Decimals">1</Attribute>
+        </Object>
+        <Object type="AnalogSignal">
+          <Attribute name="Name">Retur_BV</Attribute>
+          <Attribute name="Signal">%Controller%.%System%_GT_RETUR_1_SetPoint</Attribute>
+          <Attribute name="Title">Retur %System_Namn% Börvärde:</Attribute>
+          <Attribute name="Unit">°C</Attribute>
+          <Attribute name="Color">PaleDarkBlue</Attribute>
+          <Attribute name="Decimals">1</Attribute>
+        </Object>
+      </Object>
+      <Object type="DigitalChart">
+        <Attribute name="Name">DigitalChart</Attribute>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

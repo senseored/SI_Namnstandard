@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwav" version="2024.1.100.20">
+  <Object type="View">
+    <Attribute name="Name">SubView</Attribute>
+    <Attribute name="Picture">Shared:\SI1\Symbols\SubView1.svg</Attribute>
+    <Attribute name="Width">730</Attribute>
+    <Attribute name="Height">400</Attribute>
+    <Attribute name="Zoom">100%</Attribute>
+    <Attribute name="ScaleValue">1</Attribute>
+    <Attribute name="ServerSideFunctionRPC">accounts.%account%.services.ssf.execute</Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the view. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView1_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Börvärde,Kurva,Motionering,Drifttid/Starter,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView1_File</Attribute>
+        <Attribute name="Suggests">Brytare2.rwav,Brytare3.rwav,Brytare4.rwav,BrytareAnalog2.rwav,BrytareAnalog3.rwav,BrytareAnalog4.rwav,Motionpump1.rwlv,DrifttidStarter1.rwav,Variabel1.rwlv,Kurva1.rwav,Larm1_AVV.rwlv,Larm1_H.rwlv,Larm1_H_BLOCK_RUM_UTE.rwlv,Larm1_HL.rwlv,Larm1_HL_BLOCK_RUM_UTE.rwlv,Larm1_HLK.rwlv,Larm1_HLK_BLOCK_RUM_UTE.rwlv,Larm1_HLK_BLOCK_UTE.rwlv,Larm1_L.rwlv,Larm1_LK.rwlv,Larm1_LK_BLOCK_UTE.rwlv,Regulator1_PID.rwlv,RegulatorKaskad1_MAX_MIN.rwlv,RegulatorKaskad1_PID.rwlv,RegulatorKaskad2_PI.rwlv</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView1_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%.</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView1_Object</Attribute>
+        <Attribute name="Suggests">%VS1%_GT_TILL_1</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView1_Setting</Attribute>
+        <Attribute name="Suggests">[[     Brytare     ]],[_Select;Från;Till],[_Select;Från;Till;Auto],[_Select;Från;Halvfart;Helfart;Auto],[_Select;_ManIn;_Output1;0 %;Manuell;Auto],,[[     Variabel1     ]],[Börvärde:;°C;1;PID_VS1_GT_TILL_1_SetP;1],[Tappvarmvatten:;°C;1;PID_VV1_GT_TAPP_1_SetP;1],,[[     Kurva     ]],[8;Utetemp.;Tillopp;°C;°C;1;1;1;1;0;Förskjutning nattsänkning],[8;Utetemp.;Tilluft;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],[8;Utetemp.;Börvärde;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],,[[    Larmgränser     ]],[°C;1;min],[Pa;0;min],[l/s;0;min]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView1_Enable</Attribute>
+        <Attribute name="Default">Yes [1]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView2_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Börvärde,Kurva,Motionering,Drifttid/Starter,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView2_File</Attribute>
+        <Attribute name="Suggests">Brytare2.rwav,Brytare3.rwav,Brytare4.rwav,BrytareAnalog2.rwav,BrytareAnalog3.rwav,BrytareAnalog4.rwav,Motionpump1.rwlv,DrifttidStarter1.rwav,Variabel1.rwlv,Kurva1.rwav,Larm1_AVV.rwlv,Larm1_H.rwlv,Larm1_H_BLOCK_RUM_UTE.rwlv,Larm1_HL.rwlv,Larm1_HL_BLOCK_RUM_UTE.rwlv,Larm1_HLK.rwlv,Larm1_HLK_BLOCK_RUM_UTE.rwlv,Larm1_HLK_BLOCK_UTE.rwlv,Larm1_L.rwlv,Larm1_LK.rwlv,Larm1_LK_BLOCK_UTE.rwlv,Regulator1_PID.rwlv,RegulatorKaskad1_MAX_MIN.rwlv,RegulatorKaskad1_PID.rwlv,RegulatorKaskad2_PI.rwlv</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView2_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%.</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView2_Object</Attribute>
+        <Attribute name="Suggests">%VS1%_GT_TILL_1</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView2_Setting</Attribute>
+        <Attribute name="Suggests">[[     Brytare     ]],[_Select;Från;Till],[_Select;Från;Till;Auto],[_Select;Från;Halvfart;Helfart;Auto],[_Select;_ManIn;_Output1;0 %;Manuell;Auto],,[[     Variabel1     ]],[Börvärde:;°C;1;PID_VS1_GT_TILL_1_SetP;1],[Tappvarmvatten:;°C;1;PID_VV1_GT_TAPP_1_SetP;1],,[[     Kurva     ]],[8;Utetemp.;Tillopp;°C;°C;1;1;1;1;0;Förskjutning nattsänkning],[8;Utetemp.;Tilluft;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],[8;Utetemp.;Börvärde;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],,[[    Larmgränser     ]],[°C;1;min],[Pa;0;min],[l/s;0;min]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView2_Enable</Attribute>
+        <Attribute name="Default">Yes [1]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView3_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Börvärde,Kurva,Motionering,Drifttid/Starter,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView3_File</Attribute>
+        <Attribute name="Suggests">Brytare2.rwav,Brytare3.rwav,Brytare4.rwav,BrytareAnalog2.rwav,BrytareAnalog3.rwav,BrytareAnalog4.rwav,Motionpump1.rwlv,DrifttidStarter1.rwav,Variabel1.rwlv,Kurva1.rwav,Larm1_AVV.rwlv,Larm1_H.rwlv,Larm1_H_BLOCK_RUM_UTE.rwlv,Larm1_HL.rwlv,Larm1_HL_BLOCK_RUM_UTE.rwlv,Larm1_HLK.rwlv,Larm1_HLK_BLOCK_RUM_UTE.rwlv,Larm1_HLK_BLOCK_UTE.rwlv,Larm1_L.rwlv,Larm1_LK.rwlv,Larm1_LK_BLOCK_UTE.rwlv,Regulator1_PID.rwlv,RegulatorKaskad1_MAX_MIN.rwlv,RegulatorKaskad1_PID.rwlv,RegulatorKaskad2_PI.rwlv</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView3_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%.</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView3_Object</Attribute>
+        <Attribute name="Suggests">%VS1%_GT_TILL_1</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView3_Setting</Attribute>
+        <Attribute name="Suggests">[[     Brytare     ]],[_Select;Från;Till],[_Select;Från;Till;Auto],[_Select;Från;Halvfart;Helfart;Auto],[_Select;_ManIn;_Output1;0 %;Manuell;Auto],,[[     Variabel1     ]],[Börvärde:;°C;1;PID_VS1_GT_TILL_1_SetP;1],[Tappvarmvatten:;°C;1;PID_VV1_GT_TAPP_1_SetP;1],,[[     Kurva     ]],[8;Utetemp.;Tillopp;°C;°C;1;1;1;1;0;Förskjutning nattsänkning],[8;Utetemp.;Tilluft;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],[8;Utetemp.;Börvärde;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],,[[    Larmgränser     ]],[°C;1;min],[Pa;0;min],[l/s;0;min]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView3_Enable</Attribute>
+        <Attribute name="Default">Yes [1]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView4_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Börvärde,Kurva,Motionering,Drifttid/Starter,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView4_File</Attribute>
+        <Attribute name="Suggests">Brytare2.rwav,Brytare3.rwav,Brytare4.rwav,BrytareAnalog2.rwav,BrytareAnalog3.rwav,BrytareAnalog4.rwav,Motionpump1.rwlv,DrifttidStarter1.rwav,Variabel1.rwlv,Kurva1.rwav,Larm1_AVV.rwlv,Larm1_H.rwlv,Larm1_H_BLOCK_RUM_UTE.rwlv,Larm1_HL.rwlv,Larm1_HL_BLOCK_RUM_UTE.rwlv,Larm1_HLK.rwlv,Larm1_HLK_BLOCK_RUM_UTE.rwlv,Larm1_HLK_BLOCK_UTE.rwlv,Larm1_L.rwlv,Larm1_LK.rwlv,Larm1_LK_BLOCK_UTE.rwlv,Regulator1_PID.rwlv,RegulatorKaskad1_MAX_MIN.rwlv,RegulatorKaskad1_PID.rwlv,RegulatorKaskad2_PI.rwlv</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView4_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%.</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView4_Object</Attribute>
+        <Attribute name="Suggests">%VS1%_GT_TILL_1</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView4_Setting</Attribute>
+        <Attribute name="Suggests">[[     Brytare     ]],[_Select;Från;Till],[_Select;Från;Till;Auto],[_Select;Från;Halvfart;Helfart;Auto],[_Select;_ManIn;_Output1;0 %;Manuell;Auto],,[[     Variabel1     ]],[Börvärde:;°C;1;PID_VS1_GT_TILL_1_SetP;1],[Tappvarmvatten:;°C;1;PID_VV1_GT_TAPP_1_SetP;1],,[[     Kurva     ]],[8;Utetemp.;Tillopp;°C;°C;1;1;1;1;0;Förskjutning nattsänkning],[8;Utetemp.;Tilluft;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],[8;Utetemp.;Börvärde;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],,[[    Larmgränser     ]],[°C;1;min],[Pa;0;min],[l/s;0;min]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView4_Enable</Attribute>
+        <Attribute name="Default">Yes [1]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView5_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Börvärde,Kurva,Motionering,Drifttid/Starter,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView5_File</Attribute>
+        <Attribute name="Suggests">Brytare2.rwav,Brytare3.rwav,Brytare4.rwav,BrytareAnalog2.rwav,BrytareAnalog3.rwav,BrytareAnalog4.rwav,Motionpump1.rwlv,DrifttidStarter1.rwav,Variabel1.rwlv,Kurva1.rwav,Larm1_AVV.rwlv,Larm1_H.rwlv,Larm1_H_BLOCK_RUM_UTE.rwlv,Larm1_HL.rwlv,Larm1_HL_BLOCK_RUM_UTE.rwlv,Larm1_HLK.rwlv,Larm1_HLK_BLOCK_RUM_UTE.rwlv,Larm1_HLK_BLOCK_UTE.rwlv,Larm1_L.rwlv,Larm1_LK.rwlv,Larm1_LK_BLOCK_UTE.rwlv,Regulator1_PID.rwlv,RegulatorKaskad1_MAX_MIN.rwlv,RegulatorKaskad1_PID.rwlv,RegulatorKaskad2_PI.rwlv</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView5_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%.</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView5_Object</Attribute>
+        <Attribute name="Suggests">%VS1%_GT_TILL_1</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView5_Setting</Attribute>
+        <Attribute name="Suggests">[[     Brytare     ]],[_Select;Från;Till],[_Select;Från;Till;Auto],[_Select;Från;Halvfart;Helfart;Auto],[_Select;_ManIn;_Output1;0 %;Manuell;Auto],,[[     Variabel1     ]],[Börvärde:;°C;1;PID_VS1_GT_TILL_1_SetP;1],[Tappvarmvatten:;°C;1;PID_VV1_GT_TAPP_1_SetP;1],,[[     Kurva     ]],[8;Utetemp.;Tillopp;°C;°C;1;1;1;1;0;Förskjutning nattsänkning],[8;Utetemp.;Tilluft;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],[8;Utetemp.;Börvärde;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],,[[    Larmgränser     ]],[°C;1;min],[Pa;0;min],[l/s;0;min]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView5_Enable</Attribute>
+        <Attribute name="Default">Yes [1]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView6_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Börvärde,Kurva,Motionering,Drifttid/Starter,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView6_File</Attribute>
+        <Attribute name="Suggests">Brytare2.rwav,Brytare3.rwav,Brytare4.rwav,BrytareAnalog2.rwav,BrytareAnalog3.rwav,BrytareAnalog4.rwav,Motionpump1.rwlv,DrifttidStarter1.rwav,Variabel1.rwlv,Kurva1.rwav,Larm1_AVV.rwlv,Larm1_H.rwlv,Larm1_H_BLOCK_RUM_UTE.rwlv,Larm1_HL.rwlv,Larm1_HL_BLOCK_RUM_UTE.rwlv,Larm1_HLK.rwlv,Larm1_HLK_BLOCK_RUM_UTE.rwlv,Larm1_HLK_BLOCK_UTE.rwlv,Larm1_L.rwlv,Larm1_LK.rwlv,Larm1_LK_BLOCK_UTE.rwlv,Regulator1_PID.rwlv,RegulatorKaskad1_MAX_MIN.rwlv,RegulatorKaskad1_PID.rwlv,RegulatorKaskad2_PI.rwlv</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView6_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%.</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView6_Object</Attribute>
+        <Attribute name="Suggests">%VS1%_GT_TILL_1</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView6_Setting</Attribute>
+        <Attribute name="Suggests">[[     Brytare     ]],[_Select;Från;Till],[_Select;Från;Till;Auto],[_Select;Från;Halvfart;Helfart;Auto],[_Select;_ManIn;_Output1;0 %;Manuell;Auto],,[[     Variabel1     ]],[Börvärde:;°C;1;PID_VS1_GT_TILL_1_SetP;1],[Tappvarmvatten:;°C;1;PID_VV1_GT_TAPP_1_SetP;1],,[[     Kurva     ]],[8;Utetemp.;Tillopp;°C;°C;1;1;1;1;0;Förskjutning nattsänkning],[8;Utetemp.;Tilluft;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],[8;Utetemp.;Börvärde;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],,[[    Larmgränser     ]],[°C;1;min],[Pa;0;min],[l/s;0;min]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView6_Enable</Attribute>
+        <Attribute name="Default">Yes [1]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView7_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Börvärde,Kurva,Motionering,Drifttid/Starter,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView7_File</Attribute>
+        <Attribute name="Suggests">Brytare2.rwav,Brytare3.rwav,Brytare4.rwav,BrytareAnalog2.rwav,BrytareAnalog3.rwav,BrytareAnalog4.rwav,Motionpump1.rwlv,DrifttidStarter1.rwav,Variabel1.rwlv,Kurva1.rwav,Larm1_AVV.rwlv,Larm1_H.rwlv,Larm1_H_BLOCK_RUM_UTE.rwlv,Larm1_HL.rwlv,Larm1_HL_BLOCK_RUM_UTE.rwlv,Larm1_HLK.rwlv,Larm1_HLK_BLOCK_RUM_UTE.rwlv,Larm1_HLK_BLOCK_UTE.rwlv,Larm1_L.rwlv,Larm1_LK.rwlv,Larm1_LK_BLOCK_UTE.rwlv,Regulator1_PID.rwlv,RegulatorKaskad1_MAX_MIN.rwlv,RegulatorKaskad1_PID.rwlv,RegulatorKaskad2_PI.rwlv</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView7_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%.</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView7_Object</Attribute>
+        <Attribute name="Suggests">%VS1%_GT_TILL_1</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView7_Setting</Attribute>
+        <Attribute name="Suggests">[[     Brytare     ]],[_Select;Från;Till],[_Select;Från;Till;Auto],[_Select;Från;Halvfart;Helfart;Auto],[_Select;_ManIn;_Output1;0 %;Manuell;Auto],,[[     Variabel1     ]],[Börvärde:;°C;1;PID_VS1_GT_TILL_1_SetP;1],[Tappvarmvatten:;°C;1;PID_VV1_GT_TAPP_1_SetP;1],,[[     Kurva     ]],[8;Utetemp.;Tillopp;°C;°C;1;1;1;1;0;Förskjutning nattsänkning],[8;Utetemp.;Tilluft;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],[8;Utetemp.;Börvärde;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],,[[    Larmgränser     ]],[°C;1;min],[Pa;0;min],[l/s;0;min]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView7_Enable</Attribute>
+        <Attribute name="Default">Yes [1]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView8_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Börvärde,Kurva,Motionering,Drifttid/Starter,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView8_File</Attribute>
+        <Attribute name="Suggests">Brytare2.rwav,Brytare3.rwav,Brytare4.rwav,BrytareAnalog2.rwav,BrytareAnalog3.rwav,BrytareAnalog4.rwav,Motionpump1.rwlv,DrifttidStarter1.rwav,Variabel1.rwlv,Kurva1.rwav,Larm1_AVV.rwlv,Larm1_H.rwlv,Larm1_H_BLOCK_RUM_UTE.rwlv,Larm1_HL.rwlv,Larm1_HL_BLOCK_RUM_UTE.rwlv,Larm1_HLK.rwlv,Larm1_HLK_BLOCK_RUM_UTE.rwlv,Larm1_HLK_BLOCK_UTE.rwlv,Larm1_L.rwlv,Larm1_LK.rwlv,Larm1_LK_BLOCK_UTE.rwlv,Regulator1_PID.rwlv,RegulatorKaskad1_MAX_MIN.rwlv,RegulatorKaskad1_PID.rwlv,RegulatorKaskad2_PI.rwlv</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView8_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%.</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView8_Object</Attribute>
+        <Attribute name="Suggests">%VS1%_GT_TILL_1</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView8_Setting</Attribute>
+        <Attribute name="Suggests">[[     Brytare     ]],[_Select;Från;Till],[_Select;Från;Till;Auto],[_Select;Från;Halvfart;Helfart;Auto],[_Select;_ManIn;_Output1;0 %;Manuell;Auto],,[[     Variabel1     ]],[Börvärde:;°C;1;PID_VS1_GT_TILL_1_SetP;1],[Tappvarmvatten:;°C;1;PID_VV1_GT_TAPP_1_SetP;1],,[[     Kurva     ]],[8;Utetemp.;Tillopp;°C;°C;1;1;1;1;0;Förskjutning nattsänkning],[8;Utetemp.;Tilluft;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],[8;Utetemp.;Börvärde;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],,[[    Larmgränser     ]],[°C;1;min],[Pa;0;min],[l/s;0;min]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView8_Enable</Attribute>
+        <Attribute name="Default">Yes [1]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView9_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Börvärde,Kurva,Motionering,Drifttid/Starter,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView9_File</Attribute>
+        <Attribute name="Suggests">Brytare2.rwav,Brytare3.rwav,Brytare4.rwav,BrytareAnalog2.rwav,BrytareAnalog3.rwav,BrytareAnalog4.rwav,Motionpump1.rwlv,DrifttidStarter1.rwav,Variabel1.rwlv,Kurva1.rwav,Larm1_AVV.rwlv,Larm1_H.rwlv,Larm1_H_BLOCK_RUM_UTE.rwlv,Larm1_HL.rwlv,Larm1_HL_BLOCK_RUM_UTE.rwlv,Larm1_HLK.rwlv,Larm1_HLK_BLOCK_RUM_UTE.rwlv,Larm1_HLK_BLOCK_UTE.rwlv,Larm1_L.rwlv,Larm1_LK.rwlv,Larm1_LK_BLOCK_UTE.rwlv,Regulator1_PID.rwlv,RegulatorKaskad1_MAX_MIN.rwlv,RegulatorKaskad1_PID.rwlv,RegulatorKaskad2_PI.rwlv</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView9_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%.</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView9_Object</Attribute>
+        <Attribute name="Suggests">%VS1%_GT_TILL_1</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView9_Setting</Attribute>
+        <Attribute name="Suggests">[[     Brytare     ]],[_Select;Från;Till],[_Select;Från;Till;Auto],[_Select;Från;Halvfart;Helfart;Auto],[_Select;_ManIn;_Output1;0 %;Manuell;Auto],,[[     Variabel1     ]],[Börvärde:;°C;1;PID_VS1_GT_TILL_1_SetP;1],[Tappvarmvatten:;°C;1;PID_VV1_GT_TAPP_1_SetP;1],,[[     Kurva     ]],[8;Utetemp.;Tillopp;°C;°C;1;1;1;1;0;Förskjutning nattsänkning],[8;Utetemp.;Tilluft;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],[8;Utetemp.;Börvärde;°C;°C;1;1;1;0;0;Förskjutning nattsänkning],,[[    Larmgränser     ]],[°C;1;min],[Pa;0;min],[l/s;0;min]</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView9_Enable</Attribute>
+        <Attribute name="Default">Yes [1]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all visual elements for the view.</Attribute>
+      <Object type="ViewContainer">
+        <Attribute name="Name">LeftPane_ViewContainer</Attribute>
+        <Attribute name="ViewFile">Shared:\SI_CB\Views\SubView.rwlv</Attribute>
+        <Attribute name="ViewFileArgumentArray">
+          <Attribute name="Argument">
+            <Attribute name="Name">Controller</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">ControllerSelected</Attribute>
+            <Attribute name="Value">%ControllerSelected%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">System</Attribute>
+            <Attribute name="Value">%System%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView1_Title</Attribute>
+            <Attribute name="Value">%SubView1_Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView1_File</Attribute>
+            <Attribute name="Value">%SubView1_File%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView1_Controller</Attribute>
+            <Attribute name="Value">%SubView1_Controller%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView1_Object</Attribute>
+            <Attribute name="Value">%SubView1_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView1_Setting</Attribute>
+            <Attribute name="Value">%SubView1_Setting%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView1_Enable</Attribute>
+            <Attribute name="Value">%SubView1_Enable%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView2_Title</Attribute>
+            <Attribute name="Value">%SubView2_Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView2_File</Attribute>
+            <Attribute name="Value">%SubView2_File%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView2_Controller</Attribute>
+            <Attribute name="Value">%SubView2_Controller%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView2_Object</Attribute>
+            <Attribute name="Value">%SubView2_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView2_Setting</Attribute>
+            <Attribute name="Value">%SubView2_Setting%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView2_Enable</Attribute>
+            <Attribute name="Value">%SubView2_Enable%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView3_Title</Attribute>
+            <Attribute name="Value">%SubView3_Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView3_File</Attribute>
+            <Attribute name="Value">%SubView3_File%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView3_Controller</Attribute>
+            <Attribute name="Value">%SubView3_Controller%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView3_Object</Attribute>
+            <Attribute name="Value">%SubView3_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView3_Setting</Attribute>
+            <Attribute name="Value">%SubView3_Setting%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView3_Enable</Attribute>
+            <Attribute name="Value">%SubView3_Enable%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView4_Title</Attribute>
+            <Attribute name="Value">%SubView4_Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView4_File</Attribute>
+            <Attribute name="Value">%SubView4_File%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView4_Controller</Attribute>
+            <Attribute name="Value">%SubView4_Controller%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView4_Object</Attribute>
+            <Attribute name="Value">%SubView4_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView4_Setting</Attribute>
+            <Attribute name="Value">%SubView4_Setting%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView4_Enable</Attribute>
+            <Attribute name="Value">%SubView4_Enable%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView5_Title</Attribute>
+            <Attribute name="Value">%SubView5_Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView5_File</Attribute>
+            <Attribute name="Value">%SubView5_File%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView5_Controller</Attribute>
+            <Attribute name="Value">%SubView5_Controller%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView5_Object</Attribute>
+            <Attribute name="Value">%SubView5_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView5_Setting</Attribute>
+            <Attribute name="Value">%SubView5_Setting%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView5_Enable</Attribute>
+            <Attribute name="Value">%SubView5_Enable%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView6_Title</Attribute>
+            <Attribute name="Value">%SubView6_Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView6_File</Attribute>
+            <Attribute name="Value">%SubView6_File%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView6_Controller</Attribute>
+            <Attribute name="Value">%SubView6_Controller%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView6_Object</Attribute>
+            <Attribute name="Value">%SubView6_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView6_Setting</Attribute>
+            <Attribute name="Value">%SubView6_Setting%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView6_Enable</Attribute>
+            <Attribute name="Value">%SubView6_Enable%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView7_Title</Attribute>
+            <Attribute name="Value">%SubView7_Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView7_File</Attribute>
+            <Attribute name="Value">%SubView7_File%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView7_Controller</Attribute>
+            <Attribute name="Value">%SubView7_Controller%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView7_Object</Attribute>
+            <Attribute name="Value">%SubView7_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView7_Setting</Attribute>
+            <Attribute name="Value">%SubView7_Setting%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView7_Enable</Attribute>
+            <Attribute name="Value">%SubView7_Enable%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView8_Title</Attribute>
+            <Attribute name="Value">%SubView8_Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView8_File</Attribute>
+            <Attribute name="Value">%SubView8_File%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView8_Controller</Attribute>
+            <Attribute name="Value">%SubView8_Controller%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView8_Object</Attribute>
+            <Attribute name="Value">%SubView8_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView8_Setting</Attribute>
+            <Attribute name="Value">%SubView8_Setting%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView8_Enable</Attribute>
+            <Attribute name="Value">%SubView8_Enable%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView9_Title</Attribute>
+            <Attribute name="Value">%SubView9_Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView9_File</Attribute>
+            <Attribute name="Value">%SubView9_File%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView9_Controller</Attribute>
+            <Attribute name="Value">%SubView9_Controller%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView9_Object</Attribute>
+            <Attribute name="Value">%SubView9_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView9_Setting</Attribute>
+            <Attribute name="Value">%SubView9_Setting%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView9_Enable</Attribute>
+            <Attribute name="Value">%SubView9_Enable%</Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="AllowScroll">No</Attribute>
+        <Attribute name="AllowZoom">No</Attribute>
+        <Attribute name="Left">5</Attribute>
+        <Attribute name="Top">5</Attribute>
+        <Attribute name="Width">150</Attribute>
+        <Attribute name="Height">390</Attribute>
+      </Object>
+      <Object type="ViewContainer">
+        <Attribute name="Name">SubView_ViewContainer</Attribute>
+        <Attribute name="AllowScroll">No</Attribute>
+        <Attribute name="AllowZoom">No</Attribute>
+        <Attribute name="Left">160</Attribute>
+        <Attribute name="Top">5</Attribute>
+        <Attribute name="Width">565</Attribute>
+        <Attribute name="Height">390</Attribute>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

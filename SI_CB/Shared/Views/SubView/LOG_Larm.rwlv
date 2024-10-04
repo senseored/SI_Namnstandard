@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwlv" version="2024.1.100.32">
+  <Object type="ListView">
+    <Attribute name="Name">LOG_Larm</Attribute>
+    <Attribute name="Title">%Subview_Title%</Attribute>
+    <Attribute name="ShowLines">No</Attribute>
+    <Attribute name="MaxColumnWidth">565</Attribute>
+    <Attribute name="AlwaysShowSpaceForIcons">No</Attribute>
+    <Attribute name="MoreCommandIcon"></Attribute>
+    <Attribute name="OnOpen"></Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the listview file. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Controller</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Setting</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all elements for the listview file.</Attribute>
+      <Object type="Table">
+        <Attribute name="Name">UnnamedTable_1</Attribute>
+        <Attribute name="Title">Larm</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="NoOfValueColumns">4</Attribute>
+        <Attribute name="PercentWidth">44</Attribute>
+        <Attribute name="MinTitleWidth">80</Attribute>
+        <Attribute name="ShowSpace">No</Attribute>
+        <Attribute name="FontSize">Small</Attribute>
+        <Object type="TableValueColumn">
+          <Attribute name="Name">Larm</Attribute>
+          <Attribute name="Title">Larmgräns</Attribute>
+          <Attribute name="ShowTitle">Yes</Attribute>
+          <Attribute name="Column">1</Attribute>
+          <Attribute name="Alignment">Right</Attribute>
+          <Attribute name="PercentWidth">18</Attribute>
+        </Object>
+        <Object type="TableValueColumn">
+          <Attribute name="Name">Fördröjning</Attribute>
+          <Attribute name="ShowTitle">Yes</Attribute>
+          <Attribute name="Column">2</Attribute>
+          <Attribute name="Alignment">Right</Attribute>
+          <Attribute name="PercentWidth">17</Attribute>
+        </Object>
+        <Object type="TableValueColumn">
+          <Attribute name="Name">Enhet</Attribute>
+          <Attribute name="ShowTitle">Yes</Attribute>
+          <Attribute name="Column">3</Attribute>
+          <Attribute name="MinWidth">25</Attribute>
+        </Object>
+        <Object type="TableValueColumn">
+          <Attribute name="Name">Status</Attribute>
+          <Attribute name="ShowTitle">Yes</Attribute>
+          <Attribute name="Column">4</Attribute>
+          <Attribute name="Alignment">Center</Attribute>
+          <Attribute name="PercentWidth">10</Attribute>
+          <Attribute name="MinWidth">20</Attribute>
+        </Object>
+        <Object type="TableRow">
+          <Attribute name="Name">DayAlarm</Attribute>
+          <Attribute name="Title">Hög dygnsförbrukning:</Attribute>
+          <Attribute name="ShowTitle">Yes</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Object type="Numeric">
+            <Attribute name="Name">DayHighAlarmLimit</Attribute>
+            <Attribute name="ValueColumn">1</Attribute>
+            <Attribute name="Title">Låglarm B-larm</Attribute>
+            <Attribute name="ShowTitle">No</Attribute>
+            <Attribute name="Value">*%SubView_Controller%%SubView_Object%_DayHighAlarmLimit</Attribute>
+            <Attribute name="Unit">%SubView_Setting#1%</Attribute>
+            <Attribute name="Format">%SubView_Setting#2%</Attribute>
+            <Attribute name="ManeuverStyle">DialogBox</Attribute>
+            <Attribute name="Enabled">Yes</Attribute>
+            <Attribute name="FontSize"></Attribute>
+            <Attribute name="IconSize"></Attribute>
+            <Attribute name="Visible">Yes</Attribute>
+          </Object>
+          <Object type="Numeric">
+            <Attribute name="Name">DayHighAlarm_DelayValue</Attribute>
+            <Attribute name="ValueColumn">2</Attribute>
+            <Attribute name="Title">Låglarmgräns B-larm:</Attribute>
+            <Attribute name="ShowTitle">No</Attribute>
+            <Attribute name="Value">*%SubView_Controller%%SubView_Object%_DayHighAlarm_DelayValue</Attribute>
+            <Attribute name="Format">0</Attribute>
+            <Attribute name="ManeuverStyle">DialogBox</Attribute>
+            <Attribute name="Enabled">Yes</Attribute>
+            <Attribute name="FontSize"></Attribute>
+            <Attribute name="IconSize"></Attribute>
+            <Attribute name="Visible">Yes</Attribute>
+            <Attribute name="OnOpen">if (this.value()&gt;=-1){
+    this.view.DayAlarm.visible("Yes");
+}</Attribute>
+            <Attribute name="OnChanged">if (this.value()&gt;=-1){
+    this.view.DayAlarm.visible("Yes");
+}</Attribute>
+          </Object>
+          <Object type="TextSelect">
+            <Attribute name="Name">DayHighAlarmText</Attribute>
+            <Attribute name="ValueColumn">3</Attribute>
+            <Attribute name="ShowTitle">No</Attribute>
+            <Attribute name="Value">*%SubView_Controller%%SubView_Object%_DayHighAlarm_DelayUnit</Attribute>
+            <Attribute name="Texts">-,Sekunder,Minuter,Timmar</Attribute>
+            <Attribute name="ValueNames">-,Sekunder,Minuter,Timmar</Attribute>
+            <Attribute name="ManeuverStyle">DialogBox</Attribute>
+            <Attribute name="FontSize"></Attribute>
+            <Attribute name="IconSize"></Attribute>
+            <Attribute name="Visible">Yes</Attribute>
+          </Object>
+          <Object type="Symbol">
+            <Attribute name="Name">DayHighAlarmSymbol</Attribute>
+            <Attribute name="ValueColumn">4</Attribute>
+            <Attribute name="ShowTitle">No</Attribute>
+            <Attribute name="Value">*%SubView_Controller%%SubView_Object%_DayHighAlarm_Status</Attribute>
+            <Attribute name="Pictures">,Shared:\SI_CB\Symbols\AlarmStatus1.svg,Shared:\SI_CB\Symbols\AlarmStatus2.svg,Shared:\SI_CB\Symbols\AlarmStatus3.svg,,Shared:\SI_CB\Symbols\AlarmStatus5.svg,,Shared:\SI_CB\Symbols\AlarmStatus7.svg</Attribute>
+            <Attribute name="FontSize"></Attribute>
+            <Attribute name="IconSize"></Attribute>
+            <Attribute name="PictureSize">NormalList</Attribute>
+          </Object>
+        </Object>
+        <Object type="TableRow">
+          <Attribute name="Name">MonthAlarm</Attribute>
+          <Attribute name="Title">Hög månadsförbrukning:</Attribute>
+          <Attribute name="ShowTitle">Yes</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Object type="Numeric">
+            <Attribute name="Name">MonthHighAlarmLimit</Attribute>
+            <Attribute name="ValueColumn">1</Attribute>
+            <Attribute name="Title">Låglarm B-larm</Attribute>
+            <Attribute name="ShowTitle">No</Attribute>
+            <Attribute name="Value">*%SubView_Controller%%SubView_Object%_MonthHighAlarmLimit</Attribute>
+            <Attribute name="Unit">%SubView_Setting#1%</Attribute>
+            <Attribute name="Format">%SubView_Setting#2%</Attribute>
+            <Attribute name="ManeuverStyle">DialogBox</Attribute>
+            <Attribute name="Enabled">Yes</Attribute>
+            <Attribute name="FontSize"></Attribute>
+            <Attribute name="IconSize"></Attribute>
+            <Attribute name="Visible">Yes</Attribute>
+          </Object>
+          <Object type="Numeric">
+            <Attribute name="Name">MonthHighAlarm_DelayValue</Attribute>
+            <Attribute name="ValueColumn">2</Attribute>
+            <Attribute name="Title">Låglarmgräns B-larm:</Attribute>
+            <Attribute name="ShowTitle">No</Attribute>
+            <Attribute name="Value">*%SubView_Controller%%SubView_Object%_MonthHighAlarm_DelayValue</Attribute>
+            <Attribute name="Format">0</Attribute>
+            <Attribute name="ManeuverStyle">DialogBox</Attribute>
+            <Attribute name="Enabled">Yes</Attribute>
+            <Attribute name="FontSize"></Attribute>
+            <Attribute name="IconSize"></Attribute>
+            <Attribute name="Visible">Yes</Attribute>
+            <Attribute name="OnOpen">if (this.value()&gt;=-1){
+    this.view.MonthAlarm.visible("Yes");
+}</Attribute>
+            <Attribute name="OnChanged">if (this.value()&gt;=-1){
+    this.view.MonthAlarm.visible("Yes");
+}</Attribute>
+          </Object>
+          <Object type="TextSelect">
+            <Attribute name="Name">MonthHighAlarmText</Attribute>
+            <Attribute name="ValueColumn">3</Attribute>
+            <Attribute name="ShowTitle">No</Attribute>
+            <Attribute name="Value">*%SubView_Controller%%SubView_Object%_MonthHighAlarm_DelayUnit</Attribute>
+            <Attribute name="Texts">-,Sekunder,Minuter,Timmar</Attribute>
+            <Attribute name="ValueNames">-,Sekunder,Minuter,Timmar</Attribute>
+            <Attribute name="ManeuverStyle">DialogBox</Attribute>
+            <Attribute name="FontSize"></Attribute>
+            <Attribute name="IconSize"></Attribute>
+            <Attribute name="Visible">Yes</Attribute>
+          </Object>
+          <Object type="Symbol">
+            <Attribute name="Name">MonthHighAlarmSymbol</Attribute>
+            <Attribute name="ValueColumn">4</Attribute>
+            <Attribute name="ShowTitle">No</Attribute>
+            <Attribute name="Value">*%SubView_Controller%%SubView_Object%_MonthHighAlarm_Status</Attribute>
+            <Attribute name="Pictures">,Shared:\SI_CB\Symbols\AlarmStatus1.svg,Shared:\SI_CB\Symbols\AlarmStatus2.svg,Shared:\SI_CB\Symbols\AlarmStatus3.svg,,Shared:\SI_CB\Symbols\AlarmStatus5.svg,,Shared:\SI_CB\Symbols\AlarmStatus7.svg</Attribute>
+            <Attribute name="FontSize"></Attribute>
+            <Attribute name="IconSize"></Attribute>
+            <Attribute name="PictureSize">NormalList</Attribute>
+          </Object>
+        </Object>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>
