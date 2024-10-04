@@ -21,7 +21,7 @@
 | Utgångar | Signaltyp | Beskrivning |
 | --- | --- | --- |
 | StartOut | L | Startsignal med fördörjning |
-| StartOutDirect | Startsignal utan fördröjning |
+| StartOutDirect | L | Startsignal utan fördröjning |
 
 ## Namnstandard
 
