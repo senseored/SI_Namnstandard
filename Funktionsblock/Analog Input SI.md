@@ -2,6 +2,8 @@
 
 ## Beskrivning
 
+(img/Analog Input SI.png)
+
 | Ingång | Signaltyp | Beskrivning |
 | --- | --- | --- |
 | Input | R | Ingång, binds till AI_-ingång. |
