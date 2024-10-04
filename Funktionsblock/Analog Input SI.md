@@ -1,7 +1,7 @@
 # AI/Analog Ingång
 
 ## Beskrivning
-![Alt text](/img/Analog Input SI.PNG?raw=true "Optional Title")
+![Alt text]("/img/Analog Input SI.PNG?raw=true" "Optional Title")
 ![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
 ![alt text](/img/Analog Input SI.PNG?raw=true)
 
