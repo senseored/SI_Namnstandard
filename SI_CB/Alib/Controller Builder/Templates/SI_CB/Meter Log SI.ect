@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigTemplate format="ControllerBuilder">
+  <Name>Meter Log SI</Name>
+  <Type>Block</Type>
+  <Description>Förbrukning logg</Description>
+  <Icon>Alib:\Controller Builder\Icons\Trend Calculation.ico</Icon>
+  <Advanced>No</Advanced>
+  <Revision />
+  <About />
+  <Parameter name="EmbeddAllSubBlocksInThisTemplate">False</Parameter>
+  <Parameter name="EmbeddAllPicturesInThisTemplate">False</Parameter>
+  <Object type="Block">
+    <Name>LOG</Name>
+    <Attribute name="UserTitle">Energi/Volym</Attribute>
+    <Attribute name="SubSystemTitle">%SubSystemTitle% %UserTitle%</Attribute>
+    <Attribute name="ConnectionPoints">
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Input</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Blocked</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SynchInput</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SynchTotal</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SynchHour</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SynchDay</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SynchWeek</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SynchMonth</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SynchYear</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SynchReset</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">AccumTotal</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">AccumHour</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">AccumDay</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">AccumWeek</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">AccumMonth</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">AccumYear</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LastHour</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LastDay</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LastWeek</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LastMonth</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LastYear</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LastMonday</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LastTuesday</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LastWednesday</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LastThursday</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LastFriday</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LastSaturday</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LastSunday</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">ReCalculate</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Factor</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Logging</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Reset</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">DayHighAlarmLimit</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">MonthHighAlarmLimit</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Activated</Attribute>
+        <Attribute name="InitValue">Ja [1]</Attribute>
+      </Attribute>
+    </Attribute>
+    <Attribute name="Top">85</Attribute>
+    <Attribute name="Left">525</Attribute>
+    <Object type="TypeInfo">
+      <Attribute name="TypeTitle">Ackumulera värden</Attribute>
+      <Attribute name="Icon">Alib:\Controller Builder\Icons\Trend Calculation.ico</Attribute>
+      <Attribute name="Description">Objekt för att ackumulerar värden för innevarande och föregående timme/dag/vecka/månad/år.</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>Input</Name>
+      <Attribute name="ToolTitle">Ingång</Attribute>
+      <Attribute name="Description">Ingång för värdet som ska ackumuleras</Attribute>
+      <Attribute name="SignalType">Input</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">45</Attribute>
+      <Attribute name="Left">45</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>Blocked</Name>
+      <Attribute name="ToolTitle">Blockera larm</Attribute>
+      <Attribute name="Description">Blockera larm</Attribute>
+      <Attribute name="SignalType">Input</Attribute>
+      <Attribute name="DataType">L</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">115</Attribute>
+      <Attribute name="Left">115</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>SynchInput</Name>
+      <Attribute name="ToolTitle">Synk. ingång</Attribute>
+      <Attribute name="Description">Synk. ingång (spegling av värdet på ingången)</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">60</Attribute>
+      <Attribute name="Left">60</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>SynchTotal</Name>
+      <Attribute name="ToolTitle">Synk. totalt</Attribute>
+      <Attribute name="Description">Synk. totalt (startvärde)</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">75</Attribute>
+      <Attribute name="Left">75</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>SynchHour</Name>
+      <Attribute name="ToolTitle">Synk. timme</Attribute>
+      <Attribute name="Description">Synk. timme (startvärde)</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">90</Attribute>
+      <Attribute name="Left">90</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>SynchDay</Name>
+      <Attribute name="ToolTitle">Synk. dag</Attribute>
+      <Attribute name="Description">Synk. dag (startvärde)</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">105</Attribute>
+      <Attribute name="Left">105</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>SynchWeek</Name>
+      <Attribute name="ToolTitle">Synk. vecka</Attribute>
+      <Attribute name="Description">Synk. vecka (startvärde)</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">120</Attribute>
+      <Attribute name="Left">120</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>SynchMonth</Name>
+      <Attribute name="ToolTitle">Synk. månad</Attribute>
+      <Attribute name="Description">Synk. månad (startvärde)</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">135</Attribute>
+      <Attribute name="Left">135</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>SynchYear</Name>
+      <Attribute name="ToolTitle">Synk. år</Attribute>
+      <Attribute name="Description">Synk. år (startvärde)</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">150</Attribute>
+      <Attribute name="Left">150</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>SynchReset</Name>
+      <Attribute name="ToolTitle">Synk. nollställ</Attribute>
+      <Attribute name="Description">Synk. nollställ (värdet på ingången vid nollställning)</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">165</Attribute>
+      <Attribute name="Left">165</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>AccumTotal</Name>
+      <Attribute name="ToolTitle">Totalt</Attribute>
+      <Attribute name="Description">Ackumulerat totalt</Attribute>
+      <Attribute name="SignalType">Output</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">180</Attribute>
+      <Attribute name="Left">180</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>AccumHour</Name>
+      <Attribute name="ToolTitle">Innevarande timme</Attribute>
+      <Attribute name="Description">Ackumulerat innevarande timme</Attribute>
+      <Attribute name="SignalType">Output</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">195</Attribute>
+      <Attribute name="Left">195</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>AccumDay</Name>
+      <Attribute name="ToolTitle">Innevarande dag</Attribute>
+      <Attribute name="Description">Ackumulerat innevarande dag</Attribute>
+      <Attribute name="SignalType">Output</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">210</Attribute>
+      <Attribute name="Left">210</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>AccumWeek</Name>
+      <Attribute name="ToolTitle">Innevarande vecka</Attribute>
+      <Attribute name="Description">Ackumulerat innevarande vecka</Attribute>
+      <Attribute name="SignalType">Output</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">225</Attribute>
+      <Attribute name="Left">225</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>AccumMonth</Name>
+      <Attribute name="ToolTitle">Innevarande månad</Attribute>
+      <Attribute name="Description">Ackumulerat innevarande månad</Attribute>
+      <Attribute name="SignalType">Output</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">240</Attribute>
+      <Attribute name="Left">240</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>AccumYear</Name>
+      <Attribute name="ToolTitle">Innevarande år</Attribute>
+      <Attribute name="Description">Ackumulerat innevarande år</Attribute>
+      <Attribute name="SignalType">Output</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">255</Attribute>
+      <Attribute name="Left">255</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>LastHour</Name>
+      <Attribute name="ToolTitle">Föregående timme</Attribute>
+      <Attribute name="Description">Ackumulerat föregående timme</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">270</Attribute>
+      <Attribute name="Left">270</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>LastDay</Name>
+      <Attribute name="ToolTitle">Föregående dag</Attribute>
+      <Attribute name="Description">Ackumulerat föregående dag</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">285</Attribute>
+      <Attribute name="Left">285</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>LastWeek</Name>
+      <Attribute name="ToolTitle">Föregående vecka</Attribute>
+      <Attribute name="Description">Ackumulerat föregående vecka</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">300</Attribute>
+      <Attribute name="Left">300</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>LastMonth</Name>
+      <Attribute name="ToolTitle">Föregående månad</Attribute>
+      <Attribute name="Description">Ackumulerat föregående månad</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">315</Attribute>
+      <Attribute name="Left">315</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>LastYear</Name>
+      <Attribute name="ToolTitle">Föregående år</Attribute>
+      <Attribute name="Description">Ackumulerat föregående år</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">330</Attribute>
+      <Attribute name="Left">330</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>LastMonday</Name>
+      <Attribute name="ToolTitle">Föregående måndag</Attribute>
+      <Attribute name="Description">Ackumulerat föregående dag</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">10</Attribute>
+      <Attribute name="Left">10</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>LastTuesday</Name>
+      <Attribute name="ToolTitle">Föregående tisdag</Attribute>
+      <Attribute name="Description">Ackumulerat föregående dag</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">25</Attribute>
+      <Attribute name="Left">25</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>LastWednesday</Name>
+      <Attribute name="ToolTitle">Föregående onsdag</Attribute>
+      <Attribute name="Description">Ackumulerat föregående dag</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">40</Attribute>
+      <Attribute name="Left">40</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>LastThursday</Name>
+      <Attribute name="ToolTitle">Föregående torsdag</Attribute>
+      <Attribute name="Description">Ackumulerat föregående dag</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">55</Attribute>
+      <Attribute name="Left">55</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>LastFriday</Name>
+      <Attribute name="ToolTitle">Föregående fredag</Attribute>
+      <Attribute name="Description">Ackumulerat föregående dag</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">70</Attribute>
+      <Attribute name="Left">70</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>LastSaturday</Name>
+      <Attribute name="ToolTitle">Föregående lördag</Attribute>
+      <Attribute name="Description">Ackumulerat föregående dag</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">85</Attribute>
+      <Attribute name="Left">85</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>LastSunday</Name>
+      <Attribute name="ToolTitle">Föregående söndag</Attribute>
+      <Attribute name="Description">Ackumulerat föregående dag</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">100</Attribute>
+      <Attribute name="Left">100</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>ReCalculate</Name>
+      <Attribute name="ToolTitle">Räkna om</Attribute>
+      <Attribute name="Description">Defenierar om objektet automatisk skall räkna om och ta hänsyn till om mätarställningen nollställs vid omlastning</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">L</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Suggests"> "Nej [0]","Ja [1]"</Attribute>
+      <Attribute name="Top">345</Attribute>
+      <Attribute name="Left">345</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>Factor</Name>
+      <Attribute name="ToolTitle">Faktor</Attribute>
+      <Attribute name="Description">Defeniera en faktor för det här objektet. Faktorn gäller för samtliga värden som ackumuleras. (exempel för energi, ange 1000 för att göra om MWh till kWh)</Attribute>
+      <Attribute name="SignalType">Parameter</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">1</Attribute>
+      <Attribute name="Top">360</Attribute>
+      <Attribute name="Left">360</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>Logging</Name>
+      <Attribute name="ToolTitle">Logging</Attribute>
+      <Attribute name="Description">Signal för logging, counting (sum)</Attribute>
+      <Attribute name="SignalType">Output</Attribute>
+      <Attribute name="DataType">R</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">375</Attribute>
+      <Attribute name="Left">375</Attribute>
+    </Object>
+    <Object type="Signal">
+      <Name>Reset</Name>
+      <Attribute name="ToolTitle">Nollställ</Attribute>
+      <Attribute name="Description">Nollställ alla ackumulerade värden</Attribute>
+      <Attribute name="SignalType">Command</Attribute>
+      <Attribute name="DataType">L</Attribute>
+      <Attribute name="Default">0</Attribute>
+      <Attribute name="Top">390</Attribute>
+      <Attribute name="Left">390</Attribute>
+    </Object>
+    <Object type="Group">
+      <Name>Internal</Name>
+      <Object type="EXOLVariables">
+        <Name>Variables</Name>
+        <Attribute name="Variables">
+  L SetRefreshAlarm
+  L SetDayHighAlarm
+  L SetMonthHighAlarm
+
+  X OldHour = 0 ; Internal to determine if we have a new hour
+  X OldWDay = 0 ; Internal to determine if we have a new day   
+  X OldMonth = 0 ; Internal to determine if we have a new month
+  X OldYear = 0 ; Internal to determine if we have a new year
+</Attribute>
+        <Attribute name="Top">490</Attribute>
+        <Attribute name="Left">140</Attribute>
+      </Object>
+      <Object type="EXOLCode">
+        <Name>Code</Name>
+        <Attribute name="Code">
+  If Reset                                
+    R SynchInput        = Input*Factor    ; Synchronize input                  
+    R SynchTotal        = 0               ; Synchronize total
+    R SynchHour         = 0               ; Synchronize hour
+    R SynchDay          = 0               ; Synchronize day
+    R SynchWeek         = 0               ; Synchronize week
+    R SynchMonth        = 0               ; Synchronize month
+    R SynchYear         = 0               ; Synchronize year  
+    R SynchReset        = -Input*Factor   ; Synchronize reset  
+    R AccumTotal        = 0               ; Total     
+    R AccumHour         = 0               ; Current hour
+    R AccumDay          = 0               ; Current day
+    R AccumWeek         = 0               ; Current week
+    R AccumMonth        = 0               ; Current month
+    R AccumYear         = 0               ; Current year
+    R LastHour          = 0               ; Previous hour
+    R LastDay           = 0               ; Previous day
+    R LastWeek          = 0               ; Previous week
+    R LastMonth         = 0               ; Previous month
+    R LastYear          = 0               ; Previous year      
+    R Logging           = 0               ; Logging
+    L Reset             = False!          ; Reset accumulated values 
+  EndIf                                 
+  
+  If StartUpFlag      
+    X OldHour  = Hour
+    X OldWDay  = WDay    
+    X OldMonth = Month
+    X OldYear  = Year     
+    If ReCalculate And CmpR( (Input*Factor) &lt; SynchInput )
+      R SynchTotal = SynchInput + SynchTotal + SynchReset
+      R SynchInput = 0                                   
+      R SynchReset = 0
+    EndIf                  
+  Else
+    If CmpR( (Input*Factor) &gt; SynchInput )        
+      If CmpR( SynchInput &lt;&gt; 0 )
+        R Logging = Logging + ((Input*Factor) - SynchInput)
+      EndIf              
+      R SynchInput = Input*Factor       
+    EndIf
+  EndIf 
+    
+  If CmpR( (SynchInput + SynchTotal + SynchReset) &lt;&gt; AccumTotal ) 
+    R AccumTotal = SynchInput + SynchTotal + SynchReset       
+    R AccumHour  = AccumTotal - SynchHour
+    R AccumDay   = AccumTotal - SynchDay
+    R AccumWeek  = AccumTotal - SynchWeek
+    R AccumMonth = AccumTotal - SynchMonth
+    R AccumYear  = AccumTotal - SynchYear 
+  EndIf 
+
+  If CmpX( OldHour &lt;&gt; Hour )  
+    R SynchHour = AccumTotal
+    R LastHour  = AccumHour
+    R AccumHour = 0           
+    X OldHour   = Hour
+  EndIf
+         
+  If CmpX( OldWDay &lt;&gt; WDay ) 
+    If CmpX(WDay = 1)
+      R SynchWeek = AccumTotal
+      R LastWeek  = AccumWeek  
+      R AccumWeek = 0
+      R LastSunday = AccumDay
+    ElseIf CmpX(WDay = 2)
+      R LastMonday = AccumDay
+    ElseIf CmpX(WDay = 3)
+      R LastTuesday = AccumDay
+    ElseIf CmpX(WDay = 4)
+      R LastWednesday = AccumDay
+    ElseIf CmpX(WDay = 5)
+      R LastThursday = AccumDay
+    ElseIf CmpX(WDay = 6)
+      R LastFriday = AccumDay
+    ElseIf CmpX(WDay = 7)
+      R LastSaturday = AccumDay
+    EndIf  
+    R SynchDay = AccumTotal
+    R LastDay  = AccumDay
+    R AccumDay = 0    
+    X OldWDay  = WDay
+  EndIf 
+  
+  If CmpX( OldMonth &lt;&gt; Month )
+    R SynchMonth = AccumTotal
+    R LastMonth  = AccumMonth   
+    R AccumMonth = 0    
+    X OldMonth   = Month
+  EndIf  
+  
+  If CmpX( OldYear &lt;&gt; Year )
+    R SynchYear = AccumTotal
+    R LastYear  = AccumYear           
+    R AccumYear = 0    
+    X OldYear   = Year
+  EndIf 
+
+  If CmpT(0.001, AccumDay &lt;&gt; 0) And CmpT(0.001, LastMonth &lt;&gt; 0) 
+    L Activated = 1
+  Endif 
+  
+  If CmpT(0.001, AccumDay &lt;&gt; 0) Or Blocked Or /Activated Or StartUpFlag 
+    L SetRefreshAlarm = 0
+    
+    Else  
+    If CmpT(0.001, LastMonth = 0) 
+      L SetRefreshAlarm = 1
+  
+    EndIf      
+  EndIf    
+      
+If CmpR(AccumDay&gt;DayHighAlarmLimit)
+    L SetDayHighAlarm = 1
+Else
+    L SetDayHighAlarm = 0
+EndIf 
+
+If CmpR(AccumMonth&gt;MonthHighAlarmLimit)
+    L SetMonthHighAlarm = 1
+Else
+    L SetMonthHighAlarm = 0
+EndIf
+    
+</Attribute>
+        <Attribute name="Top">580</Attribute>
+        <Attribute name="Left">460</Attribute>
+      </Object>
+    </Object>
+    <Object type="Group">
+      <Name>Alarms</Name>
+      <Object type="AlarmPoint">
+        <Name>RefreshAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Inga nya värden</Attribute>
+        </Attribute>
+        <Attribute name="Active">Yes</Attribute>
+        <Attribute name="Priority">
+          <Attribute name="InitValue">B</Attribute>
+        </Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*SetRefreshAlarm</Attribute>
+        </Attribute>
+        <Attribute name="Delay">
+          <Attribute name="InitValue">10</Attribute>
+        </Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">210</Attribute>
+        <Attribute name="Left">805</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>DayHighAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Hög dygnsförbrukning</Attribute>
+        </Attribute>
+        <Attribute name="Active">Yes</Attribute>
+        <Attribute name="Priority">
+          <Attribute name="InitValue">B</Attribute>
+        </Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*SetDayHighAlarm</Attribute>
+        </Attribute>
+        <Attribute name="Delay">
+          <Attribute name="InitValue">60</Attribute>
+        </Attribute>
+        <Attribute name="DelayUnit">
+          <Attribute name="InitValue">Minutes[2]</Attribute>
+        </Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">300</Attribute>
+        <Attribute name="Left">840</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>MonthHighAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Hög månadsförbrukning</Attribute>
+        </Attribute>
+        <Attribute name="Active">Yes</Attribute>
+        <Attribute name="Priority">
+          <Attribute name="InitValue">B</Attribute>
+        </Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*SetMonthHighAlarm</Attribute>
+        </Attribute>
+        <Attribute name="Delay">
+          <Attribute name="InitValue">60</Attribute>
+        </Attribute>
+        <Attribute name="DelayUnit">
+          <Attribute name="InitValue">Minutes[2]</Attribute>
+        </Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">420</Attribute>
+        <Attribute name="Left">855</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>General</Name>
+      <Object type="Signal">
+        <Name>DayHighAlarmLimit</Name>
+        <Attribute name="ToolTitle">Day High Limit</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="Default">1000</Attribute>
+        <Attribute name="Top">50</Attribute>
+        <Attribute name="Left">180</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>MonthHighAlarmLimit</Name>
+        <Attribute name="ToolTitle">Month High Limit</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="Default">10000</Attribute>
+        <Attribute name="Top">10</Attribute>
+        <Attribute name="Left">10</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Activated</Name>
+        <Attribute name="ToolTitle">Aktiverad Larm</Attribute>
+        <Attribute name="Description">Funktion aktiverad (sätt automatsikt till ja när värden kommit in föregående månad samt innevarande dag)</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="Suggests"> "Nej [0]","Ja [1]"</Attribute>
+        <Attribute name="Top">40</Attribute>
+        <Attribute name="Left">40</Attribute>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigTemplate>
