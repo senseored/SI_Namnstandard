@@ -12,7 +12,7 @@ Värden skapas genom %SubView_Controller%%SubView_Object%%SubView_Setting#X% dä
 ## Variabler
 
 ## Setting
-[#1,#2,#3,#4,#5]
+[#1;#2;#3;#4;#5]
 
 ### Förklaringar
 1: Beskrivning av värdet (t.ex. "Börvärde:")

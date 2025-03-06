@@ -10,7 +10,7 @@ Visar upp till 9st larm med larmgränser (typ Variabel.rwlv, fast larm istället
 ## Variabler
 
 ## Setting
-[#1,#2,#3,#4,#5]
+[#1;#2;#3;#4;#5]
 
 ### Förklaringar
 1: Beskrivning av larmet (t.ex. "GT11 Gräns höglarm B-larm:")
@@ -31,4 +31,3 @@ Visar upp till 9st larm med larmgränser (typ Variabel.rwlv, fast larm istället
 | File | Filnamn | AnalogInput_Larm.rwlv |
 | Controller | Duc | %Controller%. |
 | Object | Givare | %VS1%_GT_TILL_1 |
-| Setting | [Enhet;Decimaler] | [kPa;0] |
