@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwlv" version="2024.1.100.32">
+  <Object type="ListView">
+    <Attribute name="Name">_rwlv_mall</Attribute>
+    <Attribute name="Title">%Subview_Title%</Attribute>
+    <Attribute name="ShowLines">No</Attribute>
+    <Attribute name="MaxColumnWidth">565</Attribute>
+    <Attribute name="AlwaysShowSpaceForIcons">No</Attribute>
+    <Attribute name="MoreCommandIcon"></Attribute>
+    <Attribute name="OnOpen"></Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the listview file. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Controller</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Setting</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all elements for the listview file.</Attribute>
+      <Object type="List">
+        <Attribute name="Name">Title</Attribute>
+        <Object type="Text">
+          <Attribute name="Name">TitleText</Attribute>
+          <Attribute name="ShowTitle">No</Attribute>
+          <Attribute name="Value">%SubView_Title%</Attribute>
+          <Attribute name="FontSize">ExtraFont2</Attribute>
+          <Attribute name="VisualStyle">Shady</Attribute>
+          <Attribute name="TitleColor">Dark</Attribute>
+        </Object>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

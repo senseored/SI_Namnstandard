@@ -1,0 +1,929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwav" version="2024.1.100.32">
+  <Object type="View">
+    <Attribute name="Name">Kurva1</Attribute>
+    <Attribute name="Width">565</Attribute>
+    <Attribute name="Height">390</Attribute>
+    <Attribute name="Zoom">100%</Attribute>
+    <Attribute name="ScaleValue">1.00</Attribute>
+    <Attribute name="ServerSideFunctionRPC">accounts.%account%.services.ssf.execute</Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the view. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Title</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_File</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Setting</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all visual elements for the view.</Attribute>
+      <Object type="Symbol">
+        <Attribute name="Name">SymDesign</Attribute>
+        <Attribute name="Title">%SubView_Title%</Attribute>
+        <Attribute name="Value">{ 
+     //console.log("Start Input Script: %Controller%");
+     //console.log("Value:", *%SubView_Object%_NoOfPoints);
+
+     let Curve_0 = {
+               noOfPoints : %SubView_Setting#1%,
+               
+               X : [
+               *%SubView_Object%_X1,
+               *%SubView_Object%_X2,
+               *%SubView_Object%_X3,
+               *%SubView_Object%_X4,
+               *%SubView_Object%_X5,
+               *%SubView_Object%_X6,
+               *%SubView_Object%_X7,
+               *%SubView_Object%_X8
+               ],
+               Y : [
+               *%SubView_Object%_Y1,
+               *%SubView_Object%_Y2,
+               *%SubView_Object%_Y3,
+               *%SubView_Object%_Y4,
+               *%SubView_Object%_Y5,
+               *%SubView_Object%_Y6,
+               *%SubView_Object%_Y7,
+               *%SubView_Object%_Y8
+               ]
+     }
+let TextVars = {
+        ApplyTxt: "Tillämpa",
+        UndoTxt: "Ångra",
+        lockXaxisTxt: "Växlar Låsning av ändring i X-led",
+        toggleSnapTxt: "Växlar Fasta justeringssteg",
+        toggleEditTxt: "Växlar Redigeringsläge",
+        incSelectedYTxt: "Öka Y-värde för vald punkt",
+        decSelectedYTxt: "Minska Y-värde för vald punkt",
+        leftTxt: "Föregående kurvpunkt",
+        rightTxt: "Nästa kurvpunkt"
+     }
+     
+   let Opts = {
+	 	WithAdaption: false,
+		PlotRefCurve: true,
+		RemoveButtons: true,
+      ShowControlDiplacement: true,
+      ShowDisplacement : true
+	 }
+     
+     let returnvalue = {
+         input: *%SubView_Object%_Input,
+         output: *%SubView_Object%_Output,
+         //highLimit: *%SubView_Object%_HighLimit,
+         //lowLimit: *%SubView_Object%_LowLimit,
+         textVars: TextVars,
+         titleInput: "%XTitle%",
+         titleOutput: "%YTitle%",
+         unitInput: "%SubView_Setting#4%",
+         unitOutput: "%SubView_Setting#5%",
+         displacement: *%SubView_Object%_ConstantParallel,
+         controlDisplacement: *%SubView_Object%_ConditionalParallel,
+         controlDisplacementOnOff: %SubView_Setting#10%,
+         smallScreen: this.session.siteLayout.smallScreen,
+         options: {Opts},
+         curves: {Curve_0}
+     }
+
+     return returnvalue
+
+}</Attribute>
+        <Attribute name="Pictures">Shared:\SI1\Symbols\Kurva_SI.svg</Attribute>
+        <Attribute name="MinValue">*%SubView_Object%_LowLimit</Attribute>
+        <Attribute name="MaxValue">*%SubView_Object%_HighLimit</Attribute>
+        <Attribute name="ManeuverStyle">SVGInteraction</Attribute>
+        <Attribute name="Style">SVGAnimation</Attribute>
+        <Attribute name="VisibleAccess">None</Attribute>
+        <Attribute name="SizeMode">FitWidth</Attribute>
+        <Attribute name="Left">-10</Attribute>
+        <Attribute name="Top">0</Attribute>
+        <Attribute name="Width">605</Attribute>
+        <Attribute name="Height">295</Attribute>
+        <Attribute name="OnOpen">console.log("OnOpen Curve editor")
+
+</Attribute>
+        <Attribute name="OnManeuver">//console.log(arguments);
+//console.log("OnManeuver", arguments[0].ManeuverStyle);
+console.log("OnManeuver", arguments[0].Value);
+
+let Output = arguments[0].Value
+  
+¤%SubView_Object%_X1 = Output.Curve_0.X[0]
+¤%SubView_Object%_X2 = Output.Curve_0.X[1]
+¤%SubView_Object%_X3 = Output.Curve_0.X[2]
+¤%SubView_Object%_X4 = Output.Curve_0.X[3]
+¤%SubView_Object%_X5 = Output.Curve_0.X[4]
+¤%SubView_Object%_X6 = Output.Curve_0.X[5]
+¤%SubView_Object%_X7 = Output.Curve_0.X[6]
+¤%SubView_Object%_X8 = Output.Curve_0.X[7]
+¤%SubView_Object%_Y1 = Output.Curve_0.Y[0]
+¤%SubView_Object%_Y2 = Output.Curve_0.Y[1]
+¤%SubView_Object%_Y3 = Output.Curve_0.Y[2]
+¤%SubView_Object%_Y4 = Output.Curve_0.Y[3]
+¤%SubView_Object%_Y5 = Output.Curve_0.Y[4]
+¤%SubView_Object%_Y6 = Output.Curve_0.Y[5]
+¤%SubView_Object%_Y7 = Output.Curve_0.Y[6]
+¤%SubView_Object%_Y8 = Output.Curve_0.Y[7]
+              
+¤%SubView_Object%_HighLimit = Output.highLimit
+¤%SubView_Object%_LowLimit = Output.lowLimit
+</Attribute>
+      </Object>
+      <Object type="Symbol">
+        <Attribute name="Name">UnnamedSymbol_1</Attribute>
+        <Attribute name="Pictures">Shared:\SI1\Symbols\DotsBtn.svg</Attribute>
+        <Attribute name="ManeuverStyle">ClickOnly</Attribute>
+        <Attribute name="ClickAction">OpenPopupWindow</Attribute>
+        <Attribute name="File">Shared:\SI1\Views\SubView1\Kurva_SI_Settings.rwlv</Attribute>
+        <Attribute name="FileArgumentArray">
+          <Attribute name="Argument">
+            <Attribute name="Name">Controller</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">Obj</Attribute>
+            <Attribute name="Value">%SubView_Object%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">XUnit</Attribute>
+            <Attribute name="Value">%SubView_Setting#4%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">YUnit</Attribute>
+            <Attribute name="Value">%SubView_Setting#5%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">XTitle</Attribute>
+            <Attribute name="Value">%XTitle%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">YTitle</Attribute>
+            <Attribute name="Value">%YTitle%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">Title</Attribute>
+            <Attribute name="Value">%Title%</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">SubView_Setting</Attribute>
+            <Attribute name="Value">%SubView_Setting%</Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="ClickActionAttributeArray">
+          <Attribute name="Argument">
+            <Attribute name="Name">WindowTitle</Attribute>
+            <Attribute name="Value">Kurva</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">WindowIcon</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">Transition</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">AllowScroll</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">AllowSwipe</Attribute>
+          </Attribute>
+          <Attribute name="Argument">
+            <Attribute name="Name">AllowZoom</Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="Style">SVGAnimation</Attribute>
+        <Attribute name="Visible">No</Attribute>
+        <Attribute name="SizeMode">FitWidth</Attribute>
+        <Attribute name="Left">5</Attribute>
+        <Attribute name="Top">340</Attribute>
+        <Attribute name="Width">45</Attribute>
+        <Attribute name="Height">45</Attribute>
+        <Attribute name="OnManeuver">this.openPopupWindow( 
+{
+ file: 'shared:\si1\views\subview1\kurva_si_settings.cwlv.json',
+ name: 'UnnamedSymbol_1_PopupWindow',
+ openedFrom: this,
+ title: 'Kurva'
+}
+,
+{
+ Obj: '%SubView_Object%',
+ XUnit: '%SubView_Setting#4%',
+ YUnit: '%SubView_Setting#5%',
+ XTitle: '%XTitle%',
+ YTitle: '%YTitle%',
+ Title: '%Title%',
+ SubView_Setting: '%SubView_Setting%'
+}
+);</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">XTitle_</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">%SubView_Setting#2%</Attribute>
+        <Attribute name="Multiline">No</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Left</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="VisibleAccess">None</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">25</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">X_1</Attribute>
+        <Attribute name="Title">1</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">X1</Attribute>
+        <Attribute name="Value">*%SubView_Object%_X1</Attribute>
+        <Attribute name="Unit">%SubView_Setting#4%</Attribute>
+        <Attribute name="Format">%SubView_Setting#6%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">45</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">10</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 1)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">X_2</Attribute>
+        <Attribute name="Title">2</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">X2</Attribute>
+        <Attribute name="Value">*%SubView_Object%_X2</Attribute>
+        <Attribute name="Unit">%SubView_Setting#4%</Attribute>
+        <Attribute name="Format">%SubView_Setting#6%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">65</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">10</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 2)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">X_3</Attribute>
+        <Attribute name="Title">3</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">X3</Attribute>
+        <Attribute name="Value">*%SubView_Object%_X3</Attribute>
+        <Attribute name="Unit">%SubView_Setting#4%</Attribute>
+        <Attribute name="Format">%SubView_Setting#6%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">85</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">10</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 3)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">X_4</Attribute>
+        <Attribute name="Title">4</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">X4</Attribute>
+        <Attribute name="Value">*%SubView_Object%_X4</Attribute>
+        <Attribute name="Unit">%SubView_Setting#4%</Attribute>
+        <Attribute name="Format">%SubView_Setting#6%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">105</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">10</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 4)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">X_5</Attribute>
+        <Attribute name="Title">Test</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">X5</Attribute>
+        <Attribute name="Value">*%SubView_Object%_X5</Attribute>
+        <Attribute name="Unit">%SubView_Setting#4%</Attribute>
+        <Attribute name="Format">%SubView_Setting#6%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">125</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">10</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 5)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">X_6</Attribute>
+        <Attribute name="Title">6</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">X6</Attribute>
+        <Attribute name="Value">*%SubView_Object%_X6</Attribute>
+        <Attribute name="Unit">%SubView_Setting#4%</Attribute>
+        <Attribute name="Format">%SubView_Setting#6%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">145</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">10</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 6)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">X_7</Attribute>
+        <Attribute name="Title">7</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">X7</Attribute>
+        <Attribute name="Value">*%SubView_Object%_X7</Attribute>
+        <Attribute name="Unit">%SubView_Setting#4%</Attribute>
+        <Attribute name="Format">%SubView_Setting#6%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">165</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">10</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 7)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">X_8</Attribute>
+        <Attribute name="Title">8</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">X8</Attribute>
+        <Attribute name="Value">*%SubView_Object%_X8</Attribute>
+        <Attribute name="Unit">%SubView_Setting#4%</Attribute>
+        <Attribute name="Format">%SubView_Setting#6%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">185</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">10</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% == 8)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">YTitle_</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">%SubView_Setting#3%</Attribute>
+        <Attribute name="Multiline">No</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Left</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="VisibleAccess">None</Attribute>
+        <Attribute name="Left">75</Attribute>
+        <Attribute name="Top">25</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Y_1</Attribute>
+        <Attribute name="Title">1</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">Y1</Attribute>
+        <Attribute name="Value">*%SubView_Object%_Y1</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="Left">75</Attribute>
+        <Attribute name="Top">45</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 1)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Y_2</Attribute>
+        <Attribute name="Title">2</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">Y2</Attribute>
+        <Attribute name="Value">*%SubView_Object%_Y2</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="Left">75</Attribute>
+        <Attribute name="Top">65</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 2)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Y_3</Attribute>
+        <Attribute name="Title">3</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">Y3</Attribute>
+        <Attribute name="Value">*%SubView_Object%_Y3</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="Left">75</Attribute>
+        <Attribute name="Top">85</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 3)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Y_4</Attribute>
+        <Attribute name="Title">4</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">Y4</Attribute>
+        <Attribute name="Value">*%SubView_Object%_Y4</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="Left">75</Attribute>
+        <Attribute name="Top">105</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 4)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Y_5</Attribute>
+        <Attribute name="Title">5</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">Y5</Attribute>
+        <Attribute name="Value">*%SubView_Object%_Y5</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="Left">75</Attribute>
+        <Attribute name="Top">125</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 5)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Y_6</Attribute>
+        <Attribute name="Title">6</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">Y6</Attribute>
+        <Attribute name="Value">*%SubView_Object%_Y6</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="Left">75</Attribute>
+        <Attribute name="Top">145</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 6)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Y_7</Attribute>
+        <Attribute name="Title">7</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">Y7</Attribute>
+        <Attribute name="Value">*%SubView_Object%_Y7</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="Left">75</Attribute>
+        <Attribute name="Top">165</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% &gt;= 7)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Y_8</Attribute>
+        <Attribute name="Title">8</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="UserDescription">Y8</Attribute>
+        <Attribute name="Value">*%SubView_Object%_Y8</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="Left">75</Attribute>
+        <Attribute name="Top">185</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="OnOpen">if(%SubView_Setting#1% == 8)
+{	
+this.visible("Yes")
+}	
+else
+{
+this.visible("No")	
+}</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">HighLim</Attribute>
+        <Attribute name="Title">Höggräns:</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="UserDescription">Y-Max</Attribute>
+        <Attribute name="Value">*%SubView_Object%_HighLimit</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Left">75</Attribute>
+        <Attribute name="Top">230</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">60</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">LowLim</Attribute>
+        <Attribute name="Title">Låggräns:</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="UserDescription">Y-Min</Attribute>
+        <Attribute name="Value">*%SubView_Object%_LowLimit</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Left">75</Attribute>
+        <Attribute name="Top">210</Attribute>
+        <Attribute name="Width">65</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">60</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Parallell2</Attribute>
+        <Attribute name="Title">Förskjutning:</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="Value">*%SubView_Object%_ConstantParallel</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Visible">%SubView_Setting#8%</Attribute>
+        <Attribute name="Left">90</Attribute>
+        <Attribute name="Top">255</Attribute>
+        <Attribute name="Width">50</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">80</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Parallell_1</Attribute>
+        <Attribute name="Title">Nattsänkning:</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="Value">*%SubView_Object%_ConditionalParallel</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">Editable</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="Border">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Center</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Visible">%SubView_Setting#9%</Attribute>
+        <Attribute name="Left">90</Attribute>
+        <Attribute name="Top">280</Attribute>
+        <Attribute name="Width">50</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">82</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Parallell2_1</Attribute>
+        <Attribute name="Title">%SubView_Setting#11%:</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="Value">*%SubView_Object%_ConditionalParallel</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">None</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Left</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Visible">%SubView_Setting#8%</Attribute>
+        <Attribute name="Left">400</Attribute>
+        <Attribute name="Top">355</Attribute>
+        <Attribute name="Width">55</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">145</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">Text_1</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">%SubView_Title%</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="Transparency">0</Attribute>
+        <Attribute name="Left">0</Attribute>
+        <Attribute name="Top">0</Attribute>
+        <Attribute name="Width">565</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Output</Attribute>
+        <Attribute name="Title">Verkligt börvärde:</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="Value">*%SubView_Object%_Output</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">None</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Left</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Left">400</Attribute>
+        <Attribute name="Top">295</Attribute>
+        <Attribute name="Width">55</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">135</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Output_1</Attribute>
+        <Attribute name="Title">Insignal:</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="Value">*%SubView_Object%_Input</Attribute>
+        <Attribute name="Unit">%SubView_Setting#4%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="ManeuverStyle">None</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Left</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Left">400</Attribute>
+        <Attribute name="Top">315</Attribute>
+        <Attribute name="Width">55</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">145</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Parallell2_2</Attribute>
+        <Attribute name="Title">Förskjutning:</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="Value">*%SubView_Object%_ConstantParallel</Attribute>
+        <Attribute name="Unit">%SubView_Setting#5%</Attribute>
+        <Attribute name="Format">%SubView_Setting#7%</Attribute>
+        <Attribute name="TouchEditable">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Left</Attribute>
+        <Attribute name="TitlePosition">Left</Attribute>
+        <Attribute name="Visible">%SubView_Setting#7%</Attribute>
+        <Attribute name="Left">400</Attribute>
+        <Attribute name="Top">335</Attribute>
+        <Attribute name="Width">55</Attribute>
+        <Attribute name="Height">20</Attribute>
+        <Attribute name="TitleWidth">145</Attribute>
+      </Object>
+      <Object type="Symbol">
+        <Attribute name="Name">UnnamedSymbol_2</Attribute>
+        <Attribute name="Pictures">Shared:\SI1\Symbols\Kurva_SI_Linjesvart.svg</Attribute>
+        <Attribute name="SizeMode">Stretch</Attribute>
+        <Attribute name="Left">465</Attribute>
+        <Attribute name="Top">300</Attribute>
+        <Attribute name="Width">20</Attribute>
+        <Attribute name="Height">20</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">YTitle__1</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">Konfigurerad kurva</Attribute>
+        <Attribute name="Multiline">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Left</Attribute>
+        <Attribute name="VisualStyle">Normal</Attribute>
+        <Attribute name="VisibleAccess">None</Attribute>
+        <Attribute name="Left">485</Attribute>
+        <Attribute name="Top">295</Attribute>
+        <Attribute name="Width">80</Attribute>
+        <Attribute name="Height">30</Attribute>
+      </Object>
+      <Object type="Symbol">
+        <Attribute name="Name">UnnamedSymbol_3</Attribute>
+        <Attribute name="Pictures">Shared:\SI1\Symbols\Kurva_SI_Linjegron.svg</Attribute>
+        <Attribute name="Visible">%SubView_Setting#8%</Attribute>
+        <Attribute name="SizeMode">FitWidth</Attribute>
+        <Attribute name="Left">465</Attribute>
+        <Attribute name="Top">335</Attribute>
+        <Attribute name="Width">20</Attribute>
+        <Attribute name="Height">20</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">YTitle__2</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">Kurva med förskjutning</Attribute>
+        <Attribute name="Multiline">Yes</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="Alignment">Left</Attribute>
+        <Attribute name="VisualStyle">Normal</Attribute>
+        <Attribute name="Visible">%SubView_Setting#8%</Attribute>
+        <Attribute name="VisibleAccess">None</Attribute>
+        <Attribute name="Left">485</Attribute>
+        <Attribute name="Top">330</Attribute>
+        <Attribute name="Width">80</Attribute>
+        <Attribute name="Height">30</Attribute>
+      </Object>
+      <Object type="Symbol">
+        <Attribute name="Name">UnnamedSymbol_4</Attribute>
+        <Attribute name="Pictures">Shared:\SI1\Symbols\Line.svg</Attribute>
+        <Attribute name="SizeMode">Stretch</Attribute>
+        <Attribute name="Left">457</Attribute>
+        <Attribute name="Top">297</Attribute>
+        <Attribute name="Width">3</Attribute>
+        <Attribute name="Height">78</Attribute>
+      </Object>
+      <Object type="Symbol">
+        <Attribute name="Name">UnnamedSymbol_5</Attribute>
+        <Attribute name="Pictures">Shared:\SI1\Symbols\Kurva_SI_kryss.svg</Attribute>
+        <Attribute name="SizeMode">Stretch</Attribute>
+        <Attribute name="Left">250</Attribute>
+        <Attribute name="Top">299</Attribute>
+        <Attribute name="Width">12</Attribute>
+        <Attribute name="Height">12</Attribute>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

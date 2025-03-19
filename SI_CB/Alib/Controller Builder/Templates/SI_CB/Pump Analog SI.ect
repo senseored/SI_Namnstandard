@@ -1,0 +1,2527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigTemplate format="ControllerBuilder">
+  <Name>Pump Analog SI</Name>
+  <Type>Block</Type>
+  <Description>Pump with analog output</Description>
+  <Icon>Alib:\Controller Builder\Icons\Pump.ico</Icon>
+  <Advanced>No</Advanced>
+  <Revision />
+  <About />
+  <Parameter name="EmbeddAllSubBlocksInThisTemplate">True</Parameter>
+  <Parameter name="EmbeddAllPicturesInThisTemplate">False</Parameter>
+  <Object type="Block">
+    <Name>P_1</Name>
+    <Attribute name="UserTitle">P01</Attribute>
+    <Attribute name="SubSystemTitle">%SubSystemTitle%-%UserTitle%</Attribute>
+    <Attribute name="ConnectionPoints">
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Enable</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Blocked</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">ForcedON</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">BlockedAuto</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StartIn</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Input</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">OutputManual</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">MotorProt</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Running</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SumAlarmIn</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Status</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StartOut</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Output</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Reset</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Service</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">ExCmd</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Select</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">ExWeekDay</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">ExHour</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">ExTime</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">StatusSwitchDelay</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Inverse</Attribute>
+        <Attribute name="Show">No</Attribute>
+      </Attribute>
+    </Attribute>
+    <Attribute name="Top">1950</Attribute>
+    <Attribute name="Left">455</Attribute>
+    <Object type="TypeInfo">
+      <Attribute name="TypeName">Pump Analog SI</Attribute>
+      <Attribute name="TypeTitle">Pump with analog output</Attribute>
+      <Attribute name="Icon">ALib:\Controller Builder\Icons\Pump.ico</Attribute>
+      <Attribute name="ObjectsAdded">Yes</Attribute>
+      <Attribute name="ObjectsDeleted">Yes</Attribute>
+      <Attribute name="ObjectsModified">Yes</Attribute>
+      <Attribute name="ChangedDate">2024-10-03 06:45:21</Attribute>
+      <Attribute name="ChangedBy">tobiasg</Attribute>
+      <Attribute name="TemplateFile">ALib:\Controller Builder\Templates\SI_CB\Pump Analog SI.ect</Attribute>
+      <Attribute name="TemplateRevision">1.0-1-04</Attribute>
+      <Attribute name="TemplateDate">2020-03-11 09:54:02</Attribute>
+      <Attribute name="Comment">1.0-1-02: Two new outputs - TotalRTMinute, MaintRTMinute
+1.0-1-03: Added Status Switch Delay parameter
+1.0-1-04: Added suggestion Never [0] to Exercise Weekday parameter</Attribute>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>Operation</Name>
+      <Object type="Signal">
+        <Name>Enable</Name>
+        <Attribute name="ToolTitle">Enabled</Attribute>
+        <Attribute name="Description">Activate the function</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Default">Yes [1]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+        <Attribute name="Top">10</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Blocked</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">Blocked</Attribute>
+        <Attribute name="Description">Blocks Function block. Output = 0</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">25</Attribute>
+        <Attribute name="Left">250</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>ForcedON</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">Forced ON</Attribute>
+        <Attribute name="Description">Forces Output to state ON</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">55</Attribute>
+        <Attribute name="Left">250</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>BlockedAuto</Name>
+        <Attribute name="ToolTitle">Blocking Pump Auto</Attribute>
+        <Attribute name="Description">Blocking Pump in AUTO mode</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">40</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>StartIn</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">StartIn</Attribute>
+        <Attribute name="Description">Logic Input for Start of Pump</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">150</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Input</Name>
+        <Attribute name="ObjectChanged">Added</Attribute>
+        <Attribute name="ToolTitle">Input</Attribute>
+        <Attribute name="Description">Analog input from PID</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Top">265</Attribute>
+        <Attribute name="Left">1055</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>OutputManual</Name>
+        <Attribute name="ObjectChanged">Added</Attribute>
+        <Attribute name="ToolTitle">Output when _Select=1</Attribute>
+        <Attribute name="Description">Analog input from PID</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Top">320</Attribute>
+        <Attribute name="Left">1060</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>MotorProt</Name>
+        <Attribute name="ToolTitle">Motor Protection</Attribute>
+        <Attribute name="Description">Motor protection</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">695</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Running</Name>
+        <Attribute name="ToolTitle">Running</Attribute>
+        <Attribute name="Description">Run Indication</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">180</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>SumAlarmIn</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">Summalarm</Attribute>
+        <Attribute name="Description">Input for connecting external alarm. If active, it will affect this blocks' Status output.</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="ConnectionStyle">Text</Attribute>
+        <Attribute name="Top">795</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Status</Name>
+        <Attribute name="ToolTitle">Status</Attribute>
+        <Attribute name="Description">The current operational status. 0=Off, 1=Running, 2=Alarm, 3=Running but alarmed</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">X</Attribute>
+        <Attribute name="Value">*OpStatus_Status</Attribute>
+        <Attribute name="BoundTo">[Block].[OpStatus].[Output].[Status]</Attribute>
+        <Attribute name="CoordinatesArray">
+          <Attribute name="Coordinates">
+            <Attribute name="X">695</Attribute>
+            <Attribute name="Y">670</Attribute>
+          </Attribute>
+          <Attribute name="Coordinates">
+            <Attribute name="X">800</Attribute>
+            <Attribute name="Y">670</Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="ConnectionStyle">Line</Attribute>
+        <Attribute name="Top">660</Attribute>
+        <Attribute name="Left">810</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>StartOut</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">Start Output</Attribute>
+        <Attribute name="Description">Start of Pump</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Value">*DigAutoMan_StartOut</Attribute>
+        <Attribute name="BoundTo">[Block].[DigAutoMan].[Output].[StartOut]</Attribute>
+        <Attribute name="CoordinatesArray">
+          <Attribute name="Coordinates">
+            <Attribute name="X">920</Attribute>
+            <Attribute name="Y">160</Attribute>
+          </Attribute>
+          <Attribute name="Coordinates">
+            <Attribute name="X">1015</Attribute>
+            <Attribute name="Y">160</Attribute>
+            <Attribute name="IsBranch">Yes</Attribute>
+          </Attribute>
+          <Attribute name="Coordinates">
+            <Attribute name="X">1310</Attribute>
+            <Attribute name="Y">160</Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="ConnectionStyle">Line</Attribute>
+        <Attribute name="Top">150</Attribute>
+        <Attribute name="Left">1320</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Output</Name>
+        <Attribute name="ObjectChanged">Added</Attribute>
+        <Attribute name="ToolTitle">Analog output</Attribute>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Top">260</Attribute>
+        <Attribute name="Left">1455</Attribute>
+        <Attribute name="Width">140</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Reset</Name>
+        <Attribute name="ToolTitle">Reset</Attribute>
+        <Attribute name="Description">Resets the total Run Time Meter when set to 1. Cleared automatically by the Run Time Meter.</Attribute>
+        <Attribute name="SignalType">Command</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">515</Attribute>
+        <Attribute name="Left">140</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Service</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">Service</Attribute>
+        <Attribute name="Description">Resets the Service Run Time Meter when set to 1. Cleared automatically by the Run Time Meter.</Attribute>
+        <Attribute name="SignalType">Command</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">490</Attribute>
+        <Attribute name="Left">140</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>ExCmd</Name>
+        <Attribute name="ToolTitle">Exercise Command</Attribute>
+        <Attribute name="Description">Command for starting an exercise cycle.</Attribute>
+        <Attribute name="SignalType">Command</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Top">195</Attribute>
+        <Attribute name="Left">140</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>ManAuto</Name>
+      <Attribute name="Title">Manual/Auto</Attribute>
+      <Object type="Signal">
+        <Name>Select</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="ToolTitle">Man Auto Select</Attribute>
+        <Attribute name="Description">Manual/Auto switch</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">X</Attribute>
+        <Attribute name="Default">Auto [3]</Attribute>
+        <Attribute name="Suggests">Off [0],On [1],Manual [2],Auto [3]</Attribute>
+        <Attribute name="Top">105</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>Settings</Name>
+      <Attribute name="Title">Settings</Attribute>
+      <Object type="Signal">
+        <Name>ExWeekDay</Name>
+        <Attribute name="ToolTitle">Exercise Weekday</Attribute>
+        <Attribute name="Description">Weekday for Pump Exercise</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">X</Attribute>
+        <Attribute name="Default">Thursday [4]</Attribute>
+        <Attribute name="Suggests">Never [0],Monday [1],Tuesday [2],Wednesday [3],Thursday [4],Friday [5],Saturday [6],Sunday [7],Daily [8]</Attribute>
+        <Attribute name="Top">210</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>ExHour</Name>
+        <Attribute name="ToolTitle">Exercise Hour</Attribute>
+        <Attribute name="Description">Hour for Pump Exercise</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">X</Attribute>
+        <Attribute name="Default">10</Attribute>
+        <Attribute name="Top">235</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>ExTime</Name>
+        <Attribute name="ToolTitle">Exercise Time</Attribute>
+        <Attribute name="Description">Time Period for Pump Exercise (1-59 minutes)</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">X</Attribute>
+        <Attribute name="Default">10</Attribute>
+        <Attribute name="Top">260</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>StatusSwitchDelay</Name>
+        <Attribute name="ToolTitle">Status Switch Delay</Attribute>
+        <Attribute name="Description">Delay before switching status. [s]</Attribute>
+        <Attribute name="Unit">s</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">I</Attribute>
+        <Attribute name="Default">5</Attribute>
+        <Attribute name="Top">720</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>Configuration</Name>
+      <Attribute name="Title">Configuration</Attribute>
+      <Object type="Signal">
+        <Name>Inverse</Name>
+        <Attribute name="ToolTitle">Inverse</Attribute>
+        <Attribute name="Description">Start/Stop Pump inversion.</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="Top">165</Attribute>
+        <Attribute name="Left">140</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+    </Object>
+    <Object type="Block">
+      <Name>DigAutoMan</Name>
+      <Attribute name="ObjectChanged">Modified</Attribute>
+      <Attribute name="ConnectionPoints">
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Enable</Attribute>
+          <Attribute name="Binding">*Enable</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Blocked</Attribute>
+          <Attribute name="Binding">*Blocked OR MotorProt</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">BlockedAuto</Attribute>
+          <Attribute name="Binding">*BlockedAuto</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ForcedON</Attribute>
+          <Attribute name="Binding">*ForcedON</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">StartIn</Attribute>
+          <Attribute name="Binding">*ExerciseDigital_StartOut</Attribute>
+          <Attribute name="BoundTo">[Block].[ExerciseDigital].[Output].[StartOut]</Attribute>
+          <Attribute name="ConnectionStyle">Line</Attribute>
+          <Attribute name="CoordinatesArray">
+            <Attribute name="Coordinates">
+              <Attribute name="X">630</Attribute>
+              <Attribute name="Y">160</Attribute>
+            </Attribute>
+            <Attribute name="Coordinates">
+              <Attribute name="X">700</Attribute>
+              <Attribute name="Y">160</Attribute>
+            </Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">StartOut</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaManual</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaBlocked</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaBlockedAuto</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaForcedON</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaSum</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Select</Attribute>
+          <Attribute name="Binding">*Select</Attribute>
+        </Attribute>
+      </Attribute>
+      <Attribute name="Top">130</Attribute>
+      <Attribute name="Left">710</Attribute>
+      <Object type="TypeInfo">
+        <Attribute name="TypeName">DigAutoMan</Attribute>
+        <Attribute name="TypeTitle">Digital Auto/Manual switch</Attribute>
+        <Attribute name="Icon">Device:\Icons\ManAuto (Small).ico</Attribute>
+        <Attribute name="Description">Blocks of the Digital Auto/Manual Switch type select either an automatic data channel, a constant ON, or a constant OFF.</Attribute>
+        <Attribute name="ObjectsModified">Yes</Attribute>
+        <Attribute name="ChangedDate">2024-08-21 13:43:41</Attribute>
+        <Attribute name="ChangedBy">Administrator</Attribute>
+        <Attribute name="TemplateFile">ALib:\Controller Builder\Templates\BlockTypes\DigAutoMan.ect</Attribute>
+        <Attribute name="TemplateRevision">1.0-1-00</Attribute>
+        <Attribute name="TemplateDate">2014-04-24 13:24:56</Attribute>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Operation</Name>
+        <Object type="Signal">
+          <Name>Enable</Name>
+          <Attribute name="Description">This parameter enables (1) or disables (0) the function. </Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">Yes [1]</Attribute>
+          <Attribute name="Suggests">No [0], Yes [1]</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Blocked</Name>
+          <Attribute name="ToolTitle">Blocked</Attribute>
+          <Attribute name="Description">Blocks Function block. Output = 0</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>BlockedAuto</Name>
+          <Attribute name="ToolTitle">BlockedAuto</Attribute>
+          <Attribute name="Description">Blocks output only in Auto mode</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">60</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ForcedON</Name>
+          <Attribute name="ToolTitle">Forced ON</Attribute>
+          <Attribute name="Description">Force the function output to its ON state.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">85</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>StartIn</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Input</Attribute>
+          <Attribute name="Description">Logic Input for auto mode.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">110</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>StartOut</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Output</Attribute>
+          <Attribute name="Description">The output value</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">135</Attribute>
+          <Attribute name="Left">440</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>AlarmOutputs</Name>
+        <Object type="Signal">
+          <Name>AlaManual</Name>
+          <Attribute name="ToolTitle">Alarm Manual Mode</Attribute>
+          <Attribute name="Description">Alarm Output: Manual mode</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">440</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>AlaBlocked</Name>
+          <Attribute name="ToolTitle">Alarm Blocked Output</Attribute>
+          <Attribute name="Description">Alarm Output: Blocked Output</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">440</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>AlaBlockedAuto</Name>
+          <Attribute name="ToolTitle">Alarm Blocked Output in Auto</Attribute>
+          <Attribute name="Description">Alarm Output: Blocked Output in Auto mode</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">60</Attribute>
+          <Attribute name="Left">440</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>AlaForcedON</Name>
+          <Attribute name="ToolTitle">Alarm Forced Output ON</Attribute>
+          <Attribute name="Description">Alarm Output: Forced Output ON</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">110</Attribute>
+          <Attribute name="Left">440</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>AlaSum</Name>
+          <Attribute name="ToolTitle">Alarm Summary of function</Attribute>
+          <Attribute name="Description">Alarm Output: Function is alarming</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">85</Attribute>
+          <Attribute name="Left">440</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>ManAuto</Name>
+        <Attribute name="Title">Manual/Auto</Attribute>
+        <Object type="Signal">
+          <Name>Select</Name>
+          <Attribute name="ToolTitle">Select</Attribute>
+          <Attribute name="Description">Selects mode of the automatic/manual switch. 0=Off, 1=On, 2=Auto</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">X</Attribute>
+          <Attribute name="Default">Auto [2]</Attribute>
+          <Attribute name="Suggests">Off [0],Manual [1],Auto [2]</Attribute>
+          <Attribute name="Top">145</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+      </Object>
+      <Object type="Group">
+        <Name>Internal</Name>
+        <Object type="EXOLCode">
+          <Name>Code</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="Code">If Enable  
+  Switch Select
+      L StartOut = ForcedON AND NOT Blocked
+    Pole 1
+      L StartOut = Not Blocked 
+    Pole 2
+      L StartOut = Not Blocked 
+    ElsePole
+      L StartOut = StartIn And Not Blocked And Not BlockedAuto OR ForcedON AND NOT BlockedAuto AND NOT Blocked
+  EndSwitch           
+Else
+  L StartOut = 0
+EndIf
+L AlaManual = Enable AND CmpX(Select &lt;&gt; 3) 
+L AlaBlocked = Enable AND Blocked AND NOT StartOut 
+L AlaBlockedAuto = Enable AND BlockedAuto AND NOT Blocked AND CmpX(Select = 2) AND NOT StartOut 
+L AlaForcedON = Enable AND NOT (Blocked OR BlockedAuto AND CmpX(Select = 2)) AND ForcedON AND StartOut 
+L AlaSum = AlaManual OR AlaBlocked OR AlaBlockedAuto OR AlaForcedON</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">240</Attribute>
+        </Object>
+      </Object>
+    </Object>
+    <Object type="Block">
+      <Name>ExerciseDigital</Name>
+      <Attribute name="ObjectChanged">Modified</Attribute>
+      <Attribute name="ConnectionPoints">
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Enable</Attribute>
+          <Attribute name="Binding">*Enable</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Blocked</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ForcedON</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Bypass</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">StartIn</Attribute>
+          <Attribute name="Binding">*(StartIn Xor Inverse) And Not BlockedAuto And Not MotorProt</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Running</Attribute>
+          <Attribute name="Binding">*Running</Attribute>
+          <Attribute name="BoundTo">[Signal].[Running].[Output].[Running]</Attribute>
+          <Attribute name="ConnectionStyle">Line</Attribute>
+          <Attribute name="CoordinatesArray">
+            <Attribute name="Coordinates">
+              <Attribute name="X">140</Attribute>
+              <Attribute name="Y">190</Attribute>
+            </Attribute>
+            <Attribute name="Coordinates">
+              <Attribute name="X">410</Attribute>
+              <Attribute name="Y">190</Attribute>
+            </Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ExCmd</Attribute>
+          <Attribute name="Binding">*ExCmd</Attribute>
+          <Attribute name="BoundTo">[Signal].[ExCmd].[Output].[ExCmd]</Attribute>
+          <Attribute name="ConnectionStyle">Line</Attribute>
+          <Attribute name="CoordinatesArray">
+            <Attribute name="Coordinates">
+              <Attribute name="X">270</Attribute>
+              <Attribute name="Y">205</Attribute>
+            </Attribute>
+            <Attribute name="Coordinates">
+              <Attribute name="X">410</Attribute>
+              <Attribute name="Y">205</Attribute>
+            </Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">StartOut</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ExerciseActive</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaExercise</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ExWeekday</Attribute>
+          <Attribute name="Binding">*ExWeekday</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ExHour</Attribute>
+          <Attribute name="Binding">*ExHour</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ExTime</Attribute>
+          <Attribute name="Binding">*ExTime</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">OnOffCycle</Attribute>
+          <Attribute name="InitValue">No [0]</Attribute>
+        </Attribute>
+      </Attribute>
+      <Attribute name="Top">130</Attribute>
+      <Attribute name="Left">420</Attribute>
+      <Object type="TypeInfo">
+        <Attribute name="TypeName">ExerciseDigital</Attribute>
+        <Attribute name="TypeTitle">Exercise Digitally Controlled Device</Attribute>
+        <Attribute name="Icon">Device:\Icons\Device.ico</Attribute>
+        <Attribute name="Description">Function for exercising a digitally controlled device. The block waits for a Running signal to come within a settable time (ExTime). If the time limit is exceeded, an alarm output is triggered (AlaExercise). This alarm is reset if Running signal appears. The control signal is intended to connect through this block before it is forwarded to the controlling output. The scheduled time for exercise is set with the parameters ExWeekday and ExHour. The exercise will only take place if the Output is not already set. There is also a command for starting an exercise cycle unconditionally (ExCmd).
+Note that an exercise cycle includes both a forcing of the Output to the ON state during the given ExTime, and then a forcing to the OFF state for the same time. The output ExerciseActive is set high during the entire exercise cycle.</Attribute>
+        <Attribute name="ObjectsModified">Yes</Attribute>
+        <Attribute name="ChangedDate">2024-08-14 12:03:23</Attribute>
+        <Attribute name="ChangedBy">tobiasg</Attribute>
+        <Attribute name="TemplateFile">ALib:\Controller Builder\Templates\BlockTypes\ExerciseDigital.ect</Attribute>
+        <Attribute name="TemplateRevision">1.0-1-02</Attribute>
+        <Attribute name="TemplateDate">2019-05-21 15:24:08</Attribute>
+        <Attribute name="Comment">1.0-1-01: Added OnOffCycle configuration parameter.
+	1.0-1-02: Modified code in If Exercise AND NOT Running AND NOT ExerciseSecondPart And Not Bypass Added And Not Bypass </Attribute>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Operation</Name>
+        <Object type="Signal">
+          <Name>Enable</Name>
+          <Attribute name="Description">This parameter enables (1) or disables (0) the function. </Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">Yes [1]</Attribute>
+          <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+          <Attribute name="Comment">This parameter enables (1) or disables (0) the function. </Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Blocked</Name>
+          <Attribute name="ToolTitle">Blocked</Attribute>
+          <Attribute name="Description">Blocks Function block. Output = 0</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ForcedON</Name>
+          <Attribute name="ToolTitle">Forced ON</Attribute>
+          <Attribute name="Description">Forces Function block Output to the ON state</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">60</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Bypass</Name>
+          <Attribute name="ToolTitle">Bypass</Attribute>
+          <Attribute name="Description">Bypasses the signal handling. Output = Input</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">85</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>StartIn</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="Description">The digital control signal.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">125</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Running</Name>
+          <Attribute name="Description">Run indication from exercised device.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">150</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ExCmd</Name>
+          <Attribute name="ToolTitle">Exercise Command</Attribute>
+          <Attribute name="Description">Command for starting an exercise cycle unconditionaly.</Attribute>
+          <Attribute name="SignalType">Command</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">175</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>StartOut</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="Description">The digital control signal output, forced to exercise if triggered.</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">585</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ExerciseActive</Name>
+          <Attribute name="Description">Set high during the entire exercise cycle.</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">60</Attribute>
+          <Attribute name="Left">585</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>AlarmOutputs</Name>
+        <Attribute name="Title">Alarm Outputs</Attribute>
+        <Object type="Signal">
+          <Name>AlaExercise</Name>
+          <Attribute name="ToolTitle">Alarm Output: Exercise error</Attribute>
+          <Attribute name="Description">Alarm output for error during exercise.</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">585</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Settings</Name>
+        <Object type="Signal">
+          <Name>ExWeekday</Name>
+          <Attribute name="ToolTitle">Exercise Weekday</Attribute>
+          <Attribute name="Description">Weekday for Pump Excercise</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">X</Attribute>
+          <Attribute name="Default">Thursday [4]</Attribute>
+          <Attribute name="Suggests">Never [0],Monday [1],Tuesday [2],Wednesday [3],Thursday [4],Friday [5],Saturday [6],Sunday [7],Daily [8]</Attribute>
+          <Attribute name="Top">220</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ExHour</Name>
+          <Attribute name="ToolTitle">Exercise Hour</Attribute>
+          <Attribute name="Description">Hour for Pump Excercise</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">X</Attribute>
+          <Attribute name="Default">10</Attribute>
+          <Attribute name="Top">245</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ExTime</Name>
+          <Attribute name="ToolTitle">Exercise Time</Attribute>
+          <Attribute name="Description">Time Period for Pump Excercise (1-59 minutes)</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">X</Attribute>
+          <Attribute name="Default">10</Attribute>
+          <Attribute name="Top">270</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Configuration</Name>
+        <Object type="Signal">
+          <Name>OnOffCycle</Name>
+          <Attribute name="ToolTitle">On-Off Cycle</Attribute>
+          <Attribute name="Description">If this parameter is set, the exercise first forces the Output to the On state for the time set in ExTime, then forces it to the Off state for the same time.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">Yes[1]</Attribute>
+          <Attribute name="Suggests">No [0], Yes[1]</Attribute>
+          <Attribute name="Top">295</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+      </Object>
+      <Object type="Group">
+        <Name>Internal</Name>
+        <Object type="EXOLVariables">
+          <Name>Variables</Name>
+          <Attribute name="Variables"> 
+X OldHour
+L Exercise 
+I Counter
+L ExerciseSecondPart</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">245</Attribute>
+        </Object>
+        <Object type="EXOLCode">
+          <Name>Code</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="Code">If Enable
+  ; Time for Exercise?
+  If (CmpX(Wday = ExWeekday) Or CmpX(ExWeekDay = 8)) And Not StartUpFlag Or ExCmd
+     If CmpX(Hour = ExHour) And CmpX(Hour &lt;&gt; OldHour) And Not StartOut Or ExCmd And Not StartOut
+        ; yes
+        If CmpX(ExTime &gt; 59)
+          X ExTime = 59
+        EndIf
+        If ExCmd
+		  L ExCmd = False!
+        EndIf
+        L Exercise = Not Blocked    ;1
+     EndIf
+  EndIf
+  X OldHour = Hour
+ 
+  If Exercise OR ExerciseSecondPart 
+	  If CmpI(Counter &lt; CvX(ExTime)*60)
+		I Counter = Counter + CvX(SecDiff)
+	  Else
+	    I Counter = 0
+		If Exercise AND NOT Running AND NOT ExerciseSecondPart And Not Bypass
+		  L AlaExercise = True!
+		  L ExerciseSecondPart = OnOffCycle  
+		  L Exercise = False!
+		Else
+		  If Not ExerciseSecondPart And OnOffCycle
+			 L ExerciseSecondPart = True!
+			 L Exercise = False!
+		  Else
+			 If Running
+				L AlaExercise = False!
+			 Else
+				L AlaExercise = True!
+			 EndIf
+			 L ExerciseSecondPart = False!
+			 L Exercise = False!
+		  EndIf
+		EndIf
+	  EndIf
+  EndIf
+  
+  If Bypass AND NOT Blocked AND NOT ForcedON
+	L StartOut = StartIn
+  Else
+    L StartOut = ((StartIn AND NOT ExerciseSecondPart) Or Exercise) AND NOT Blocked OR ForcedON AND NOT Blocked
+  EndIf
+  L ExerciseActive = Exercise Or ExerciseSecondPart
+  
+  If (StartOut AND Running OR NOT StartOut AND NOT Running) AND NOT Exercise AND NOT ExerciseSecondPart
+	L AlaExercise = False!
+  EndIf
+  
+Else
+  L StartOut = False!
+  I Counter = 0
+  L AlaExercise = False!
+EndIf
+</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">365</Attribute>
+        </Object>
+      </Object>
+    </Object>
+    <Object type="Block">
+      <Name>OpStatus</Name>
+      <Attribute name="ObjectChanged">Modified</Attribute>
+      <Attribute name="ConnectionPoints">
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Enable</Attribute>
+          <Attribute name="Binding">*Enable</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Running</Attribute>
+          <Attribute name="Binding">*Running</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">RunMode</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Alarm</Attribute>
+          <Attribute name="Binding">*Enable AND (SumAlarmIn OR MotorProt OR (StartOut AND NOT Running And Not MotorProt) OR ExerciseDigital_AlaExercise)</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlarmStatus</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Status</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">SwitchDelay</Attribute>
+          <Attribute name="Binding">*StatusSwitchDelay</Attribute>
+        </Attribute>
+      </Attribute>
+      <Attribute name="Top">640</Attribute>
+      <Attribute name="Left">550</Attribute>
+      <Object type="TypeInfo">
+        <Attribute name="TypeName">OperationStatus</Attribute>
+        <Attribute name="TypeTitle">Operation Status</Attribute>
+        <Attribute name="Icon">Device:\Icons\OperationStatus.ico</Attribute>
+        <Attribute name="Description">Sets a simplified status depending on inputs from a control process. Assuming there are no alarms, Status output is set to 1 if RunMode is greater than zero or Running is set. If Alarm input is set, or Alarm Status equals 3 or 7 (Acknowledged or Alarmed), Status output is set to 2.</Attribute>
+        <Attribute name="TemplateFile">ALib:\Controller Builder\Templates\BlockTypes\OperationStatus.ect</Attribute>
+        <Attribute name="TemplateRevision">1.0-1-00</Attribute>
+        <Attribute name="TemplateDate">2015-09-14 15:37:59</Attribute>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Operation</Name>
+        <Object type="Signal">
+          <Name>Enable</Name>
+          <Attribute name="Description">This parameter enables (1) or disables (0) the function. </Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">Yes [1]</Attribute>
+          <Attribute name="Suggests">No [0], Yes [1]</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Running</Name>
+          <Attribute name="ToolTitle">Running</Attribute>
+          <Attribute name="Description">Run Indication from connected process.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>RunMode</Name>
+          <Attribute name="ToolTitle">Run Mode</Attribute>
+          <Attribute name="Description">Run Mode. 0 always means Off.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">X</Attribute>
+          <Attribute name="Top">60</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Alarm</Name>
+          <Attribute name="ToolTitle">Alarm</Attribute>
+          <Attribute name="Description">Logical Alarm input.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">85</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>AlarmStatus</Name>
+          <Attribute name="ToolTitle">Alarm Status</Attribute>
+          <Attribute name="Description">Alarm Status. 1=Normal, 2=Blocked, 3=Acknowledged, 5=Returned, 7=Alarmed.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">X</Attribute>
+          <Attribute name="Top">110</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Status</Name>
+          <Attribute name="ToolTitle">Status</Attribute>
+          <Attribute name="Description">The current operational status. 0=Off, 1=Running, 2=Alarm, 3=Alarmed but running</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">X</Attribute>
+          <Attribute name="Top">15</Attribute>
+          <Attribute name="Left">670</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Settings</Name>
+        <Attribute name="Title">Settings</Attribute>
+        <Object type="Signal">
+          <Name>SwitchDelay</Name>
+          <Attribute name="ToolTitle">Status Switch Delay</Attribute>
+          <Attribute name="Description">Delay before switching status. [s]</Attribute>
+          <Attribute name="Unit">s</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">I</Attribute>
+          <Attribute name="Default">5</Attribute>
+          <Attribute name="Top">185</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+      </Object>
+      <Object type="Group">
+        <Name>Internal</Name>
+        <Object type="EXOLCode">
+          <Name>Code</Name>
+          <Attribute name="Code">If Enable   
+   If Not (CmpX(AlarmStatus = 7) Or CmpX(AlarmStatus = 3) Or Alarm)
+        If (CmpX(RunMode = 0) And Not Running)
+            X StatusInt = 0
+        Else
+            X StatusInt = 1        
+        EndIf
+    Else
+		If Running OR CmpX(RunMode &lt;&gt; 0)
+			X StatusInt = 3
+		Else
+			X StatusInt = 2 
+		EndIf
+    EndIf 
+    
+    ;Delay
+    If EdgeL(Running) OR EdgeL(Alarm) OR EdgeX(RunMode)
+        I Counter = 0
+    EndIf
+    If CmpX(StatusInt &lt;&gt; Status)
+        If CmpI(Counter &gt;= SwitchDelay)
+            X Status = StatusInt
+            I Counter = 0
+        Else
+            I Counter = Counter + CvX(SecDiff)
+        EndIf
+    EndIf
+Else
+	X Status = 0
+EndIf</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">415</Attribute>
+        </Object>
+      </Object>
+      <Object type="EXOLVariables">
+        <Name>EXOLVariables1</Name>
+        <Attribute name="Variables">X StatusInt     ;Internal
+I Counter</Attribute>
+        <Attribute name="Top">10</Attribute>
+        <Attribute name="Left">310</Attribute>
+      </Object>
+    </Object>
+    <Object type="EXOLCode">
+      <Name>ResetExCmd</Name>
+      <Attribute name="Code">If ExCmd
+	L ExCmd = False!
+EndIf</Attribute>
+      <Attribute name="Top">220</Attribute>
+      <Attribute name="Left">220</Attribute>
+      <Attribute name="Width">100</Attribute>
+      <Attribute name="Height">70</Attribute>
+    </Object>
+    <Object type="EXOLCode">
+      <Name>ResetResetCmds</Name>
+      <Attribute name="ObjectChanged">Modified</Attribute>
+      <Attribute name="Code">If Reset
+	L Reset = False!
+EndIf
+If Service
+	L Service = False!
+EndIf</Attribute>
+      <Attribute name="Top">525</Attribute>
+      <Attribute name="Left">30</Attribute>
+      <Attribute name="Width">100</Attribute>
+      <Attribute name="Height">70</Attribute>
+    </Object>
+    <Object type="Group">
+      <Name>Alarms</Name>
+      <Object type="AlarmPoint">
+        <Name>MProtAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Motorskydd</Attribute>
+        </Attribute>
+        <Attribute name="Active">No</Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*MotorProt</Attribute>
+        </Attribute>
+        <Attribute name="Comment">Motor Protection Alarm</Attribute>
+        <Attribute name="UserArea">ET134_Byggnad_1_UC</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">870</Attribute>
+        <Attribute name="Left">650</Attribute>
+        <Attribute name="Width">20</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>ManualAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Handläge</Attribute>
+        </Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*DigAutoMan_AlaManual</Attribute>
+        </Attribute>
+        <Attribute name="Comment">Alarm Output: Manual mode</Attribute>
+        <Attribute name="UserArea">ET134_Byggnad_1_UC</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">815</Attribute>
+        <Attribute name="Left">460</Attribute>
+        <Attribute name="Width">20</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>ExerciseAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Fel under motionering</Attribute>
+        </Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*ExerciseDigital_AlaExercise</Attribute>
+        </Attribute>
+        <Attribute name="Comment">Alarm, error during exercise</Attribute>
+        <Attribute name="UserArea">ET134_Byggnad_1_UC</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">1130</Attribute>
+        <Attribute name="Left">655</Attribute>
+        <Attribute name="Width">20</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>BlockedAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Funktion blockerad</Attribute>
+        </Attribute>
+        <Attribute name="Active">No</Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*DigAutoMan_AlaBlocked AND NOT MotorProt</Attribute>
+        </Attribute>
+        <Attribute name="Comment">Alarm Output: Pump operation blocked</Attribute>
+        <Attribute name="UserArea">ET134_Byggnad_1_UC</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">940</Attribute>
+        <Attribute name="Left">460</Attribute>
+        <Attribute name="Width">20</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>BlockedAutoAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Blockerad i Autoläge</Attribute>
+        </Attribute>
+        <Attribute name="Active">No</Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*DigAutoMan_AlaBlockedAuto</Attribute>
+        </Attribute>
+        <Attribute name="Comment">Alarm Output: Pump output blocked in Auto mode</Attribute>
+        <Attribute name="UserArea">ET134_Byggnad_1_UC</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">1075</Attribute>
+        <Attribute name="Left">460</Attribute>
+        <Attribute name="Width">20</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>ForcedONAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Funktion Tvingad PÅ</Attribute>
+        </Attribute>
+        <Attribute name="Active">No</Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*DigAutoMan_AlaForcedON</Attribute>
+        </Attribute>
+        <Attribute name="UserArea">ET134_Byggnad_1_UC</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">1205</Attribute>
+        <Attribute name="Left">460</Attribute>
+        <Attribute name="Width">20</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>NotRunAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Driftfel</Attribute>
+        </Attribute>
+        <Attribute name="Active">No</Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*StartOut AND NOT Running And Not MotorProt</Attribute>
+        </Attribute>
+        <Attribute name="Comment">Pump is not running</Attribute>
+        <Attribute name="UserArea">ET134_Byggnad_1_UC</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">1025</Attribute>
+        <Attribute name="Left">655</Attribute>
+        <Attribute name="Width">20</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>SumAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Summalarm</Attribute>
+        </Attribute>
+        <Attribute name="Active">Yes</Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*SumAlarmIn</Attribute>
+        </Attribute>
+        <Attribute name="Delay">
+          <Attribute name="InitValue">6</Attribute>
+        </Attribute>
+        <Attribute name="Comment">Alarm Output: Summarized function alarm. Alarms if any of the block alarm points are triggered.</Attribute>
+        <Attribute name="UserArea">ET134_Byggnad_1_UC</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">935</Attribute>
+        <Attribute name="Left">780</Attribute>
+        <Attribute name="Width">20</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+    </Object>
+    <Object type="Block">
+      <Name>RT</Name>
+      <Attribute name="ObjectChanged">Modified</Attribute>
+      <Attribute name="ConnectionPoints">
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Enable</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Input</Attribute>
+          <Attribute name="Binding">*DigAutoMan_StartOut</Attribute>
+          <Attribute name="BoundTo">[Block].[DigAutoMan].[Output].[StartOut]</Attribute>
+          <Attribute name="ConnectionStyle">Line</Attribute>
+          <Attribute name="CoordinatesArray">
+            <Attribute name="Coordinates">
+              <Attribute name="X">920</Attribute>
+              <Attribute name="Y">160</Attribute>
+            </Attribute>
+            <Attribute name="Coordinates">
+              <Attribute name="X">1015</Attribute>
+              <Attribute name="Y">160</Attribute>
+              <Attribute name="IsBranch">Yes</Attribute>
+            </Attribute>
+            <Attribute name="Coordinates">
+              <Attribute name="X">1015</Attribute>
+              <Attribute name="Y">485</Attribute>
+              <Attribute name="IsBranch">Yes</Attribute>
+            </Attribute>
+            <Attribute name="Coordinates">
+              <Attribute name="X">1285</Attribute>
+              <Attribute name="Y">485</Attribute>
+            </Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Reset</Attribute>
+          <Attribute name="Binding">*Service</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Service</Attribute>
+          <Attribute name="Binding">*Reset</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">TotalHours</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">TotalMinutes</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">MaintenanceHours</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">MaintenanceMinutes</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ThisDayMinutes</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ThisDayHours</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">PrevDayHours</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">PrevDayMinutes</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">TwoDaysAgoHours</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">TwoDaysAgoMinutes</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ThisWeekHours</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ThisWeekMinutes</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">PrevWeekHours</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">PrevWeekMinutes</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ThisMonthHours</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ThisMonthMinutes</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">PrevMonthHours</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">PrevMonthMinutes</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ThisYearHours</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ThisYearMinutes</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">PrevYearHours</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">PrevYearMinutes</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">TotalStarts</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ThisDayStarts</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">PrevDayStarts</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">TwoDaysAgoStarts</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ThisWeekStarts</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">PrevWeekStarts</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ThisMonthStarts</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">PrevMonthStarts</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ThisYearStarts</Attribute>
+          <Attribute name="InitValue"></Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">PrevYearStarts</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaMaintenance</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ServicePeriod</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointTotalHours</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointDayHours</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointYesterdayHours</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointTwoDaysAgoHours</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointThisWeekHours</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointPrevWeekHours</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointThisMonthHours</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointPrevMonthHours</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointThisYearHours</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointPrevYearHours</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointTotalStarts</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointThisDayStarts</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointPrevDayStarts</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointTwoDaysAgoStarts</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointThisWeekStarts</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointPrevWeekStarts</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointThisMonthStarts</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointPrevMonthStarts</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointThisYearStarts</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">ResetPointPrevYearStarts</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+      </Attribute>
+      <Attribute name="Top">455</Attribute>
+      <Attribute name="Left">1295</Attribute>
+      <Attribute name="Width">260</Attribute>
+      <Object type="TypeInfo">
+        <Attribute name="TypeName">RunTimeMeter</Attribute>
+        <Attribute name="TypeTitle">Runtime Meter</Attribute>
+        <Attribute name="Icon">Device:\Icons\Run Time Meter.ico</Attribute>
+        <Attribute name="Description">Blocks of the type Runtime Meter measure runtime and count the number of starts. The block shows accumulated values for this and previous year along with values for previous 24 hour period. The Service period can be configured.</Attribute>
+        <Attribute name="ObjectsAdded">Yes</Attribute>
+        <Attribute name="ObjectsDeleted">Yes</Attribute>
+        <Attribute name="ObjectsModified">Yes</Attribute>
+        <Attribute name="ChangedDate">2024-10-03 06:43:47</Attribute>
+        <Attribute name="ChangedBy">tobiasg</Attribute>
+        <Attribute name="TemplateFile">ALib:\Controller Builder\Templates\BlockTypes\RunTimeMeter.ect</Attribute>
+        <Attribute name="TemplateRevision">1.0-1-03</Attribute>
+        <Attribute name="TemplateDate">2015-05-29 12:55:44</Attribute>
+        <Attribute name="Comment">1.0-1-01: Added output signal AlaMaintenance
+1.0-1-02: Deleted Alarm activation and alarm text parameters. Alarm NOT active as default.
+1.0-1-03: Added more historical storage signals, and separated hour and minute for runtimes.</Attribute>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Operation</Name>
+        <Object type="Signal">
+          <Name>Enable</Name>
+          <Attribute name="Description">This parameter enables (1) or disables (0) the function. </Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">Yes [1]</Attribute>
+          <Attribute name="Suggests">No [0], Yes [1]</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Input</Name>
+          <Attribute name="ToolTitle">Input</Attribute>
+          <Attribute name="Description">Run Indication from the monitored device.</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Reset</Name>
+          <Attribute name="ToolTitle">Reset</Attribute>
+          <Attribute name="Description">Resets start and runtime counters to the specified reset points, all except from Maintennance runtime which has a separate reset command.</Attribute>
+          <Attribute name="SignalType">Command</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">65</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Service</Name>
+          <Attribute name="ToolTitle">Reset Service</Attribute>
+          <Attribute name="Description">Reset Service Runtime Meter.</Attribute>
+          <Attribute name="SignalType">Command</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">90</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>TotalHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Total Hours</Attribute>
+          <Attribute name="Description">Total Runtime Hour part</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>TotalMinutes</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Total Minutes</Attribute>
+          <Attribute name="Description">Total Runtime Minute part</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>MaintenanceHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Maintenance Hours</Attribute>
+          <Attribute name="Description">Runtime since last maintennance, Hour part</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">70</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>MaintenanceMinutes</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Maintenance Minutes</Attribute>
+          <Attribute name="Description">Runtime since last maintennance, Minute part.</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">95</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ThisDayHours</Name>
+          <Attribute name="ObjectChanged">Added</Attribute>
+          <Attribute name="ToolTitle">Todays Hours</Attribute>
+          <Attribute name="Description">Runtime today, Hour part</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">130</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ThisDayMinutes</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Todays Minutes</Attribute>
+          <Attribute name="Description">Runtime today, Minute part</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">155</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>PrevDayHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Yesterday Hours</Attribute>
+          <Attribute name="Description">Runtime Yesterday, Hour part</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">190</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>PrevDayMinutes</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Previous Day Minutes</Attribute>
+          <Attribute name="Description">Previous Day Runtime Minute part</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">215</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>TwoDaysAgoHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Two Days Ago Hours</Attribute>
+          <Attribute name="Description">Runtime Two Days Ago, Hour part</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">250</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>TwoDaysAgoMinutes</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Two Days Ago Minutes</Attribute>
+          <Attribute name="Description">Runtime Two Days Ago, Minute part</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">275</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ThisWeekHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">This Week Hours</Attribute>
+          <Attribute name="Description">This Week Runtime, Hour part</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">310</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ThisWeekMinutes</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">This Week Minutes</Attribute>
+          <Attribute name="Description">This Week Runtime, Minute part</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">335</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>PrevWeekHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Previous Week Hours</Attribute>
+          <Attribute name="Description">Previous Week Runtime, Hour part</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">370</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>PrevWeekMinutes</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Previous Week Minutes</Attribute>
+          <Attribute name="Description">Previous Week Runtime, Minute part</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">395</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ThisMonthHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">This Month Hours</Attribute>
+          <Attribute name="Description">This Month Runtime, Hour part</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">430</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ThisMonthMinutes</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">This Month Minutes</Attribute>
+          <Attribute name="Description">This Month Runtime, Minute part</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">455</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>PrevMonthHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Previous Month Hours</Attribute>
+          <Attribute name="Description">Previous Month Runtime, Hour part</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">490</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>PrevMonthMinutes</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Previous Month Minutes</Attribute>
+          <Attribute name="Description">Previous Month Runtime, Minute part</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">515</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ThisYearHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">This Year Hours</Attribute>
+          <Attribute name="Description">This Year Runtime, Hour part</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">550</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ThisYearMinutes</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">This Year Minutes</Attribute>
+          <Attribute name="Description">This Year Runtime, Minute part</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">575</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>PrevYearHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Previous Year Hours</Attribute>
+          <Attribute name="Description">Previous Year Runtime, Hour part.</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">610</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>PrevYearMinutes</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Previous Year Minutes</Attribute>
+          <Attribute name="Description">Previous Year Runtime, Minute part.</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">635</Attribute>
+          <Attribute name="Left">695</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>TotalStarts</Name>
+          <Attribute name="ToolTitle">Total Starts</Attribute>
+          <Attribute name="Description">Total number of starts.</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">995</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ThisDayStarts</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Starts Today</Attribute>
+          <Attribute name="Description">Number of starts today</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">130</Attribute>
+          <Attribute name="Left">1000</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>PrevDayStarts</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Starts Previous Day</Attribute>
+          <Attribute name="Description">Number of starts yesterday</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">190</Attribute>
+          <Attribute name="Left">1000</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>TwoDaysAgoStarts</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Starts Two Days Ago</Attribute>
+          <Attribute name="Description">Number of starts two days ago</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">250</Attribute>
+          <Attribute name="Left">1000</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ThisWeekStarts</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Starts This Week</Attribute>
+          <Attribute name="Description">Number of starts this week</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">310</Attribute>
+          <Attribute name="Left">1000</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>PrevWeekStarts</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Starts Previous Week</Attribute>
+          <Attribute name="Description">Number of starts previous week</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">370</Attribute>
+          <Attribute name="Left">1000</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ThisMonthStarts</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Starts This Month</Attribute>
+          <Attribute name="Description">Number of starts this month</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">430</Attribute>
+          <Attribute name="Left">1000</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>PrevMonthStarts</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Starts Previous Month</Attribute>
+          <Attribute name="Description">Number of starts previous month</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">490</Attribute>
+          <Attribute name="Left">1000</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ThisYearStarts</Name>
+          <Attribute name="ToolTitle">This Year Starts</Attribute>
+          <Attribute name="Description">Number of starts this year.</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">550</Attribute>
+          <Attribute name="Left">1000</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>PrevYearStarts</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Previous Year Starts</Attribute>
+          <Attribute name="Description">Number of starts previous year.</Attribute>
+          <Attribute name="SignalType">Counter</Attribute>
+          <Attribute name="Top">610</Attribute>
+          <Attribute name="Left">1000</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>AlaMaintenance</Name>
+          <Attribute name="ToolTitle">Maintenance Alarm signal</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">250</Attribute>
+          <Attribute name="Left">390</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Settings</Name>
+        <Object type="Signal">
+          <Name>ServicePeriod</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Service Period</Attribute>
+          <Attribute name="Description">Time Period for Service. [h]</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">130</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Configuration</Name>
+        <Object type="Signal">
+          <Name>ResetPointTotalHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Reset Point Total Run-Time</Attribute>
+          <Attribute name="Description">The point where Total Run-Time will start counting from, after reset. [h]</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">175</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointDayHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Reset Point Day Run-Time</Attribute>
+          <Attribute name="Description">The point where Day Run-Time will start counting from, after reset. [h]</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">200</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointYesterdayHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Reset Point Yesterday Run-Time</Attribute>
+          <Attribute name="Description">The point that Yesterday Run-Time will be set to, after reset. [h]</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">225</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointTwoDaysAgoHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Reset Point Two Days Ago Run-Time</Attribute>
+          <Attribute name="Description">The point that 'Two Days Ago Run-Time' will be set to, after reset. [h]</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">250</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointThisWeekHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Reset Point This Week Run-Time</Attribute>
+          <Attribute name="Description">The point where This Week Run-Time will start counting from, after reset. [h]</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">275</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointPrevWeekHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Reset Point Prev. Week Run-Time</Attribute>
+          <Attribute name="Description">The point that Previous Week Run-Time will be set to, after reset. [h]</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">300</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointThisMonthHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Reset Point This Month Run-Time</Attribute>
+          <Attribute name="Description">The point where This Month Run-Time will start counting from, after reset. [h]</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">325</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointPrevMonthHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Reset Point Prev. Month Run-Time</Attribute>
+          <Attribute name="Description">The point that Previous Month Run-Time will be set to, after reset. [h]</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">350</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointThisYearHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Reset Point This Year Run-Time</Attribute>
+          <Attribute name="Description">The point where This Year Run-Time will start counting from, after reset. [h]</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">375</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointPrevYearHours</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Reset Point Prev. Year Run-Time</Attribute>
+          <Attribute name="Description">The point where Prev. Year Run-Time will start counting from, after reset. [h]</Attribute>
+          <Attribute name="Unit">h</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">400</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointTotalStarts</Name>
+          <Attribute name="ToolTitle">Reset Point Total Starts</Attribute>
+          <Attribute name="Description">The point where Total Starts will start counting from, after reset.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">435</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointThisDayStarts</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Reset Point Day Starts</Attribute>
+          <Attribute name="Description">The point where Day Starts will start counting from, after reset.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">460</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointPrevDayStarts</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Reset Point Yesterday Starts</Attribute>
+          <Attribute name="Description">The point Yesterday Starts will ne set to, after reset.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">485</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointTwoDaysAgoStarts</Name>
+          <Attribute name="ToolTitle">Reset Point Two Days Ago Starts</Attribute>
+          <Attribute name="Description">The point 'Two Days Ago Starts' will ne set to, after reset.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">510</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointThisWeekStarts</Name>
+          <Attribute name="ToolTitle">Reset Point This Week Starts</Attribute>
+          <Attribute name="Description">The point where This Week Starts will start counting from, after reset.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">535</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointPrevWeekStarts</Name>
+          <Attribute name="ToolTitle">Reset Point Prev. Week Starts</Attribute>
+          <Attribute name="Description">The point Previous Week Starts will ne set to, after reset.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">560</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointThisMonthStarts</Name>
+          <Attribute name="ToolTitle">Reset Point This Month Starts</Attribute>
+          <Attribute name="Description">The point where This Month Starts will start counting from, after reset.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">585</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointPrevMonthStarts</Name>
+          <Attribute name="ToolTitle">Reset Point Prev. Month Starts</Attribute>
+          <Attribute name="Description">The point Previous Month Starts will ne set to, after reset.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">610</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointThisYearStarts</Name>
+          <Attribute name="ToolTitle">Reset Point This Year Starts</Attribute>
+          <Attribute name="Description">The point where This Year Starts will start counting from, after reset.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">635</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>ResetPointPrevYearStarts</Name>
+          <Attribute name="ToolTitle">Reset Point Prev. Year Starts</Attribute>
+          <Attribute name="Description">The point where Prev. Year Starts will start counting from, after reset.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">660</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+      </Object>
+      <Object type="Group">
+        <Name>Internal</Name>
+        <Object type="EXOLVariables">
+          <Name>Variables</Name>
+          <Attribute name="Variables">  X OldDay      ; Internal. For detecting day-shift
+  I IntSec      ; Internal Sec-counter
+  X OldYear     ; Internal for storing year values.		
+  X OldMonth    ; Internal for storing month values.	
+  X OldMinute   ; Internal for storing minute values.	</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">325</Attribute>
+        </Object>
+        <Object type="EXOLCode">
+          <Name>Code</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="Code">If Enable
+  If StartUpFlag
+        ; Avoid shift at first startup
+        X OldDay    = WDay     
+        X OldMonth  = Month
+        X OldYear   = Year
+        X OldMinute = Minute
+  EndIf
+  
+  If CmpX( OldDay &lt;&gt; WDay )
+    ; if change of day (0:00)...
+    X OldDay = WDay
+    
+    ;Shift day runtime counters
+    R TwoDaysAgoHours       = PrevDayHours
+    R TwoDaysAgoMinutes     = PrevDayMinutes
+    R PrevDayHours          = ThisDayHours
+    R PrevDayMinutes        = ThisDayMinutes
+    R ThisDayHours          = 0
+    R ThisDayMinutes        = 0
+    
+    ;Shift day start counters
+    R TwoDaysAgoStarts      = PrevDayStarts
+    R PrevDayStarts         = ThisDayStarts
+    R ThisDayStarts         = 0
+    
+    If CmpX(WDay = 1) ;New week
+        ;Shift week runtime counters
+        R PrevWeekHours    = ThisWeekHours
+        R PrevWeekMinutes  = ThisWeekMinutes
+        R ThisWeekHours    = 0
+        R ThisWeekMinutes  = 0
+        
+        ;Shift week start counters
+        R PrevWeekStarts   = ThisWeekStarts
+        R ThisWeekStarts   = 0
+    EndIf
+  EndIf
+  
+  If CmpX( OldMonth &lt;&gt; Month )
+    ;New month
+    X OldMonth = Month
+    
+    ;Shift month runtime counters
+    R PrevMonthHours       = ThisMonthHours
+    R PrevMonthMinutes     = ThisMonthMinutes
+    R ThisMonthHours       = 0
+    R ThisMonthMinutes     = 0
+    
+    ;Shift month start counters
+    R PrevMonthStarts      = ThisMonthStarts
+    R ThisMonthStarts      = 0
+  EndIf
+  
+  If CmpX( OldYear &lt;&gt; Year )
+     ; if change of year...
+     X OldYear = Year
+     
+     ;Shift year runtime counters
+     R PrevYearHours    = ThisYearHours
+     R PrevYearMinutes  = ThisYearMinutes
+     R ThisYearHours    = 0
+     R ThisYearMinutes  = 0
+     
+     ;Shift year start counters
+     R PrevYearStarts   = ThisYearStarts
+     R ThisYearStarts   = 0
+  EndIf
+  
+  If Reset
+    L Reset = False!
+    R TotalHours             = CvH(CvR(ResetPointTotalHours))      ; Reset TotalHours runtime
+    R TotalMinutes           = 0 
+    R ThisDayHours           = CvH(CvR(ResetPointDayHours))        ; Reset Runtime today  
+    R ThisDayMinutes         = 0  
+    R PrevDayHours           = CvH(CvR(ResetPointYesterdayHours))  ; Reset Runtime Yesterday  
+    R PrevDayMinutes         = 0
+    R TwoDaysAgoHours        = CvH(CvR(ResetPointTwoDaysAgoHours)) ; Reset Runtime Two Days Ago 
+    R TwoDaysAgoMinutes      = 0
+    R ThisWeekHours          = CvH(CvR(ResetPointThisWeekHours))   ; Reset previous weeks' runtime
+    R ThisWeekMinutes        = 0 
+    R PrevWeekHours          = CvH(CvR(ResetPointPrevWeekHours))   ; Reset previous weeks' runtime
+    R PrevWeekMinutes        = 0 
+    R ThisMonthHours         = CvH(CvR(ResetPointThisMonthHours))  ; Reset previous months' runtime
+    R ThisMonthMinutes       = 0 
+    R PrevMonthHours         = CvH(CvR(ResetPointPrevMonthHours))  ; Reset previous months' runtime
+    R PrevMonthMinutes       = 0 
+    R ThisYearHours          = CvH(CvR(ResetPointThisYearHours))   ; Reset this years' runtime
+    R ThisYearMinutes        = 0
+    R PrevYearHours          = CvH(CvR(ResetPointPrevYearHours))   ; Reset previous years' runtime
+    R PrevYearMinutes        = 0 
+    
+    R TotalStarts            = ResetPointTotalStarts	  ; TotalHours number of starts
+    R ThisDayStarts          = ResetPointThisDayStarts		  ; Number of starts today  
+    R PrevDayStarts          = ResetPointPrevDayStarts  ; Number of starts Yesterday
+    R TwoDaysAgoStarts       = ResetPointTwoDaysAgoStarts ; Number of starts Yesterday
+    R ThisWeekStarts         = ResetPointThisWeekStarts   ; Reset this weeks' no of starts
+    R PrevWeekStarts         = ResetPointPrevWeekStarts   ; Reset previous weeks' no of starts
+    R ThisMonthStarts        = ResetPointThisMonthStarts  ; Reset this months' no of starts
+    R PrevMonthStarts        = ResetPointPrevMonthStarts  ; Reset previous months' no of starts                                                                      
+    R ThisYearStarts         = ResetPointThisYearStarts   ; Reset this years' no of starts
+    R PrevYearStarts         = ResetPointPrevYearStarts   ; Reset previous years' no of starts
+    
+   ; I IntSec = 0     ; Reset internal seccounter
+  EndIf
+
+  If Input
+      ; if runtime indication
+      ; Count number of starts...
+      If EdgeL( Input )
+        R TotalStarts       = TotalStarts + 1
+        R ThisDayStarts     = ThisDayStarts + 1
+        R ThisWeekStarts    = ThisWeekStarts + 1
+        R ThisMonthStarts   = ThisMonthStarts + 1
+        R ThisYearStarts    = ThisYearStarts + 1
+      Else
+        ; Count runtime...
+        ;I IntSec    = IntSec + CvX(SecDiff)      
+        If CmpR(TotalMinutes &lt; 59) AND CmpX(OldMinute &lt;&gt; Minute)
+            X OldMinute = Minute
+            ;Count up minutes
+            R TotalMinutes         = TotalMinutes + 1
+            R MaintenanceMinutes   = MaintenanceMinutes + 1
+            R ThisDayMinutes       = ThisDayMinutes + 1
+            R ThisWeekMinutes      = ThisWeekMinutes + 1
+            R ThisMonthMinutes     = ThisMonthMinutes + 1
+            R ThisYearMinutes      = ThisYearMinutes + 1 
+        Else
+            If CmpR(TotalMinutes &gt;= 59) AND CmpX(OldMinute &lt;&gt; Minute)     ;New hour
+                ;Reset minute counters
+                R TotalMinutes         = 0
+                R MaintenanceMinutes   = 0
+                R ThisDayMinutes       = 0
+                R ThisWeekMinutes      = 0
+                R ThisMonthMinutes     = 0
+                R ThisYearMinutes      = 0
+                
+                ;Count up hour counters
+                R TotalHours           = TotalHours + 1
+                R MaintenanceHours     = MaintenanceHours + 1
+                R ThisDayHours         = ThisDayHours + 1
+                R ThisWeekHours        = ThisWeekHours +1
+                R ThisMonthHours       = ThisMonthHours + 1
+                R ThisYearHours        = ThisYearHours + 1
+                ;I IntSec            = 0 ;Reset second counter
+            EndIf
+        EndIf
+        
+      EndIf     
+  EndIf  ; if running
+
+  If Service
+    ; reset the serviceruntime
+    L Service = False!
+    R MaintenanceHours = 0
+    R MaintenanceMinutes = 0
+  EndIf
+  L AlaMaintenance = CmpR( MaintenanceHours &gt; ServicePeriod ) AND CmpR( ServicePeriod &gt; 0 ) 
+EndIf		</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">430</Attribute>
+        </Object>
+      </Object>
+      <Object type="Group">
+        <Name>Alarms</Name>
+        <Object type="AlarmPoint">
+          <Name>MaintAlarm</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="AlarmText">
+            <Attribute name="InitValue">%SubSystemTitle% Service</Attribute>
+          </Attribute>
+          <Attribute name="Active">No</Attribute>
+          <Attribute name="Input">
+            <Attribute name="Binding">*AlaMaintenance</Attribute>
+          </Attribute>
+          <Attribute name="Comment">Alarm when Service Runtime &gt; Service Period</Attribute>
+          <Attribute name="UserArea">ET134_Byggnad_1_UC</Attribute>
+          <Attribute name="ShowStyle">Compact</Attribute>
+          <Attribute name="Top">420</Attribute>
+          <Attribute name="Left">445</Attribute>
+        </Object>
+      </Object>
+    </Object>
+    <Object type="Group">
+      <Name>Internal</Name>
+      <Attribute name="ObjectChanged">Added</Attribute>
+      <Object type="EXOLCode">
+        <Name>Code</Name>
+        <Attribute name="ObjectChanged">Added</Attribute>
+        <Attribute name="Code">If Enable  
+  Switch Select
+      R Output = 0
+    Pole 1
+      R Output = OutputManual
+    Pole 2
+      R Output = Input
+    ElsePole
+      R Output = Input
+  EndSwitch           
+Else
+  R Output = Input
+EndIf
+</Attribute>
+        <Attribute name="Top">230</Attribute>
+        <Attribute name="Left">1270</Attribute>
+      </Object>
+    </Object>
+    <Object type="EventPoint">
+      <Name>LOG</Name>
+      <Attribute name="ObjectChanged">Added</Attribute>
+      <Attribute name="AlarmText">
+        <Attribute name="InitValue">%SubSystemTitle% Drift</Attribute>
+      </Attribute>
+      <Attribute name="Input">
+        <Attribute name="Binding">*DigAutoMan_StartOut</Attribute>
+        <Attribute name="BoundTo">[Block].[DigAutoMan].[Output].[StartOut]</Attribute>
+        <Attribute name="ShowPosition">0</Attribute>
+        <Attribute name="ConnectionStyle">Line</Attribute>
+        <Attribute name="CoordinatesArray">
+          <Attribute name="Coordinates">
+            <Attribute name="X">920</Attribute>
+            <Attribute name="Y">160</Attribute>
+          </Attribute>
+          <Attribute name="Coordinates">
+            <Attribute name="X">1015</Attribute>
+            <Attribute name="Y">160</Attribute>
+            <Attribute name="IsBranch">Yes</Attribute>
+          </Attribute>
+          <Attribute name="Coordinates">
+            <Attribute name="X">1015</Attribute>
+            <Attribute name="Y">485</Attribute>
+            <Attribute name="IsBranch">Yes</Attribute>
+          </Attribute>
+          <Attribute name="Coordinates">
+            <Attribute name="X">1015</Attribute>
+            <Attribute name="Y">585</Attribute>
+          </Attribute>
+          <Attribute name="Coordinates">
+            <Attribute name="X">1100</Attribute>
+            <Attribute name="Y">585</Attribute>
+          </Attribute>
+        </Attribute>
+      </Attribute>
+      <Attribute name="Status">
+        <Attribute name="ShowPosition">0</Attribute>
+      </Attribute>
+      <Attribute name="ShowStyle">Compact</Attribute>
+      <Attribute name="Top">575</Attribute>
+      <Attribute name="Left">1110</Attribute>
+      <Attribute name="Height">40</Attribute>
+    </Object>
+  </Object>
+  <Action type="Copy">
+    <Source>Alib:\Controller Builder\Icons\Pump.ico</Source>
+    <Destination>ALib:\Controller Builder\Icons\Pump.ico</Destination>
+  </Action>
+  <Action type="Copy">
+    <Source>Alib:\Controller Builder\Icons\ManAuto (Small).ico</Source>
+    <Destination>Device:\Icons\ManAuto (Small).ico</Destination>
+  </Action>
+  <Action type="Copy">
+    <Source>Alib:\Controller Builder\Icons\Device.ico</Source>
+    <Destination>Device:\Icons\Device.ico</Destination>
+  </Action>
+  <Action type="Copy">
+    <Source>Alib:\Controller Builder\Icons\OperationStatus.ico</Source>
+    <Destination>Device:\Icons\OperationStatus.ico</Destination>
+  </Action>
+  <Action type="Copy">
+    <Source>Alib:\Controller Builder\Icons\Run Time Meter.ico</Source>
+    <Destination>Device:\Icons\Run Time Meter.ico</Destination>
+  </Action>
+</EXOconfigTemplate>

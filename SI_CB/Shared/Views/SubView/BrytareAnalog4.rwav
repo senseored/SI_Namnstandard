@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwav" version="2024.1.100.32">
+  <Object type="View">
+    <Attribute name="Name">BrytareAnalog4</Attribute>
+    <Attribute name="Width">565</Attribute>
+    <Attribute name="Height">390</Attribute>
+    <Attribute name="Zoom">100%</Attribute>
+    <Attribute name="ScaleValue">1</Attribute>
+    <Attribute name="ServerSideFunctionRPC">accounts.%account%.services.ssf.execute</Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the view. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Title</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Controller</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_File</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Setting</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all visual elements for the view.</Attribute>
+      <Object type="Symbol">
+        <Attribute name="Name">Symbol_1</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#1%</Attribute>
+        <Attribute name="Pictures">Shared:\SI1\Symbols\Brytare4_noll.svg,Shared:\SI1\Symbols\Brytare4_ett.svg,Shared:\SI1\Symbols\Brytare4_tva.svg,Shared:\SI1\Symbols\Brytare4_tre.svg</Attribute>
+        <Attribute name="SizeMode">Stretch</Attribute>
+        <Attribute name="Left">180</Attribute>
+        <Attribute name="Top">45</Attribute>
+        <Attribute name="Width">250</Attribute>
+        <Attribute name="Height">250</Attribute>
+      </Object>
+      <Object type="Button">
+        <Attribute name="Name">Button_0</Attribute>
+        <Attribute name="Title">%SubView_Setting#4%</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="Left">20</Attribute>
+        <Attribute name="Top">55</Attribute>
+        <Attribute name="Width">150</Attribute>
+        <Attribute name="Height">50</Attribute>
+        <Attribute name="OnManeuver">¤%SubView_Controller%%SubView_Object%%SubView_Setting#1% = 0</Attribute>
+      </Object>
+      <Object type="Button">
+        <Attribute name="Name">Button_1</Attribute>
+        <Attribute name="Title">%SubView_Setting#5%</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="Left">20</Attribute>
+        <Attribute name="Top">115</Attribute>
+        <Attribute name="Width">150</Attribute>
+        <Attribute name="Height">50</Attribute>
+        <Attribute name="OnManeuver">¤%SubView_Controller%%SubView_Object%%SubView_Setting#1% = 1</Attribute>
+      </Object>
+      <Object type="Button">
+        <Attribute name="Name">Button_2</Attribute>
+        <Attribute name="Title">%SubView_Setting#6%</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="Left">20</Attribute>
+        <Attribute name="Top">175</Attribute>
+        <Attribute name="Width">150</Attribute>
+        <Attribute name="Height">50</Attribute>
+        <Attribute name="OnManeuver">¤%SubView_Controller%%SubView_Object%%SubView_Setting#1% = 2</Attribute>
+      </Object>
+      <Object type="Button">
+        <Attribute name="Name">Button_3</Attribute>
+        <Attribute name="Title">%SubView_Setting#7%</Attribute>
+        <Attribute name="ShowTitle">Yes</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="Left">20</Attribute>
+        <Attribute name="Top">235</Attribute>
+        <Attribute name="Width">150</Attribute>
+        <Attribute name="Height">50</Attribute>
+        <Attribute name="OnManeuver">¤%SubView_Controller%%SubView_Object%%SubView_Setting#1% = 3</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_1</Attribute>
+        <Attribute name="Title">Manuell utsignal:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#2%</Attribute>
+        <Attribute name="Unit">%</Attribute>
+        <Attribute name="Format">1</Attribute>
+        <Attribute name="ManeuverStyle">DialogBox</Attribute>
+        <Attribute name="Left">180</Attribute>
+        <Attribute name="Top">315</Attribute>
+        <Attribute name="Width">80</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">151</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Numeric_2</Attribute>
+        <Attribute name="Title">Aktuell utsignal:</Attribute>
+        <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#3%</Attribute>
+        <Attribute name="Unit">%</Attribute>
+        <Attribute name="Format">1</Attribute>
+        <Attribute name="ManeuverStyle">None</Attribute>
+        <Attribute name="Left">180</Attribute>
+        <Attribute name="Top">350</Attribute>
+        <Attribute name="Width">80</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">151</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">Text_1</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">%SubView_Title%</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="Left">0</Attribute>
+        <Attribute name="Top">0</Attribute>
+        <Attribute name="Width">565</Attribute>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

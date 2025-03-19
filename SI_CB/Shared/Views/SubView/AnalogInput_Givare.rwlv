@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwlv" version="2024.1.100.32">
+  <Object type="ListView">
+    <Attribute name="Name">AnalogInput_Givare</Attribute>
+    <Attribute name="Title">%Subview_Title%</Attribute>
+    <Attribute name="ShowLines">Yes</Attribute>
+    <Attribute name="MaxColumnWidth">275</Attribute>
+    <Attribute name="AllowViewColumns">No</Attribute>
+    <Attribute name="AlwaysShowSpaceForIcons">No</Attribute>
+    <Attribute name="MoreCommandIcon"></Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the listview file. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Controller</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Setting</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all elements for the listview file.</Attribute>
+      <Object type="List">
+        <Attribute name="Name">Title</Attribute>
+        <Object type="Text">
+          <Attribute name="Name">TitleText</Attribute>
+          <Attribute name="ShowTitle">No</Attribute>
+          <Attribute name="Value">Inställningar</Attribute>
+          <Attribute name="FontSize">ExtraFont2</Attribute>
+          <Attribute name="VisualStyle">Shady</Attribute>
+          <Attribute name="TitleColor">Dark</Attribute>
+        </Object>
+      </Object>
+      <Object type="List">
+        <Attribute name="Name">ListSelection</Attribute>
+        <Attribute name="SelectionContainer">this.view.parent.view.SubView_ViewContainer</Attribute>
+        <Object type="Numeric">
+          <Attribute name="Name">Input</Attribute>
+          <Attribute name="Title">Insignal:</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%_Input</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Kalibrering</Attribute>
+          <Attribute name="Title">Kalibrering:</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%_Offset</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">Type</Attribute>
+          <Attribute name="Title">Specialgivare:</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%_SensorType</Attribute>
+          <Attribute name="Texts">Nej [0],Honeywell T7043B 1005 [1],Honeywell T7043A 1002 [2],TA EGL/EGRL/EGU [3],Geamatic NTC (SDT-NTC) (Trend 1C1002-1) [4],Geamatic PTC (SDT-PTC) (KTY81-210) [5],Satchwell DRT/DDT/DWT/DRTE/DDTE/DWTE/DOT/DOS/DOW [6],Satchwell DW [7],Satchwell DD/DR [8],Satchwell DO [9],Staefa T30 [10],Staefa T35 [11],L&amp;G NTC (QAC31) [12],Staefa TH2 [13],Staefa T1 [14],Regin 0-30°C [15],Diana [16],Priva CD750 [17]</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Output</Attribute>
+          <Attribute name="Title">Utsignal:</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%_Output</Attribute>
+          <Attribute name="Unit">%SubView_Setting%</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+      </Object>
+      <Object type="List">
+        <Attribute name="Name">Givarfel</Attribute>
+        <Object type="Text">
+          <Attribute name="Name">TitleText_1</Attribute>
+          <Attribute name="ShowTitle">No</Attribute>
+          <Attribute name="Value">Givarfel</Attribute>
+          <Attribute name="FontSize">ExtraFont2</Attribute>
+          <Attribute name="VisualStyle">Shady</Attribute>
+          <Attribute name="TitleColor">Dark</Attribute>
+        </Object>
+      </Object>
+      <Object type="List">
+        <Attribute name="Name">ListSelection_1</Attribute>
+        <Attribute name="SelectionContainer">this.view.parent.view.SubView_ViewContainer</Attribute>
+        <Object type="Numeric">
+          <Attribute name="Name">LowSensorLimit</Attribute>
+          <Attribute name="Title">Orimligt lågt värde:</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%_LowSensorLimit</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">HighSensorLimit</Attribute>
+          <Attribute name="Title">Orimligt högt värde:</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%_HighSensorLimit</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">SensorCnt</Attribute>
+          <Attribute name="Title">Oförändrat värde (tid):</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%_SensorCnt</Attribute>
+          <Attribute name="Unit">sek</Attribute>
+          <Attribute name="Format">0</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

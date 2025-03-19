@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwav" version="2019.4.100.249">
+  <Object type="View">
+    <Attribute name="Name">DrifttidStarter1</Attribute>
+    <Attribute name="Width">565</Attribute>
+    <Attribute name="Height">390</Attribute>
+    <Attribute name="Zoom">100%</Attribute>
+    <Attribute name="ScaleValue">1.00</Attribute>
+    <Attribute name="ServerSideFunctionRPC">accounts.%account%.services.ssf.execute</Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the view. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Title</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_File</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Setting</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all visual elements for the view.</Attribute>
+      <Object type="Numeric">
+        <Attribute name="Name">Totalt_3</Attribute>
+        <Attribute name="Title">Totalt:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_TotalStarts</Attribute>
+        <Attribute name="Left">340</Attribute>
+        <Attribute name="Top">40</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">In_Dag_1</Attribute>
+        <Attribute name="Title">Dygn:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_DayStarts</Attribute>
+        <Attribute name="Left">340</Attribute>
+        <Attribute name="Top">95</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">In_Vecka_1</Attribute>
+        <Attribute name="Title">Vecka:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_WeekStarts</Attribute>
+        <Attribute name="Left">340</Attribute>
+        <Attribute name="Top">125</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">In_Manad_1</Attribute>
+        <Attribute name="Title">Månad:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_MonthStarts</Attribute>
+        <Attribute name="Left">340</Attribute>
+        <Attribute name="Top">155</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">For_Dag_1</Attribute>
+        <Attribute name="Title">Dygn:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_LastDayStarts</Attribute>
+        <Attribute name="Left">340</Attribute>
+        <Attribute name="Top">210</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">For_Vecka_1</Attribute>
+        <Attribute name="Title">Vecka:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_LastWeekStarts</Attribute>
+        <Attribute name="Left">340</Attribute>
+        <Attribute name="Top">240</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">For_Manad_1</Attribute>
+        <Attribute name="Title">Månad:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_LastMonthStarts</Attribute>
+        <Attribute name="Left">340</Attribute>
+        <Attribute name="Top">270</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Totalt</Attribute>
+        <Attribute name="Title">Totalt:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_TotalRT</Attribute>
+        <Attribute name="Unit">h</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">40</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">In_Dag</Attribute>
+        <Attribute name="Title">Dygn:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_DayRT</Attribute>
+        <Attribute name="Unit">h</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">95</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">In_Vecka</Attribute>
+        <Attribute name="Title">Vecka:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_WeekRT</Attribute>
+        <Attribute name="Unit">h</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">125</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">In_Manad</Attribute>
+        <Attribute name="Title">Månad:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_MonthRT</Attribute>
+        <Attribute name="Unit">h</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">155</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">For_Dag</Attribute>
+        <Attribute name="Title">Dygn:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_LastDayRT</Attribute>
+        <Attribute name="Unit">h</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">210</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">For_Vecka</Attribute>
+        <Attribute name="Title">Vecka:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_LastWeekRT</Attribute>
+        <Attribute name="Unit">h</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">240</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">For_Manad</Attribute>
+        <Attribute name="Title">Månad:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_LastMonthRT</Attribute>
+        <Attribute name="Unit">h</Attribute>
+        <Attribute name="Left">70</Attribute>
+        <Attribute name="Top">270</Attribute>
+        <Attribute name="Width">200</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">51</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Tid_service</Attribute>
+        <Attribute name="Title">Tid sedan service:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_ServiceRT</Attribute>
+        <Attribute name="Unit">h</Attribute>
+        <Attribute name="FontSize">Normal</Attribute>
+        <Attribute name="Left">140</Attribute>
+        <Attribute name="Top">325</Attribute>
+        <Attribute name="Width">100</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">120</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">Service</Attribute>
+        <Attribute name="Title">Servicelarm:</Attribute>
+        <Attribute name="Value">*%SubView_Object%_ServicePer</Attribute>
+        <Attribute name="Unit">h</Attribute>
+        <Attribute name="ManeuverStyle">DialogBox</Attribute>
+        <Attribute name="FontSize">Normal</Attribute>
+        <Attribute name="Transparency">100</Attribute>
+        <Attribute name="Left">140</Attribute>
+        <Attribute name="Top">355</Attribute>
+        <Attribute name="Width">100</Attribute>
+        <Attribute name="Height">30</Attribute>
+        <Attribute name="TitleWidth">120</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">Text_7</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">Starter</Attribute>
+        <Attribute name="FontSize">Medium</Attribute>
+        <Attribute name="Left">280</Attribute>
+        <Attribute name="Top">20</Attribute>
+        <Attribute name="Width">260</Attribute>
+        <Attribute name="Height">25</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">Text_9</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">Drifttid</Attribute>
+        <Attribute name="FontSize">Medium</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">20</Attribute>
+        <Attribute name="Width">260</Attribute>
+        <Attribute name="Height">25</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">Text_10</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">Servicetid</Attribute>
+        <Attribute name="FontSize">Medium</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">300</Attribute>
+        <Attribute name="Width">210</Attribute>
+        <Attribute name="Height">25</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">Text_8</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">Innevarande</Attribute>
+        <Attribute name="FontSize">Normal</Attribute>
+        <Attribute name="Left">280</Attribute>
+        <Attribute name="Top">70</Attribute>
+        <Attribute name="Width">260</Attribute>
+        <Attribute name="Height">25</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">Text_6</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">Föregående</Attribute>
+        <Attribute name="FontSize">Normal</Attribute>
+        <Attribute name="Left">280</Attribute>
+        <Attribute name="Top">185</Attribute>
+        <Attribute name="Width">260</Attribute>
+        <Attribute name="Height">25</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">Text_2</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">Innevarande</Attribute>
+        <Attribute name="FontSize">Normal</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">70</Attribute>
+        <Attribute name="Width">260</Attribute>
+        <Attribute name="Height">25</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">Text_3</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">Föregående</Attribute>
+        <Attribute name="FontSize">Normal</Attribute>
+        <Attribute name="Left">10</Attribute>
+        <Attribute name="Top">185</Attribute>
+        <Attribute name="Width">260</Attribute>
+        <Attribute name="Height">25</Attribute>
+      </Object>
+      <Object type="Button">
+        <Attribute name="Name">Nollstall_drift</Attribute>
+        <Attribute name="Title">Nollställ drifttid/starter</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="Left">405</Attribute>
+        <Attribute name="Top">335</Attribute>
+        <Attribute name="Width">150</Attribute>
+        <Attribute name="Height">50</Attribute>
+        <Attribute name="OnManeuver">¤%SubView_Object%_Reset = 1</Attribute>
+      </Object>
+      <Object type="Button">
+        <Attribute name="Name">Nollstall_service</Attribute>
+        <Attribute name="Title">Nollställ servicetid</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="Left">245</Attribute>
+        <Attribute name="Top">335</Attribute>
+        <Attribute name="Width">150</Attribute>
+        <Attribute name="Height">50</Attribute>
+        <Attribute name="OnManeuver">¤%SubView_Object%_Service = 1</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">Text_1</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">%SubView_Title%</Attribute>
+        <Attribute name="FontSize">ExtraFont2</Attribute>
+        <Attribute name="VisualStyle">Shady</Attribute>
+        <Attribute name="Left">0</Attribute>
+        <Attribute name="Top">0</Attribute>
+        <Attribute name="Width">565</Attribute>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

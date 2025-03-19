@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwlv" version="2024.1.100.32">
+  <Object type="ListView">
+    <Attribute name="Name">Variabel</Attribute>
+    <Attribute name="Title">%Subview_Title%</Attribute>
+    <Attribute name="ShowLines">No</Attribute>
+    <Attribute name="MaxColumnWidth">565</Attribute>
+    <Attribute name="AlwaysShowSpaceForIcons">No</Attribute>
+    <Attribute name="MoreCommandIcon"></Attribute>
+    <Attribute name="OnOpen"></Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the listview file. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Controller</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Setting</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all elements for the listview file.</Attribute>
+      <Object type="List">
+        <Attribute name="Name">Title</Attribute>
+        <Object type="Text">
+          <Attribute name="Name">TitleText</Attribute>
+          <Attribute name="ShowTitle">No</Attribute>
+          <Attribute name="Value">%SubView_Title%</Attribute>
+          <Attribute name="FontSize">ExtraFont2</Attribute>
+          <Attribute name="VisualStyle">Shady</Attribute>
+          <Attribute name="TitleColor">Dark</Attribute>
+        </Object>
+      </Object>
+      <Object type="List">
+        <Attribute name="Name">ListSelection</Attribute>
+        <Attribute name="SelectionContainer">this.view.parent.view.SubView_ViewContainer</Attribute>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_1</Attribute>
+          <Attribute name="Title">%SubView_Setting#1%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#4%</Attribute>
+          <Attribute name="Unit">%SubView_Setting#2%</Attribute>
+          <Attribute name="Format">%SubView_Setting#3%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#5% == 0){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#5% == 1){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">TextSelect_1</Attribute>
+          <Attribute name="Title">%SubView_Setting#1%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#4%</Attribute>
+          <Attribute name="Texts">%SubView_Setting#2%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#5% == 2){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#5% == 3){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_2</Attribute>
+          <Attribute name="Title">%SubView_Setting#6%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#9%</Attribute>
+          <Attribute name="Unit">%SubView_Setting#7%</Attribute>
+          <Attribute name="Format">%SubView_Setting#8%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#10% == 0){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#10% == 1){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">TextSelect_2</Attribute>
+          <Attribute name="Title">%SubView_Setting#6%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#9%</Attribute>
+          <Attribute name="Texts">%SubView_Setting#7%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#10% == 2){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#10% == 3){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_3</Attribute>
+          <Attribute name="Title">%SubView_Setting#11%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#14%</Attribute>
+          <Attribute name="Unit">%SubView_Setting#12%</Attribute>
+          <Attribute name="Format">%SubView_Setting#13%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#15% == 0){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#15% == 1){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">TextSelect_3</Attribute>
+          <Attribute name="Title">%SubView_Setting#11%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#14%</Attribute>
+          <Attribute name="Texts">%SubView_Setting#12%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#15% == 2){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#15% == 3){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_4</Attribute>
+          <Attribute name="Title">%SubView_Setting#16%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#19%</Attribute>
+          <Attribute name="Unit">%SubView_Setting#17%</Attribute>
+          <Attribute name="Format">%SubView_Setting#18%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#20% == 0){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#20% == 1){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">TextSelect_4</Attribute>
+          <Attribute name="Title">%SubView_Setting#16%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#19%</Attribute>
+          <Attribute name="Texts">%SubView_Setting#17%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#20% == 2){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#20% == 3){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_5</Attribute>
+          <Attribute name="Title">%SubView_Setting#21%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#24%</Attribute>
+          <Attribute name="Unit">%SubView_Setting#22%</Attribute>
+          <Attribute name="Format">%SubView_Setting#23%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#25% == 0){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#25% == 1){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">TextSelect_5</Attribute>
+          <Attribute name="Title">%SubView_Setting#21%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#24%</Attribute>
+          <Attribute name="Texts">%SubView_Setting#22%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#25% == 2){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#25% == 3){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_6</Attribute>
+          <Attribute name="Title">%SubView_Setting#26%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#29%</Attribute>
+          <Attribute name="Unit">%SubView_Setting#27%</Attribute>
+          <Attribute name="Format">%SubView_Setting#28%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#30% == 0){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#30% == 1){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">TextSelect_6</Attribute>
+          <Attribute name="Title">%SubView_Setting#26%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#29%</Attribute>
+          <Attribute name="Texts">%SubView_Setting#27%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#30% == 2){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#30% == 3){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_7</Attribute>
+          <Attribute name="Title">%SubView_Setting#31%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#34%</Attribute>
+          <Attribute name="Unit">%SubView_Setting#32%</Attribute>
+          <Attribute name="Format">%SubView_Setting#33%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#35% == 0){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#35% == 1){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">TextSelect_7</Attribute>
+          <Attribute name="Title">%SubView_Setting#31%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#34%</Attribute>
+          <Attribute name="Texts">%SubView_Setting#32%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#35% == 2){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#35% == 3){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_8</Attribute>
+          <Attribute name="Title">%SubView_Setting#36%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#39%</Attribute>
+          <Attribute name="Unit">%SubView_Setting#37%</Attribute>
+          <Attribute name="Format">%SubView_Setting#38%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#40% == 0){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#40% == 1){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">TextSelect_8</Attribute>
+          <Attribute name="Title">%SubView_Setting#36%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#39%</Attribute>
+          <Attribute name="Texts">%SubView_Setting#37%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#40% == 2){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#40% == 3){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_9</Attribute>
+          <Attribute name="Title">%SubView_Setting#41%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#44%</Attribute>
+          <Attribute name="Unit">%SubView_Setting#42%</Attribute>
+          <Attribute name="Format">%SubView_Setting#43%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#45% == 0){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#45% == 1){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">TextSelect_9</Attribute>
+          <Attribute name="Title">%SubView_Setting#41%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#44%</Attribute>
+          <Attribute name="Texts">%SubView_Setting#42%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#45% == 2){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#45% == 3){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Numeric_10</Attribute>
+          <Attribute name="Title">%SubView_Setting#46%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#49%</Attribute>
+          <Attribute name="Unit">%SubView_Setting#47%</Attribute>
+          <Attribute name="Format">%SubView_Setting#48%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#50% == 0){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#50% == 1){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+        <Object type="TextSelect">
+          <Attribute name="Name">TextSelect_10</Attribute>
+          <Attribute name="Title">%SubView_Setting#46%</Attribute>
+          <Attribute name="Value">*%SubView_Controller%%SubView_Object%%SubView_Setting#49%</Attribute>
+          <Attribute name="Texts">%SubView_Setting#47%</Attribute>
+          <Attribute name="ManeuverStyle">DialogBox</Attribute>
+          <Attribute name="Visible">No</Attribute>
+          <Attribute name="OnOpen">if (%SubView_Setting#50% == 2){
+        this.rwItem.attributes.ManeuverStyle = "None"
+    	this.rwItem.attributes.VisualStyle = "Normal"
+        this.visible("Yes")
+}
+else if(%SubView_Setting#50% == 3){
+    this.visible("Yes")
+}</Attribute>
+        </Object>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

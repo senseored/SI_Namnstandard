@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigTemplate format="ControllerBuilder">
+  <Name>Analog Input SI</Name>
+  <Type>Block</Type>
+  <Description>Standard analog ingång/signal med larm och specialgivartyper.</Description>
+  <Icon>Alib:\Controller Builder\Icons\SensorAla.ico</Icon>
+  <Advanced>No</Advanced>
+  <Revision />
+  <About />
+  <Parameter name="EmbeddAllSubBlocksInThisTemplate">True</Parameter>
+  <Parameter name="EmbeddAllPicturesInThisTemplate">False</Parameter>
+  <Object type="Block">
+    <Name>GT_TILL_1</Name>
+    <Attribute name="UserTitle">GT11</Attribute>
+    <Attribute name="SubSystemTitle">%SubSystemTitle%-%UserTitle%</Attribute>
+    <Attribute name="Task">Normal</Attribute>
+    <Attribute name="ConnectionPoints">
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Input</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Setpoint</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Output</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">OP</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">AlarmHysteresis</Attribute>
+        <Attribute name="InitValue">1</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LowAlarmLimit</Attribute>
+        <Attribute name="InitValue">5</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">HighAlarmLimit</Attribute>
+        <Attribute name="InitValue">5</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">DiffAlarmLimit</Attribute>
+        <Attribute name="InitValue">5</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LowAAlarmLimit</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">HighAAlarmLimit</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">DiffAAlarmLimit</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">EnableHLDiff</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SensorType</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">BlockHigh</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">BlockLow</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">BlockDiff</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">AllowNaN</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Offset</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">LowSensorLimit</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">HighSensorLimit</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SensorHysteresis</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">SensorCnt</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">MinOutput</Attribute>
+      </Attribute>
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">MaxOutput</Attribute>
+      </Attribute>
+    </Attribute>
+    <Attribute name="Top">465</Attribute>
+    <Attribute name="Left">725</Attribute>
+    <Object type="TypeInfo">
+      <Attribute name="TypeName">SIAnaIn</Attribute>
+      <Attribute name="TypeTitle">Analog Input SI</Attribute>
+      <Attribute name="Icon">Mod:\Icons\SensorAla.ico</Attribute>
+      <Attribute name="Description">Analog ingång som samlar in börvärde, larmgränser samt larm.</Attribute>
+      <Attribute name="ObjectsModified">Yes</Attribute>
+      <Attribute name="ChangedDate">2024-09-02 11:36:58</Attribute>
+      <Attribute name="ChangedBy">Administrator</Attribute>
+      <Attribute name="TemplateFile">Alib:\Controller Builder\Templates\SI_CB\Analog Input SI.ect</Attribute>
+      <Attribute name="TemplateRevision">1.0-0-01</Attribute>
+      <Attribute name="TemplateDate">2024-10-03 07:15:25</Attribute>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>Operation</Name>
+      <Object type="Signal">
+        <Name>Input</Name>
+        <Attribute name="ToolTitle">Input</Attribute>
+        <Attribute name="Description">Input value from analog input.</Attribute>
+        <Attribute name="Unit">%ConnectionUnit%</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="Top">365</Attribute>
+        <Attribute name="Left">165</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Setpoint</Name>
+        <Attribute name="ToolTitle">Setpoint</Attribute>
+        <Attribute name="Description">Setpoint</Attribute>
+        <Attribute name="Unit">%InputUnit%</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="Top">405</Attribute>
+        <Attribute name="Left">165</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Output</Name>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="Top">30</Attribute>
+        <Attribute name="Left">1135</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>OP</Name>
+        <Attribute name="SignalType">Output</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Value">*SumAlarm</Attribute>
+        <Attribute name="Top">200</Attribute>
+        <Attribute name="Left">1120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>AlarmHysteresis</Name>
+        <Attribute name="ToolTitle">Alarm Hysteresis</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="Top">80</Attribute>
+        <Attribute name="Left">505</Attribute>
+      </Object>
+    </Object>
+    <Object type="Group">
+      <Name>Alarms</Name>
+      <Object type="AlarmPoint">
+        <Name>SensorAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Givarfel</Attribute>
+        </Attribute>
+        <Attribute name="Active">Yes</Attribute>
+        <Attribute name="Priority">
+          <Attribute name="InitValue">B</Attribute>
+        </Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*SetSensorAlarm</Attribute>
+        </Attribute>
+        <Attribute name="Delay">
+          <Attribute name="InitValue">10</Attribute>
+        </Attribute>
+        <Attribute name="Comment">Alarm Point for sensor failure.</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">295</Attribute>
+        <Attribute name="Left">925</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>HighAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Höglarm</Attribute>
+        </Attribute>
+        <Attribute name="Active">No</Attribute>
+        <Attribute name="Priority">
+          <Attribute name="InitValue">B</Attribute>
+        </Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*SetHighAlarm</Attribute>
+        </Attribute>
+        <Attribute name="State">
+          <Attribute name="Binding">*HighAlarmState</Attribute>
+        </Attribute>
+        <Attribute name="Delay">
+          <Attribute name="InitValue">60</Attribute>
+        </Attribute>
+        <Attribute name="DelayUnit">
+          <Attribute name="InitValue">Minutes[2]</Attribute>
+        </Attribute>
+        <Attribute name="Comment">High limit alarm. Is also set when the input equals NaN! (NotANumber) if Allow NaN! = Yes</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">100</Attribute>
+        <Attribute name="Left">925</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>LowAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Låglarm</Attribute>
+        </Attribute>
+        <Attribute name="Active">No</Attribute>
+        <Attribute name="Priority">
+          <Attribute name="InitValue">B</Attribute>
+        </Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*SetLowAlarm</Attribute>
+        </Attribute>
+        <Attribute name="State">
+          <Attribute name="Binding">*LowAlarmState</Attribute>
+        </Attribute>
+        <Attribute name="Delay">
+          <Attribute name="InitValue">60</Attribute>
+        </Attribute>
+        <Attribute name="DelayUnit">
+          <Attribute name="InitValue">Minutes[2]</Attribute>
+        </Attribute>
+        <Attribute name="Comment">Low limit alarm. Is also set when the input equals NaN! (NotANumber) if Allow NaN! = Yes</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">165</Attribute>
+        <Attribute name="Left">925</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>DiffAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Avvikelselarm</Attribute>
+        </Attribute>
+        <Attribute name="Active">No</Attribute>
+        <Attribute name="Priority">
+          <Attribute name="InitValue">B</Attribute>
+        </Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*SetDiffAlarm</Attribute>
+        </Attribute>
+        <Attribute name="State">
+          <Attribute name="Binding">*DiffAlarmState</Attribute>
+        </Attribute>
+        <Attribute name="Delay">
+          <Attribute name="InitValue">60</Attribute>
+        </Attribute>
+        <Attribute name="DelayUnit">
+          <Attribute name="InitValue">Minutes[2]</Attribute>
+        </Attribute>
+        <Attribute name="Comment">Difference alarm. Is also set when the input equals NaN! (NotANumber) if Allow NaN! = Yes</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">230</Attribute>
+        <Attribute name="Left">925</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>HighAAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Höglarm</Attribute>
+        </Attribute>
+        <Attribute name="Active">No</Attribute>
+        <Attribute name="Priority">
+          <Attribute name="InitValue">A</Attribute>
+        </Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*SetHighAAlarm</Attribute>
+        </Attribute>
+        <Attribute name="State">
+          <Attribute name="Binding">*HighAAlarmState</Attribute>
+        </Attribute>
+        <Attribute name="Delay">
+          <Attribute name="InitValue">60</Attribute>
+        </Attribute>
+        <Attribute name="DelayUnit">
+          <Attribute name="InitValue">Minutes[2]</Attribute>
+        </Attribute>
+        <Attribute name="Comment">High limit alarm. Is also set when the input equals NaN! (NotANumber) if Allow NaN! = Yes</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">390</Attribute>
+        <Attribute name="Left">1225</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>LowAAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Låglarm</Attribute>
+        </Attribute>
+        <Attribute name="Active">No</Attribute>
+        <Attribute name="Priority">
+          <Attribute name="InitValue">A</Attribute>
+        </Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*SetLowAAlarm</Attribute>
+        </Attribute>
+        <Attribute name="State">
+          <Attribute name="Binding">*LowAAlarmState</Attribute>
+        </Attribute>
+        <Attribute name="Delay">
+          <Attribute name="InitValue">60</Attribute>
+        </Attribute>
+        <Attribute name="DelayUnit">
+          <Attribute name="InitValue">Minutes[2]</Attribute>
+        </Attribute>
+        <Attribute name="Comment">Low limit alarm. Is also set when the input equals NaN! (NotANumber) if Allow NaN! = Yes</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">455</Attribute>
+        <Attribute name="Left">1225</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+      <Object type="AlarmPoint">
+        <Name>DiffAAlarm</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="AlarmText">
+          <Attribute name="InitValue">%SubSystemTitle% Avvikelselarm</Attribute>
+        </Attribute>
+        <Attribute name="Active">No</Attribute>
+        <Attribute name="Priority">
+          <Attribute name="InitValue">A</Attribute>
+        </Attribute>
+        <Attribute name="Input">
+          <Attribute name="Binding">*SetDiffAAlarm</Attribute>
+        </Attribute>
+        <Attribute name="State">
+          <Attribute name="Binding">*DiffAAlarmState</Attribute>
+        </Attribute>
+        <Attribute name="Delay">
+          <Attribute name="InitValue">60</Attribute>
+        </Attribute>
+        <Attribute name="DelayUnit">
+          <Attribute name="InitValue">Minutes[2]</Attribute>
+        </Attribute>
+        <Attribute name="Comment">Difference alarm. Is also set when the input equals NaN! (NotANumber) if Allow NaN! = Yes</Attribute>
+        <Attribute name="ShowStyle">Compact</Attribute>
+        <Attribute name="Top">520</Attribute>
+        <Attribute name="Left">1225</Attribute>
+        <Attribute name="Height">55</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>General</Name>
+      <Object type="Signal">
+        <Name>LowAlarmLimit</Name>
+        <Attribute name="ToolTitle">Low Limit</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="Default">1e6</Attribute>
+        <Attribute name="Top">440</Attribute>
+        <Attribute name="Left">185</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>HighAlarmLimit</Name>
+        <Attribute name="ToolTitle">High Limit</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="Default">1e6</Attribute>
+        <Attribute name="Top">480</Attribute>
+        <Attribute name="Left">185</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>DiffAlarmLimit</Name>
+        <Attribute name="ToolTitle">AVV Limit</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="Default">1e6</Attribute>
+        <Attribute name="Top">525</Attribute>
+        <Attribute name="Left">185</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>LowAAlarmLimit</Name>
+        <Attribute name="ToolTitle">Low Limit A-alarm</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="Default">1e6</Attribute>
+        <Attribute name="Top">595</Attribute>
+        <Attribute name="Left">185</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>HighAAlarmLimit</Name>
+        <Attribute name="ToolTitle">High Limit A-alarm</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="Default">1e6</Attribute>
+        <Attribute name="Top">635</Attribute>
+        <Attribute name="Left">185</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>DiffAAlarmLimit</Name>
+        <Attribute name="ToolTitle">AVV Limit A-alarm</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="Default">1e6</Attribute>
+        <Attribute name="Top">680</Attribute>
+        <Attribute name="Left">185</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>EnableHLDiff</Name>
+        <Attribute name="ToolTitle">HLK Alarm</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Default">No [0]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+        <Attribute name="Style">Variable</Attribute>
+        <Attribute name="Top">640</Attribute>
+        <Attribute name="Left">415</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>SensorType</Name>
+        <Attribute name="ToolTitle">Specialgivartyp</Attribute>
+        <Attribute name="Description">Specialgivartyp på ingången</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">X</Attribute>
+        <Attribute name="Default">Nej [0]</Attribute>
+        <Attribute name="Suggests"> "Nej [0]","Honeywell T7043B 1005 [1]","Honeywell T7043A 1002 [2]","TA EGL/EGRL/EGU [3]","Geamatic NTC (SDT-NTC) (Trend 1C1002-1) [4]","Geamatic PTC (SDT-PTC) (KTY81-210) [5]","Satchwell DRT/DDT/DWT/DRTE/DDTE/DWTE/DOT/DOS/DOW [6]","Satchwell DW [7]","Satchwell DD/DR [8]","Satchwell DO [9]","Staefa T30 [10]","Staefa T35 [11]","L&amp;G NTC (QAC31) [12]","Staefa TH2 [13]","Staefa T1 [14]","Regin 0-30°C [15]","Diana [16]","Priva CD750 [17]"</Attribute>
+        <Attribute name="Top">510</Attribute>
+        <Attribute name="Left">15</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>BlockAlarms</Name>
+      <Object type="Signal">
+        <Name>BlockHigh</Name>
+        <Attribute name="ToolTitle">Block High Alarm</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Default">No [0]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+        <Attribute name="Style">Variable</Attribute>
+        <Attribute name="Top">305</Attribute>
+        <Attribute name="Left">20</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>BlockLow</Name>
+        <Attribute name="ToolTitle">Block Low Alarm</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Default">No [0]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+        <Attribute name="Style">Variable</Attribute>
+        <Attribute name="Top">70</Attribute>
+        <Attribute name="Left">25</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>BlockDiff</Name>
+        <Attribute name="ToolTitle">Block Difference Alarm</Attribute>
+        <Attribute name="SignalType">Input</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Default">No [0]</Attribute>
+        <Attribute name="Suggests">No [0],Yes [1]</Attribute>
+        <Attribute name="Style">Variable</Attribute>
+        <Attribute name="Top">25</Attribute>
+        <Attribute name="Left">35</Attribute>
+        <Attribute name="Width">120</Attribute>
+      </Object>
+    </Object>
+    <Object type="Group">
+      <Name>Internal</Name>
+      <Object type="EXOLVariables">
+        <Name>Variables</Name>
+        <Attribute name="Variables">
+  R Alfa = 0 ; Internal. 1/FilterTime * Cycle!
+  L SetSensorAlarm
+  L SetLowAlarm
+  L SetHighAlarm
+  L SetDiffAlarm
+  L SetLowAAlarm
+  L SetHighAAlarm
+  L SetDiffAAlarm
+  L SumAlarm
+  L LowAlarmState
+  L HighAlarmState
+  L DiffAlarmState
+  L LowAAlarmState
+  L HighAAlarmState
+  L DiffAAlarmState
+  L SensorAlarmState
+  L SensorAlarm1 ; Input = NaN!
+  L SensorAlarm2 ; Input = Orimligt värde
+  L SensorAlarm3 ; Input = Oförändrad på inställbar tid
+  I SensorAlarm3_CntInt ; Räknare
+  X OldMinute ; Räknare
+  R StdObjRVar1              ; Internal
+  R ScaledInput = 0 ; Internal. Scaled input
+  R FilteredInput = 0 ; Internal. Filtered Input
+
+</Attribute>
+        <Attribute name="Top">165</Attribute>
+        <Attribute name="Left">435</Attribute>
+      </Object>
+      <Object type="EXOLCode">
+        <Name>Code</Name>
+        <Attribute name="ObjectChanged">Modified</Attribute>
+        <Attribute name="Code">If (CmpT( 0 ,Input=NaN!) or (CmpX(SensorType &gt; 0) and (CmpR( Input&lt;50 ) or CmpR( Input&gt;2100)))) 
+    L SensorAlarm1 = 1
+    If AllowNaN
+        R Output = NaN! 
+    Endif    
+Else                            
+    L SensorAlarm1 = 0  
+    If EdgeR( Input ) 
+        ; if difference between old and current input
+        I SensorAlarm3_CntInt = SensorCnt
+        L SensorAlarm3 = 0
+        If CmpX(SensorType &gt; 0)
+            R StdObjRVar1 = 1 / (1/Input-1/2200)
+            If CmpX(SensorType = 1)                        ; Honeywell utegivare T7043B 1005
+            R ScaledInput = 3927 / (Ln(StdObjRVar1) + 6.6556) - 273
+            Else : If CmpX(SensorType = 2)                 ; Honeywell vattengivare T7043A 1002
+            R ScaledInput = 3609 / (Ln(StdObjRVar1) + 3.7942) - 273
+            Else : If CmpX(SensorType = 3)                 ; TA EGL/EGRL/EGU
+            R ScaledInput = 3400 / (Ln(StdObjRVar1) + 3.913854) - 273
+            Else : If CmpX(SensorType = 4)                 ; Geamatic NTC (SDT-NTC)
+            R ScaledInput = 4921 / (Ln(StdObjRVar1) + 5.4803) - 310
+            Else : If CmpX(SensorType = 5)                 ; Geamatic PTC (SDT-PTC) (KTY81-210)
+            R ScaledInput = -9.676656E-6*StdObjRVar1^2+0.1026938*StdObjRVar1 - 141.681
+            Else : If CmpX(SensorType = 6)                 ; Satchwell DRT,DDT,DWT,DRTE,DDTE,DWTE,DOT,DOS,DOW
+            If CmpR(StdObjRVar1 &gt; 7661)
+                R ScaledInput = - 3.265547E-9*StdObjRVar1^3 + 7.910837E-5*StdObjRVar1^2 - 0.6505966*StdObjRVar1 + 1809.571
+            Else
+                If CmpR(StdObjRVar1 &gt; 2056)
+                    R ScaledInput = - 1.936279E-10*StdObjRVar1^3 + 3.28078E-6*StdObjRVar1^2 - 2.735153E-2*StdObjRVar1 + 104.0492
+                Else
+                    R ScaledInput = - 6.479596E-9*StdObjRVar1^3 + 3.899328E-5*StdObjRVar1^2 - 0.0973587*StdObjRVar1 + 151.6536
+                EndIf
+            EndIf
+            Else : If CmpX(SensorType = 7)                 ; Satchwell DW
+            R ScaledInput = - 7.029485E-9*StdObjRVar1^3 + 4.421713E-5*StdObjRVar1^2 - 0.1301237*StdObjRVar1 + 187.7141
+            Else : If CmpX(SensorType = 8)                 ; Satchwell DD,DR
+            R ScaledInput = - 1.862886E-8*Input^3 + 8.441165E-5*Input^2 - 0.1684521*Input + 153.655
+            Else : If CmpX(SensorType = 9)                 ; Satchwell DO
+            R ScaledInput = - 1.777231E-8*Input^3 + 9.074296E-5*Input^2 - 0.1988057*Input + 153.9254
+            EndIf : EndIf : EndIf : EndIf : EndIf : EndIf : EndIf : EndIf : EndIf
+        Else
+            R ScaledInput = Input
+        EndIf
+    EndIf
+    R FilteredInput = ScaledInput+Offset
+    If CmpT(0, Input = NaN!)
+        R FilteredInput = ScaledInput + Offset
+        If AllowNaN
+            R Output = FilteredInput
+        EndIf
+    EndIf
+    Output = FilteredInput
+    
+    If CmpR(Output&gt;MaxOutput)
+        R Output = MaxOutput
+    Endif
+    
+    If CmpR(Output&lt;MinOutput)
+        R Output = MinOutput
+    Endif
+    
+    If CmpR(Output&gt;HighSensorLimit) Or CmpR(Output&lt;LowSensorLimit)
+        L SensorAlarm2 = 1
+    Else
+        If CmpR(Output&lt;HighSensorLimit-SensorHysteresis) and CmpR(Output&gt;LowSensorLimit+SensorHysteresis)
+            L SensorAlarm2 = 0
+        Endif
+    Endif
+    
+    If EnableHLDiff
+        ;HLK-larm
+        If CmpR(Output-SetPoint&gt;HighAlarmLimit) And /BlockHigh
+            SetHighAlarm = 1
+        ElseIf CmpR(Output-SetPoint&lt;HighAlarmLimit-AlarmHysteresis) Or BlockHigh
+            SetHighAlarm = 0
+        EndIf
+        If CmpR(Output+LowAlarmLimit&lt;SetPoint) And /BlockLow
+            SetLowAlarm = 1
+        ElseIf CmpR(Output+LowAlarmLimit&gt;Setpoint+AlarmHysteresis) Or BlockLow
+            SetLowAlarm = 0
+        EndIf
+        If CmpR(Output-SetPoint&gt;HighAAlarmLimit) And /BlockHigh
+            SetHighAAlarm = 1
+        ElseIf CmpR(Output-SetPoint&lt;HighAAlarmLimit-AlarmHysteresis) Or BlockHigh
+            SetHighAAlarm = 0
+        EndIf
+        If CmpR(Output+LowAAlarmLimit&lt;SetPoint) And /BlockLow
+            SetLowAAlarm = 1
+        ElseIf CmpR(Output+LowAAlarmLimit&gt;Setpoint+AlarmHysteresis) Or BlockLow
+            SetLowAAlarm = 0
+        EndIf
+    Else
+        ;HL-larm
+        If CmpR(Output&gt;HighAlarmLimit) And /BlockHigh
+            SetHighAlarm = 1
+        ElseIf CmpR(Output&lt;HighAlarmLimit-AlarmHysteresis) Or BlockHigh
+            SetHighAlarm = 0
+        EndIf
+        If CmpR(Output&lt;LowAlarmLimit) And /BlockLow
+            SetLowAlarm = 1
+        ElseIf CmpR(Output&gt;LowAlarmLimit+AlarmHysteresis) Or BlockLow
+            SetLowAlarm = 0
+        EndIf
+        If CmpR(Output-Setpoint&gt;DiffAlarmLimit) Or CmpR(Setpoint-Output&lt;0-DiffAlarmLimit) And /BlockDiff
+            SetDiffAlarm = 1
+        ElseIf CmpR(Output-Setpoint&lt;DiffAlarmLimit-AlarmHysteresis) And CmpR(Setpoint-Output&gt;0-DiffAlarmLimit+AlarmHysteresis) Or BlockDiff
+            SetDiffAlarm = 0
+        EndIf
+        If CmpR(Output&gt;HighAAlarmLimit) And /BlockHigh
+            SetHighAAlarm = 1
+        ElseIf CmpR(Output&lt;HighAAlarmLimit-AlarmHysteresis) Or BlockHigh
+            SetHighAAlarm = 0
+        EndIf
+        If CmpR(Output&lt;LowAAlarmLimit) And /BlockLow
+            SetLowAAlarm = 1
+        ElseIf CmpR(Output&gt;LowAAlarmLimit+AlarmHysteresis) Or BlockLow
+            SetLowAAlarm = 0
+        EndIf
+        If CmpR(Output-Setpoint&gt;DiffAAlarmLimit) Or CmpR(Setpoint-Output&lt;0-DiffAAlarmLimit) And /BlockDiff
+            SetDiffAAlarm = 1
+        ElseIf CmpR(Output-Setpoint&lt;DiffAAlarmLimit-AlarmHysteresis) And CmpR(Setpoint-Output&gt;0-DiffAAlarmLimit+AlarmHysteresis) Or BlockDiff
+            SetDiffAAlarm = 0
+        EndIf
+    EndIf
+EndIf
+
+If CmpI(SensorCnt&lt;&gt;-1)
+    If CmpX(OldMinute&lt;&gt;Minute)
+        I SensorAlarm3_CntInt = SensorAlarm3_CntInt - 1
+        X OldMinute = Minute
+        If CmpI(SensorAlarm3_CntInt=&lt;0)
+            L SensorAlarm3 = 1
+        Endif
+    Endif
+Else
+    L SensorAlarm3 = 0
+Endif
+
+SetSensorAlarm = SensorAlarm1 Or SensorAlarm2 Or SensorAlarm3
+
+If HighAlarmState Or LowAlarmState Or DiffAlarmState Or HighAAlarmState Or LowAAlarmState Or DiffAAlarmState Or SensorAlarmState
+    SumAlarm = 1
+Else
+    SumAlarm = 0
+EndIf
+</Attribute>
+        <Attribute name="Top">165</Attribute>
+        <Attribute name="Left">565</Attribute>
+      </Object>
+    </Object>
+    <Object type="SignalGroup">
+      <Name>SensorAlarmSettings</Name>
+      <Object type="Signal">
+        <Name>AllowNaN</Name>
+        <Attribute name="ToolTitle">Tillåt NaN</Attribute>
+        <Attribute name="Description">Tillåt NaN! på utgången</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">L</Attribute>
+        <Attribute name="Default">Ja [1]</Attribute>
+        <Attribute name="Suggests"> "Nej [0], Ja [1]"</Attribute>
+        <Attribute name="Top">20</Attribute>
+        <Attribute name="Left">300</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>Offset</Name>
+        <Attribute name="ToolTitle">Kalibrering</Attribute>
+        <Attribute name="Description">Kalibrering på utgången</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">0</Attribute>
+        <Attribute name="Top">75</Attribute>
+        <Attribute name="Left">280</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>LowSensorLimit</Name>
+        <Attribute name="ToolTitle">Orimligt värde, låg</Attribute>
+        <Attribute name="Description">Orimligt värde, låg</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">-1e6</Attribute>
+        <Attribute name="Top">570</Attribute>
+        <Attribute name="Left">700</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>HighSensorLimit</Name>
+        <Attribute name="ToolTitle">Orimligt värde, hög</Attribute>
+        <Attribute name="Description">Orimligt värde, hög</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">1e6</Attribute>
+        <Attribute name="Top">615</Attribute>
+        <Attribute name="Left">705</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>SensorHysteresis</Name>
+        <Attribute name="ToolTitle">Orimligt värde, hysteres</Attribute>
+        <Attribute name="Description">Orimligt värde, hysteres</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">2</Attribute>
+        <Attribute name="Top">145</Attribute>
+        <Attribute name="Left">105</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>SensorCnt</Name>
+        <Attribute name="ToolTitle">Oförändrat värde, räknare</Attribute>
+        <Attribute name="Description">Inställbar tid för oförändrat värde, -1 = inaktiverat</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">I</Attribute>
+        <Attribute name="Default">1440</Attribute>
+        <Attribute name="Suggests"> "Inaktiverat [-1], 1 timma [60], 1 dag [1440]"</Attribute>
+        <Attribute name="Top">180</Attribute>
+        <Attribute name="Left">95</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>MinOutput</Name>
+        <Attribute name="ToolTitle">Min Utsignal</Attribute>
+        <Attribute name="Description">Min Utsignal</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">-1e6</Attribute>
+        <Attribute name="Top">240</Attribute>
+        <Attribute name="Left">140</Attribute>
+      </Object>
+      <Object type="Signal">
+        <Name>MaxOutput</Name>
+        <Attribute name="ToolTitle">Max Utsignal</Attribute>
+        <Attribute name="Description">Max Utsignal</Attribute>
+        <Attribute name="SignalType">Parameter</Attribute>
+        <Attribute name="DataType">R</Attribute>
+        <Attribute name="Default">1e6</Attribute>
+        <Attribute name="Top">270</Attribute>
+        <Attribute name="Left">140</Attribute>
+      </Object>
+    </Object>
+  </Object>
+  <Action type="Copy">
+    <Source>Alib:\Controller Builder\Icons\SensorAla.ico</Source>
+    <Destination>Mod:\Icons\SensorAla.ico</Destination>
+  </Action>
+</EXOconfigTemplate>

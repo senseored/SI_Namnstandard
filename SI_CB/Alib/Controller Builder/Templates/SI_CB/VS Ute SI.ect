@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigTemplate format="ControllerBuilder">
+  <Name>VS Ute SI</Name>
+  <Type>Block</Type>
+  <Description>Utetemp val värmesystem.</Description>
+  <Icon>Alib:\Controller Builder\Icons\AnaMux.ico</Icon>
+  <Advanced>No</Advanced>
+  <Revision />
+  <About />
+  <Parameter name="EmbeddAllSubBlocksInThisTemplate">True</Parameter>
+  <Parameter name="EmbeddAllPicturesInThisTemplate">False</Parameter>
+  <Object type="Block">
+    <Name>GT_UTE</Name>
+    <Attribute name="ObjectChanged">Added</Attribute>
+    <Attribute name="ConnectionPoints">
+      <Attribute name="ConnectionPoint">
+        <Attribute name="SignalName">Output</Attribute>
+      </Attribute>
+    </Attribute>
+    <Attribute name="Top">75</Attribute>
+    <Attribute name="Left">235</Attribute>
+    <Attribute name="Width">150</Attribute>
+    <Object type="TypeInfo">
+      <Attribute name="ObjectChanged">Added</Attribute>
+      <Attribute name="TypeName">VS_UTE</Attribute>
+      <Attribute name="TypeTitle">Outdoor heating system</Attribute>
+      <Attribute name="Icon">Device:\Icons\Average.ico</Attribute>
+      <Attribute name="ObjectsAdded">Yes</Attribute>
+      <Attribute name="ChangedDate">2024-10-03 10:58:14</Attribute>
+      <Attribute name="ChangedBy">tobiasg</Attribute>
+      <Attribute name="TemplateFile">Alib:\Controller Builder\Templates\SI_CB\VS Ute SI.ect</Attribute>
+      <Attribute name="TemplateRevision">1.0-1-00</Attribute>
+      <Attribute name="TemplateDate">2024-09-13 10:54:49</Attribute>
+    </Object>
+    <Object type="Block">
+      <Name>MEDEL</Name>
+      <Attribute name="ConnectionPoints">
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Enable</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Blocked</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Bypass</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Input</Attribute>
+          <Attribute name="Binding">*GT_UTE</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Output</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaBlocked</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaBypass</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaSum</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">TimeConstant</Attribute>
+          <Attribute name="InitValue">360</Attribute>
+        </Attribute>
+      </Attribute>
+      <Attribute name="Top">360</Attribute>
+      <Attribute name="Left">150</Attribute>
+      <Attribute name="Width">120</Attribute>
+      <Object type="TypeInfo">
+        <Attribute name="TypeName">MovingAverage</Attribute>
+        <Attribute name="TypeTitle">Moving Average</Attribute>
+        <Attribute name="Icon">Device:\Icons\Average.ico</Attribute>
+        <Attribute name="Description">Block type for calculating a moving average value for an analog signal, e.g. the outdoor temperature.</Attribute>
+        <Attribute name="ObjectsModified">Yes</Attribute>
+        <Attribute name="ChangedDate">2024-07-08 11:30:25</Attribute>
+        <Attribute name="ChangedBy">tobiasg</Attribute>
+        <Attribute name="TemplateFile">ALib:\Controller Builder\Templates\SI_CB\MovingAverage.ect</Attribute>
+        <Attribute name="TemplateRevision">1.0-1-00</Attribute>
+        <Attribute name="TemplateDate">2014-06-13 14:36:11</Attribute>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Operation</Name>
+        <Object type="Signal">
+          <Name>Enable</Name>
+          <Attribute name="Description">This parameter enables (1) or disables (0) the function. </Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">Yes [1]</Attribute>
+          <Attribute name="Suggests">No [0], Yes [1]</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Blocked</Name>
+          <Attribute name="ToolTitle">Blocked</Attribute>
+          <Attribute name="Description">Blocks Function block. Output = 0</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">60</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Bypass</Name>
+          <Attribute name="ToolTitle">Bypass</Attribute>
+          <Attribute name="Description">Bypasses the signal handling. Output = Input</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Input</Name>
+          <Attribute name="ToolTitle">Input</Attribute>
+          <Attribute name="Description">The input value</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Top">85</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Output</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="ToolTitle">Moving Average</Attribute>
+          <Attribute name="Description">The calculated moving average value.</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Top">85</Attribute>
+          <Attribute name="Left">530</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>AlarmOutputs</Name>
+        <Object type="Signal">
+          <Name>AlaBlocked</Name>
+          <Attribute name="ToolTitle">Alarm Blocked Output</Attribute>
+          <Attribute name="Description">Alarm Output: Blocked Output</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">530</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>AlaBypass</Name>
+          <Attribute name="ToolTitle">Alarm Bypass</Attribute>
+          <Attribute name="Description">Alarm Output: Functionality bypassed. Output = Input</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">530</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>AlaSum</Name>
+          <Attribute name="ToolTitle">Alarm Summary of function</Attribute>
+          <Attribute name="Description">Alarm Output: Function is alarming</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">60</Attribute>
+          <Attribute name="Left">530</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Settings</Name>
+        <Object type="Signal">
+          <Name>TimeConstant</Name>
+          <Attribute name="ToolTitle">Time Constant</Attribute>
+          <Attribute name="Description">Time in minutes for calculating the moving average value. [m in]</Attribute>
+          <Attribute name="Unit">min</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">1440</Attribute>
+          <Attribute name="Top">120</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+      </Object>
+      <Object type="Group">
+        <Name>Internal</Name>
+        <Object type="EXOLVariables">
+          <Name>Variables</Name>
+          <Attribute name="Variables">R StdObjRVar1          ; Internal
+</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">210</Attribute>
+        </Object>
+        <Object type="EXOLCode">
+          <Name>Code</Name>
+          <Attribute name="ObjectChanged">Modified</Attribute>
+          <Attribute name="Code">If Enable
+  If (CmpT(0, Output = 0) And Not CmpT(0, Input = 0) Or CmpR(TimeConstant = 0)) And Not CmpT(0, Input = NaN!) Or (Bypass AND NOT Blocked) ; Init Value
+     R Output = Input
+  EndIf
+
+  If Not CmpT(0, Input = NaN!) And CmpR(TimeConstant &gt; 0)
+     R StdObjRVar1 = TimeConstant * 60 / Cycle!
+     R Output = (Output - Output/StdObjRVar1 + Input/StdObjRVar1) * CvX(CvL(Not Blocked))
+  EndIf
+Else
+	R Output = 0
+EndIf
+L AlaBlocked = Enable AND Blocked AND CmpR(Output = 0)
+L AlaBypass = Enable AND Bypass AND CmpR(Output = Input)
+L AlaSum = Enable AND (AlaBlocked OR AlaBypass)
+</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">320</Attribute>
+        </Object>
+      </Object>
+    </Object>
+    <Object type="Signal">
+      <Name>Output</Name>
+      <Attribute name="ObjectChanged">Added</Attribute>
+      <Attribute name="SignalType">Output</Attribute>
+      <Attribute name="Value">*SIMULERAD_Output</Attribute>
+      <Attribute name="BoundTo">[Block].[SIMULERAD].[Output].[Output]</Attribute>
+      <Attribute name="CoordinatesArray">
+        <Attribute name="Coordinates">
+          <Attribute name="X">970</Attribute>
+          <Attribute name="Y">140</Attribute>
+        </Attribute>
+        <Attribute name="Coordinates">
+          <Attribute name="X">1075</Attribute>
+          <Attribute name="Y">140</Attribute>
+        </Attribute>
+        <Attribute name="Coordinates">
+          <Attribute name="X">1075</Attribute>
+          <Attribute name="Y">95</Attribute>
+        </Attribute>
+        <Attribute name="Coordinates">
+          <Attribute name="X">1180</Attribute>
+          <Attribute name="Y">95</Attribute>
+        </Attribute>
+      </Attribute>
+      <Attribute name="ConnectionStyle">Line</Attribute>
+      <Attribute name="Top">85</Attribute>
+      <Attribute name="Left">1190</Attribute>
+    </Object>
+    <Object type="Block">
+      <Name>MEDEL_SELECT</Name>
+      <Attribute name="UserDescription">0 = Medelute, 1 = Utetemperatur</Attribute>
+      <Attribute name="ConnectionPoints">
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Enable</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Blocked</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Input0</Attribute>
+          <Attribute name="Binding">*UTE_MAX</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Input1</Attribute>
+          <Attribute name="Binding">*GT_UTE</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Select</Attribute>
+          <Attribute name="InitValue">1</Attribute>
+          <Attribute name="Show">Yes</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Output</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaBlocked</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+      </Attribute>
+      <Attribute name="Top">110</Attribute>
+      <Attribute name="Left">405</Attribute>
+      <Object type="TypeInfo">
+        <Attribute name="TypeName">AnaSwitchL</Attribute>
+        <Attribute name="TypeTitle">Analog 2 signals Switch</Attribute>
+        <Attribute name="Icon">Device:\Icons\Analog Switch.ico</Attribute>
+        <Attribute name="Description">Blocks of the type Analog 2 Signals Switch connect one of two input signals to an output signal depending on a logic value.</Attribute>
+        <Attribute name="TemplateFile">ALib:\Controller Builder\Templates\SI_CB\AnaSwitchL.ect</Attribute>
+        <Attribute name="TemplateRevision">1.0-1-00</Attribute>
+        <Attribute name="TemplateDate">2015-02-18 14:08:19</Attribute>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Operation</Name>
+        <Object type="Signal">
+          <Name>Enable</Name>
+          <Attribute name="Description">This parameter enables (1) or disables (0) the function. </Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">Yes [1]</Attribute>
+          <Attribute name="Suggests">No [0], Yes [1]</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Blocked</Name>
+          <Attribute name="ToolTitle">Blocked</Attribute>
+          <Attribute name="Description">Blocks Function block. Output = 0</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Input0</Name>
+          <Attribute name="ToolTitle">Input 0</Attribute>
+          <Attribute name="Description">Input 0.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">60</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Input1</Name>
+          <Attribute name="ToolTitle">Input 1</Attribute>
+          <Attribute name="Description">Input 1.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">85</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Select</Name>
+          <Attribute name="ToolTitle">Select</Attribute>
+          <Attribute name="Description">Selects one of 2 inputs.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">Input 0 [0]</Attribute>
+          <Attribute name="Top">125</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Output</Name>
+          <Attribute name="ToolTitle">Output</Attribute>
+          <Attribute name="Description">The selected input.</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">455</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>AlarmOutputs</Name>
+        <Object type="Signal">
+          <Name>AlaBlocked</Name>
+          <Attribute name="ToolTitle">Alarm Blocked Output</Attribute>
+          <Attribute name="Description">Alarm Output: Blocked Output</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">455</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="Group">
+        <Name>Internal</Name>
+        <Object type="EXOLCode">
+          <Name>Code</Name>
+          <Attribute name="Code">If Enable AND NOT Blocked
+  If Select
+    R Output = Input1
+  Else
+    R Output = Input0
+  EndIf
+Else
+    R Output = 0
+EndIf
+L AlaBlocked = Enable AND Blocked And CmpR(Output = 0)
+		</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">255</Attribute>
+        </Object>
+      </Object>
+    </Object>
+    <Object type="Block">
+      <Name>PROGNOS</Name>
+      <Attribute name="UserDescription">0 = Utetemperaut, 1 = PROGNOS</Attribute>
+      <Attribute name="ConnectionPoints">
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Enable</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Blocked</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Input0</Attribute>
+          <Attribute name="Binding">*MEDEL_SELECT_Output</Attribute>
+          <Attribute name="BoundTo">[Block].[MEDEL_SELECT].[Output].[Output]</Attribute>
+          <Attribute name="ConnectionStyle">Line</Attribute>
+          <Attribute name="CoordinatesArray">
+            <Attribute name="Coordinates">
+              <Attribute name="X">525</Attribute>
+              <Attribute name="Y">140</Attribute>
+            </Attribute>
+            <Attribute name="Coordinates">
+              <Attribute name="X">565</Attribute>
+              <Attribute name="Y">140</Attribute>
+            </Attribute>
+            <Attribute name="Coordinates">
+              <Attribute name="X">565</Attribute>
+              <Attribute name="Y">155</Attribute>
+            </Attribute>
+            <Attribute name="Coordinates">
+              <Attribute name="X">610</Attribute>
+              <Attribute name="Y">155</Attribute>
+            </Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Input1</Attribute>
+          <Attribute name="Binding">*UTE_PROGNOS</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Select</Attribute>
+          <Attribute name="InitValue">0</Attribute>
+          <Attribute name="Show">Yes</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Output</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaBlocked</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+      </Attribute>
+      <Attribute name="Top">110</Attribute>
+      <Attribute name="Left">620</Attribute>
+      <Object type="TypeInfo">
+        <Attribute name="TypeName">AnaSwitchL</Attribute>
+        <Attribute name="TypeTitle">Analog 2 signals Switch</Attribute>
+        <Attribute name="Icon">Device:\Icons\Analog Switch.ico</Attribute>
+        <Attribute name="Description">Blocks of the type Analog 2 Signals Switch connect one of two input signals to an output signal depending on a logic value.</Attribute>
+        <Attribute name="TemplateFile">ALib:\Controller Builder\Templates\SI_CB\AnaSwitchL.ect</Attribute>
+        <Attribute name="TemplateRevision">1.0-1-00</Attribute>
+        <Attribute name="TemplateDate">2015-02-18 14:08:19</Attribute>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Operation</Name>
+        <Object type="Signal">
+          <Name>Enable</Name>
+          <Attribute name="Description">This parameter enables (1) or disables (0) the function. </Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">Yes [1]</Attribute>
+          <Attribute name="Suggests">No [0], Yes [1]</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Blocked</Name>
+          <Attribute name="ToolTitle">Blocked</Attribute>
+          <Attribute name="Description">Blocks Function block. Output = 0</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Input0</Name>
+          <Attribute name="ToolTitle">Input 0</Attribute>
+          <Attribute name="Description">Input 0.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">60</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Input1</Name>
+          <Attribute name="ToolTitle">Input 1</Attribute>
+          <Attribute name="Description">Input 1.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">85</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Select</Name>
+          <Attribute name="ToolTitle">Select</Attribute>
+          <Attribute name="Description">Selects one of 2 inputs.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">Input 0 [0]</Attribute>
+          <Attribute name="Top">125</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Output</Name>
+          <Attribute name="ToolTitle">Output</Attribute>
+          <Attribute name="Description">The selected input.</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">455</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>AlarmOutputs</Name>
+        <Object type="Signal">
+          <Name>AlaBlocked</Name>
+          <Attribute name="ToolTitle">Alarm Blocked Output</Attribute>
+          <Attribute name="Description">Alarm Output: Blocked Output</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">455</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="Group">
+        <Name>Internal</Name>
+        <Object type="EXOLCode">
+          <Name>Code</Name>
+          <Attribute name="Code">If Enable AND NOT Blocked
+  If Select
+    R Output = Input1
+  Else
+    R Output = Input0
+  EndIf
+Else
+    R Output = 0
+EndIf
+L AlaBlocked = Enable AND Blocked And CmpR(Output = 0)
+		</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">255</Attribute>
+        </Object>
+      </Object>
+    </Object>
+    <Object type="Block">
+      <Name>SIMULERAD</Name>
+      <Attribute name="UserDescription">0 = Utetemperaut, 1 = Simulerad</Attribute>
+      <Attribute name="ConnectionPoints">
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Enable</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Blocked</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Input0</Attribute>
+          <Attribute name="Binding">*PROGNOS_Output</Attribute>
+          <Attribute name="BoundTo">[Block].[PROGNOS].[Output].[Output]</Attribute>
+          <Attribute name="ConnectionStyle">Line</Attribute>
+          <Attribute name="CoordinatesArray">
+            <Attribute name="Coordinates">
+              <Attribute name="X">740</Attribute>
+              <Attribute name="Y">140</Attribute>
+            </Attribute>
+            <Attribute name="Coordinates">
+              <Attribute name="X">790</Attribute>
+              <Attribute name="Y">140</Attribute>
+            </Attribute>
+            <Attribute name="Coordinates">
+              <Attribute name="X">790</Attribute>
+              <Attribute name="Y">155</Attribute>
+            </Attribute>
+            <Attribute name="Coordinates">
+              <Attribute name="X">840</Attribute>
+              <Attribute name="Y">155</Attribute>
+            </Attribute>
+          </Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Input1</Attribute>
+          <Attribute name="Binding">*UTE_SIMULERAD</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Select</Attribute>
+          <Attribute name="InitValue">0</Attribute>
+          <Attribute name="Show">Yes</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">Output</Attribute>
+        </Attribute>
+        <Attribute name="ConnectionPoint">
+          <Attribute name="SignalName">AlaBlocked</Attribute>
+          <Attribute name="Show">No</Attribute>
+        </Attribute>
+      </Attribute>
+      <Attribute name="Top">110</Attribute>
+      <Attribute name="Left">850</Attribute>
+      <Object type="TypeInfo">
+        <Attribute name="TypeName">AnaSwitchL</Attribute>
+        <Attribute name="TypeTitle">Analog 2 signals Switch</Attribute>
+        <Attribute name="Icon">Device:\Icons\Analog Switch.ico</Attribute>
+        <Attribute name="Description">Blocks of the type Analog 2 Signals Switch connect one of two input signals to an output signal depending on a logic value.</Attribute>
+        <Attribute name="TemplateFile">ALib:\Controller Builder\Templates\SI_CB\AnaSwitchL.ect</Attribute>
+        <Attribute name="TemplateRevision">1.0-1-00</Attribute>
+        <Attribute name="TemplateDate">2015-02-18 14:08:19</Attribute>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>Operation</Name>
+        <Object type="Signal">
+          <Name>Enable</Name>
+          <Attribute name="Description">This parameter enables (1) or disables (0) the function. </Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">Yes [1]</Attribute>
+          <Attribute name="Suggests">No [0], Yes [1]</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Blocked</Name>
+          <Attribute name="ToolTitle">Blocked</Attribute>
+          <Attribute name="Description">Blocks Function block. Output = 0</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Input0</Name>
+          <Attribute name="ToolTitle">Input 0</Attribute>
+          <Attribute name="Description">Input 0.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">60</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Input1</Name>
+          <Attribute name="ToolTitle">Input 1</Attribute>
+          <Attribute name="Description">Input 1.</Attribute>
+          <Attribute name="SignalType">Input</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Default">0</Attribute>
+          <Attribute name="Top">85</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Select</Name>
+          <Attribute name="ToolTitle">Select</Attribute>
+          <Attribute name="Description">Selects one of 2 inputs.</Attribute>
+          <Attribute name="SignalType">Parameter</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Default">Input 0 [0]</Attribute>
+          <Attribute name="Top">125</Attribute>
+          <Attribute name="Left">10</Attribute>
+          <Attribute name="Width">120</Attribute>
+        </Object>
+        <Object type="Signal">
+          <Name>Output</Name>
+          <Attribute name="ToolTitle">Output</Attribute>
+          <Attribute name="Description">The selected input.</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">R</Attribute>
+          <Attribute name="Top">35</Attribute>
+          <Attribute name="Left">455</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="SignalGroup">
+        <Name>AlarmOutputs</Name>
+        <Object type="Signal">
+          <Name>AlaBlocked</Name>
+          <Attribute name="ToolTitle">Alarm Blocked Output</Attribute>
+          <Attribute name="Description">Alarm Output: Blocked Output</Attribute>
+          <Attribute name="SignalType">Output</Attribute>
+          <Attribute name="DataType">L</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">455</Attribute>
+          <Attribute name="Width">140</Attribute>
+        </Object>
+      </Object>
+      <Object type="Group">
+        <Name>Internal</Name>
+        <Object type="EXOLCode">
+          <Name>Code</Name>
+          <Attribute name="Code">If Enable AND NOT Blocked
+  If Select
+    R Output = Input1
+  Else
+    R Output = Input0
+  EndIf
+Else
+    R Output = 0
+EndIf
+L AlaBlocked = Enable AND Blocked And CmpR(Output = 0)
+		</Attribute>
+          <Attribute name="Top">10</Attribute>
+          <Attribute name="Left">255</Attribute>
+        </Object>
+      </Object>
+    </Object>
+    <Object type="EXOLVariables">
+      <Name>Variables</Name>
+      <Attribute name="ObjectChanged">Added</Attribute>
+      <Attribute name="Variables"> R UTE_MAX</Attribute>
+      <Attribute name="Top">520</Attribute>
+      <Attribute name="Left">795</Attribute>
+    </Object>
+    <Object type="EXOLCode">
+      <Name>Code</Name>
+      <Attribute name="ObjectChanged">Added</Attribute>
+      <Attribute name="Code">If VS_1_GT_UTE_MEDEL_Output&gt;GT_UTE
+    UTE_MAX = VS_1_GT_UTE_MEDEL_Output
+Else
+    UTE_MAX = GT_UTE
+EndIf</Attribute>
+      <Attribute name="Top">540</Attribute>
+      <Attribute name="Left">530</Attribute>
+    </Object>
+  </Object>
+  <Action type="Copy">
+    <Source>Alib:\Controller Builder\Icons\Average.ico</Source>
+    <Destination>Device:\Icons\Average.ico</Destination>
+  </Action>
+  <Action type="Copy">
+    <Source>Alib:\Controller Builder\Icons\Average.ico</Source>
+    <Destination>Device:\Icons\Average.ico</Destination>
+  </Action>
+  <Action type="Copy">
+    <Source>Alib:\Controller Builder\Icons\Analog Switch.ico</Source>
+    <Destination>Device:\Icons\Analog Switch.ico</Destination>
+  </Action>
+  <Action type="Copy">
+    <Source>Alib:\Controller Builder\Icons\Analog Switch.ico</Source>
+    <Destination>Device:\Icons\Analog Switch.ico</Destination>
+  </Action>
+  <Action type="Copy">
+    <Source>Alib:\Controller Builder\Icons\Analog Switch.ico</Source>
+    <Destination>Device:\Icons\Analog Switch.ico</Destination>
+  </Action>
+</EXOconfigTemplate>

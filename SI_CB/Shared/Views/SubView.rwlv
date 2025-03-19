@@ -1,0 +1,848 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwlv" version="2024.1.100.20">
+  <Object type="ListView">
+    <Attribute name="Name">SubView</Attribute>
+    <Attribute name="Border">Yes</Attribute>
+    <Attribute name="MaxColumnWidth">150</Attribute>
+    <Attribute name="AlwaysShowSpaceForIcons">No</Attribute>
+    <Attribute name="MoreCommandIcon"></Attribute>
+    <Attribute name="OnOpen">if (("%SubView1_Title%" == "") || ("%SubView1_Enable%" == 0) || ("%SubView1_Enable%" == "No [0]")){
+    this.SubView1_Button.visible(false);
+}
+if (("%SubView2_Title%" == "") || ("%SubView2_Enable%" == 0) || ("%SubView2_Enable%" == "No [0]")){
+    this.SubView2_Button.visible(false);
+}
+if (("%SubView3_Title%" == "") || ("%SubView3_Enable%" == 0) || ("%SubView3_Enable%" == "No [0]")){
+    this.SubView3_Button.visible(false);
+}
+if (("%SubView4_Title%" == "") || ("%SubView4_Enable%" == 0) || ("%SubView4_Enable%" == "No [0]")){
+    this.SubView4_Button.visible(false);
+}
+if (("%SubView5_Title%" == "") || ("%SubView5_Enable%" == 0) || ("%SubView5_Enable%" == "No [0]")){
+    this.SubView5_Button.visible(false);
+}
+if (("%SubView6_Title%" == "") || ("%SubView6_Enable%" == 0) || ("%SubView6_Enable%" == "No [0]")){
+    this.SubView6_Button.visible(false);
+}
+if (("%SubView7_Title%" == "") || ("%SubView7_Enable%" == 0) || ("%SubView7_Enable%" == "No [0]")){
+    this.SubView7_Button.visible(false);
+}
+if (("%SubView8_Title%" == "") || ("%SubView8_Enable%" == 0) || ("%SubView8_Enable%" == "No [0]")){
+    this.SubView8_Button.visible(false);
+}
+if (("%SubView9_Title%" == "") || ("%SubView9_Enable%" == 0) || ("%SubView9_Enable%" == "No [0]")){
+    this.SubView9_Button.visible(false);
+}</Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the listview file. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView1_Title</Attribute>
+        <Attribute name="Title">SubView1_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView1_File</Attribute>
+        <Attribute name="Title">SubView1_File</Attribute>
+        <Attribute name="Suggests">Brytare2,Brytare3,Brytare4,BrytareAnalog2,BrytareAnalog3,BrytareAnalog4,Motionpump1,DrifttidStarter1,Variabel1,Kurva1,Larm1_AVV,Larm1_H,Larm1_H_BLOCK_RUM_UTE,Larm1_HL,Larm1_HL_BLOCK_RUM_UTE,Larm1_HLK,Larm1_HLK_BLOCK_RUM_UTE,Larm1_HLK_BLOCK_UTE,Larm1_L,Larm1_LK,Larm1_LK_BLOCK_UTE,Regulator1_PID,RegulatorKaskad1_MAX_MIN,RegulatorKaskad1_PID,RegulatorKaskad2_PI</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView1_Controller</Attribute>
+        <Attribute name="Title">SubView1_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView1_Object</Attribute>
+        <Attribute name="Title">SubView1_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView1_Setting</Attribute>
+        <Attribute name="Title">SubView1_Setting</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView1_Enable</Attribute>
+        <Attribute name="Title">SubView1_Enable</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView2_Title</Attribute>
+        <Attribute name="Title">SubView2_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView2_File</Attribute>
+        <Attribute name="Title">SubView2_File</Attribute>
+        <Attribute name="Suggests">Brytare2,Brytare3,Brytare4,BrytareAnalog2,BrytareAnalog3,BrytareAnalog4,Motionpump1,DrifttidStarter1,Variabel1,Kurva1,Larm1_AVV,Larm1_H,Larm1_H_BLOCK_RUM_UTE,Larm1_HL,Larm1_HL_BLOCK_RUM_UTE,Larm1_HLK,Larm1_HLK_BLOCK_RUM_UTE,Larm1_HLK_BLOCK_UTE,Larm1_L,Larm1_LK,Larm1_LK_BLOCK_UTE,Regulator1_PID,RegulatorKaskad1_MAX_MIN,RegulatorKaskad1_PID,RegulatorKaskad2_PI</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView2_Controller</Attribute>
+        <Attribute name="Title">SubView2_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView2_Object</Attribute>
+        <Attribute name="Title">SubView2_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView2_Setting</Attribute>
+        <Attribute name="Title">SubView2_Setting</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView2_Enable</Attribute>
+        <Attribute name="Title">SubView2_Enable</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView3_Title</Attribute>
+        <Attribute name="Title">SubView3_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView3_File</Attribute>
+        <Attribute name="Title">SubView3_File</Attribute>
+        <Attribute name="Suggests">Brytare2,Brytare3,Brytare4,BrytareAnalog2,BrytareAnalog3,BrytareAnalog4,Motionpump1,DrifttidStarter1,Variabel1,Kurva1,Larm1_AVV,Larm1_H,Larm1_H_BLOCK_RUM_UTE,Larm1_HL,Larm1_HL_BLOCK_RUM_UTE,Larm1_HLK,Larm1_HLK_BLOCK_RUM_UTE,Larm1_HLK_BLOCK_UTE,Larm1_L,Larm1_LK,Larm1_LK_BLOCK_UTE,Regulator1_PID,RegulatorKaskad1_MAX_MIN,RegulatorKaskad1_PID,RegulatorKaskad2_PI</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView3_Controller</Attribute>
+        <Attribute name="Title">SubView3_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView3_Object</Attribute>
+        <Attribute name="Title">SubView3_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView3_Setting</Attribute>
+        <Attribute name="Title">SubView3_Setting</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView3_Enable</Attribute>
+        <Attribute name="Title">SubView3_Enable</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView4_Title</Attribute>
+        <Attribute name="Title">SubView4_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView4_File</Attribute>
+        <Attribute name="Title">SubView4_File</Attribute>
+        <Attribute name="Suggests">Brytare2,Brytare3,Brytare4,BrytareAnalog2,BrytareAnalog3,BrytareAnalog4,Motionpump1,DrifttidStarter1,Variabel1,Kurva1,Larm1_AVV,Larm1_H,Larm1_H_BLOCK_RUM_UTE,Larm1_HL,Larm1_HL_BLOCK_RUM_UTE,Larm1_HLK,Larm1_HLK_BLOCK_RUM_UTE,Larm1_HLK_BLOCK_UTE,Larm1_L,Larm1_LK,Larm1_LK_BLOCK_UTE,Regulator1_PID,RegulatorKaskad1_MAX_MIN,RegulatorKaskad1_PID,RegulatorKaskad2_PI</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView4_Controller</Attribute>
+        <Attribute name="Title">SubView4_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView4_Object</Attribute>
+        <Attribute name="Title">SubView4_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView4_Setting</Attribute>
+        <Attribute name="Title">SubView4_Setting</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView4_Enable</Attribute>
+        <Attribute name="Title">SubView4_Enable</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView5_Title</Attribute>
+        <Attribute name="Title">SubView5_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView5_File</Attribute>
+        <Attribute name="Title">SubView5_File</Attribute>
+        <Attribute name="Suggests">Brytare2,Brytare3,Brytare4,BrytareAnalog2,BrytareAnalog3,BrytareAnalog4,Motionpump1,DrifttidStarter1,Variabel1,Kurva1,Larm1_AVV,Larm1_H,Larm1_H_BLOCK_RUM_UTE,Larm1_HL,Larm1_HL_BLOCK_RUM_UTE,Larm1_HLK,Larm1_HLK_BLOCK_RUM_UTE,Larm1_HLK_BLOCK_UTE,Larm1_L,Larm1_LK,Larm1_LK_BLOCK_UTE,Regulator1_PID,RegulatorKaskad1_MAX_MIN,RegulatorKaskad1_PID,RegulatorKaskad2_PI</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView5_Controller</Attribute>
+        <Attribute name="Title">SubView5_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView5_Object</Attribute>
+        <Attribute name="Title">SubView5_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView5_Setting</Attribute>
+        <Attribute name="Title">SubView5_Setting</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView5_Enable</Attribute>
+        <Attribute name="Title">SubView5_Enable</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView6_Title</Attribute>
+        <Attribute name="Title">SubView6_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView6_File</Attribute>
+        <Attribute name="Title">SubView6_File</Attribute>
+        <Attribute name="Suggests">Brytare2,Brytare3,Brytare4,BrytareAnalog2,BrytareAnalog3,BrytareAnalog4,Motionpump1,DrifttidStarter1,Variabel1,Kurva1,Larm1_AVV,Larm1_H,Larm1_H_BLOCK_RUM_UTE,Larm1_HL,Larm1_HL_BLOCK_RUM_UTE,Larm1_HLK,Larm1_HLK_BLOCK_RUM_UTE,Larm1_HLK_BLOCK_UTE,Larm1_L,Larm1_LK,Larm1_LK_BLOCK_UTE,Regulator1_PID,RegulatorKaskad1_MAX_MIN,RegulatorKaskad1_PID,RegulatorKaskad2_PI</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView6_Controller</Attribute>
+        <Attribute name="Title">SubView6_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView6_Object</Attribute>
+        <Attribute name="Title">SubView6_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView6_Setting</Attribute>
+        <Attribute name="Title">SubView6_Setting</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView6_Enable</Attribute>
+        <Attribute name="Title">SubView6_Enable</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView7_Title</Attribute>
+        <Attribute name="Title">SubView7_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView7_File</Attribute>
+        <Attribute name="Title">SubView7_File</Attribute>
+        <Attribute name="Suggests">Brytare2,Brytare3,Brytare4,BrytareAnalog2,BrytareAnalog3,BrytareAnalog4,Motionpump1,DrifttidStarter1,Variabel1,Kurva1,Larm1_AVV,Larm1_H,Larm1_H_BLOCK_RUM_UTE,Larm1_HL,Larm1_HL_BLOCK_RUM_UTE,Larm1_HLK,Larm1_HLK_BLOCK_RUM_UTE,Larm1_HLK_BLOCK_UTE,Larm1_L,Larm1_LK,Larm1_LK_BLOCK_UTE,Regulator1_PID,RegulatorKaskad1_MAX_MIN,RegulatorKaskad1_PID,RegulatorKaskad2_PI</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView7_Controller</Attribute>
+        <Attribute name="Title">SubView7_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView7_Object</Attribute>
+        <Attribute name="Title">SubView7_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView7_Setting</Attribute>
+        <Attribute name="Title">SubView7_Setting</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView7_Enable</Attribute>
+        <Attribute name="Title">SubView7_Enable</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView8_Title</Attribute>
+        <Attribute name="Title">SubView8_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView8_File</Attribute>
+        <Attribute name="Title">SubView8_File</Attribute>
+        <Attribute name="Suggests">Brytare2,Brytare3,Brytare4,BrytareAnalog2,BrytareAnalog3,BrytareAnalog4,Motionpump1,DrifttidStarter1,Variabel1,Kurva1,Larm1_AVV,Larm1_H,Larm1_H_BLOCK_RUM_UTE,Larm1_HL,Larm1_HL_BLOCK_RUM_UTE,Larm1_HLK,Larm1_HLK_BLOCK_RUM_UTE,Larm1_HLK_BLOCK_UTE,Larm1_L,Larm1_LK,Larm1_LK_BLOCK_UTE,Regulator1_PID,RegulatorKaskad1_MAX_MIN,RegulatorKaskad1_PID,RegulatorKaskad2_PI</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView8_Controller</Attribute>
+        <Attribute name="Title">SubView8_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView8_Object</Attribute>
+        <Attribute name="Title">SubView8_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView8_Setting</Attribute>
+        <Attribute name="Title">SubView8_Setting</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView8_Enable</Attribute>
+        <Attribute name="Title">SubView8_Enable</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView9_Title</Attribute>
+        <Attribute name="Title">SubView9_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView9_File</Attribute>
+        <Attribute name="Title">SubView9_File</Attribute>
+        <Attribute name="Suggests">Brytare2,Brytare3,Brytare4,BrytareAnalog2,BrytareAnalog3,BrytareAnalog4,Motionpump1,DrifttidStarter1,Variabel1,Kurva1,Larm1_AVV,Larm1_H,Larm1_H_BLOCK_RUM_UTE,Larm1_HL,Larm1_HL_BLOCK_RUM_UTE,Larm1_HLK,Larm1_HLK_BLOCK_RUM_UTE,Larm1_HLK_BLOCK_UTE,Larm1_L,Larm1_LK,Larm1_LK_BLOCK_UTE,Regulator1_PID,RegulatorKaskad1_MAX_MIN,RegulatorKaskad1_PID,RegulatorKaskad2_PI</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView9_Controller</Attribute>
+        <Attribute name="Title">SubView9_Controller</Attribute>
+        <Attribute name="Suggests">%Controller%</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView9_Object</Attribute>
+        <Attribute name="Title">SubView9_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView9_Setting</Attribute>
+        <Attribute name="Title">SubView9_Setting</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView9_Enable</Attribute>
+        <Attribute name="Title">SubView9_Enable</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all elements for the listview file.</Attribute>
+      <Object type="List">
+        <Attribute name="Name">SubView1LeftPaneSelection</Attribute>
+        <Attribute name="CurrentSelection">SubView1_Button</Attribute>
+        <Attribute name="SelectionContainer">this.view.parent.view.SubView_ViewContainer</Attribute>
+        <Object type="Static">
+          <Attribute name="Name">SubView1_Button</Attribute>
+          <Attribute name="Title">%SubView1_Title%</Attribute>
+          <Attribute name="ManeuverStyle">Select</Attribute>
+          <Attribute name="ClickAction">OpenView</Attribute>
+          <Attribute name="File">Shared:\SI_CB\Views\SubView\%SubView1_File%</Attribute>
+          <Attribute name="FileArgumentArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ControllerSelected</Attribute>
+              <Attribute name="Value">%ControllerSelected%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">System</Attribute>
+              <Attribute name="Value">%System%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Title</Attribute>
+              <Attribute name="Value">%SubView1_Title%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Controller</Attribute>
+              <Attribute name="Value">%SubView1_Controller%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Object</Attribute>
+              <Attribute name="Value">%SubView1_Object%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Setting</Attribute>
+              <Attribute name="Value">%SubView1_Setting%</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="ClickActionAttributeArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ViewContainer</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">Transition</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="FontSize">NormalList</Attribute>
+          <Attribute name="IconSize">NormalList</Attribute>
+          <Attribute name="VisualStyle">Normal</Attribute>
+          <Attribute name="OnManeuver">this.view.parent.view.SubView_ViewContainer.openView(
+{
+ file: 'shared:\si_cb\views\subview\%subview1_file%',
+ name: 'SubView1_Button_View',
+ openedFrom: this,
+ transition: args.transition
+}
+,
+{
+ ControllerSelected: '%ControllerSelected%',
+ System: '%System%',
+ SubView_Title: '%SubView1_Title%',
+ SubView_Controller: '%SubView1_Controller%',
+ SubView_Object: '%SubView1_Object%',
+ SubView_Setting: '%SubView1_Setting%'
+}
+);</Attribute>
+        </Object>
+        <Object type="Static">
+          <Attribute name="Name">SubView2_Button</Attribute>
+          <Attribute name="Title">%SubView2_Title%</Attribute>
+          <Attribute name="ManeuverStyle">Select</Attribute>
+          <Attribute name="ClickAction">OpenView</Attribute>
+          <Attribute name="File">Shared:\SI_CB\Views\SubView\%SubView2_File%</Attribute>
+          <Attribute name="FileArgumentArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ControllerSelected</Attribute>
+              <Attribute name="Value">%ControllerSelected%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">System</Attribute>
+              <Attribute name="Value">%System%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Title</Attribute>
+              <Attribute name="Value">%SubView2_Title%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Controller</Attribute>
+              <Attribute name="Value">%SubView2_Controller%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Object</Attribute>
+              <Attribute name="Value">%SubView2_Object%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Setting</Attribute>
+              <Attribute name="Value">%SubView2_Setting%</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="ClickActionAttributeArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ViewContainer</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">Transition</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="FontSize">NormalList</Attribute>
+          <Attribute name="IconSize">NormalList</Attribute>
+          <Attribute name="VisualStyle">Normal</Attribute>
+          <Attribute name="OnManeuver">this.view.parent.view.SubView_ViewContainer.openView(
+{
+ file: 'shared:\si_cb\views\subview\%subview2_file%',
+ name: 'SubView2_Button_View',
+ openedFrom: this,
+ transition: args.transition
+}
+,
+{
+ ControllerSelected: '%ControllerSelected%',
+ System: '%System%',
+ SubView_Title: '%SubView2_Title%',
+ SubView_Controller: '%SubView2_Controller%',
+ SubView_Object: '%SubView2_Object%',
+ SubView_Setting: '%SubView2_Setting%'
+}
+);</Attribute>
+        </Object>
+        <Object type="Static">
+          <Attribute name="Name">SubView3_Button</Attribute>
+          <Attribute name="Title">%SubView3_Title%</Attribute>
+          <Attribute name="ManeuverStyle">Select</Attribute>
+          <Attribute name="ClickAction">OpenView</Attribute>
+          <Attribute name="File">Shared:\SI_CB\Views\SubView\%SubView3_File%</Attribute>
+          <Attribute name="FileArgumentArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ControllerSelected</Attribute>
+              <Attribute name="Value">%ControllerSelected%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">System</Attribute>
+              <Attribute name="Value">%System%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Title</Attribute>
+              <Attribute name="Value">%SubView3_Title%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Controller</Attribute>
+              <Attribute name="Value">%SubView3_Controller%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Object</Attribute>
+              <Attribute name="Value">%SubView3_Object%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Setting</Attribute>
+              <Attribute name="Value">%SubView3_Setting%</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="ClickActionAttributeArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ViewContainer</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">Transition</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="FontSize">NormalList</Attribute>
+          <Attribute name="IconSize">NormalList</Attribute>
+          <Attribute name="VisualStyle">Normal</Attribute>
+          <Attribute name="OnManeuver">this.view.parent.view.SubView_ViewContainer.openView(
+{
+ file: 'shared:\si_cb\views\subview\%subview3_file%',
+ name: 'SubView3_Button_View',
+ openedFrom: this,
+ transition: args.transition
+}
+,
+{
+ ControllerSelected: '%ControllerSelected%',
+ System: '%System%',
+ SubView_Title: '%SubView3_Title%',
+ SubView_Controller: '%SubView3_Controller%',
+ SubView_Object: '%SubView3_Object%',
+ SubView_Setting: '%SubView3_Setting%'
+}
+);</Attribute>
+        </Object>
+        <Object type="Static">
+          <Attribute name="Name">SubView4_Button</Attribute>
+          <Attribute name="Title">%SubView4_Title%</Attribute>
+          <Attribute name="ManeuverStyle">Select</Attribute>
+          <Attribute name="ClickAction">OpenView</Attribute>
+          <Attribute name="File">Shared:\SI_CB\Views\SubView\%SubView4_File%</Attribute>
+          <Attribute name="FileArgumentArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ControllerSelected</Attribute>
+              <Attribute name="Value">%ControllerSelected%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">System</Attribute>
+              <Attribute name="Value">%System%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Title</Attribute>
+              <Attribute name="Value">%SubView4_Title%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Controller</Attribute>
+              <Attribute name="Value">%SubView4_Controller%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Object</Attribute>
+              <Attribute name="Value">%SubView4_Object%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Setting</Attribute>
+              <Attribute name="Value">%SubView4_Setting%</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="ClickActionAttributeArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ViewContainer</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">Transition</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="FontSize">NormalList</Attribute>
+          <Attribute name="IconSize">NormalList</Attribute>
+          <Attribute name="VisualStyle">Normal</Attribute>
+          <Attribute name="OnManeuver">this.view.parent.view.SubView_ViewContainer.openView(
+{
+ file: 'shared:\si_cb\views\subview\%subview4_file%',
+ name: 'SubView4_Button_View',
+ openedFrom: this,
+ transition: args.transition
+}
+,
+{
+ ControllerSelected: '%ControllerSelected%',
+ System: '%System%',
+ SubView_Title: '%SubView4_Title%',
+ SubView_Controller: '%SubView4_Controller%',
+ SubView_Object: '%SubView4_Object%',
+ SubView_Setting: '%SubView4_Setting%'
+}
+);</Attribute>
+        </Object>
+        <Object type="Static">
+          <Attribute name="Name">SubView5_Button</Attribute>
+          <Attribute name="Title">%SubView5_Title%</Attribute>
+          <Attribute name="ManeuverStyle">Select</Attribute>
+          <Attribute name="ClickAction">OpenView</Attribute>
+          <Attribute name="File">Shared:\SI_CB\Views\SubView\%SubView5_File%</Attribute>
+          <Attribute name="FileArgumentArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ControllerSelected</Attribute>
+              <Attribute name="Value">%ControllerSelected%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">System</Attribute>
+              <Attribute name="Value">%System%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Title</Attribute>
+              <Attribute name="Value">%SubView5_Title%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Controller</Attribute>
+              <Attribute name="Value">%SubView5_Controller%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Object</Attribute>
+              <Attribute name="Value">%SubView5_Object%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Setting</Attribute>
+              <Attribute name="Value">%SubView5_Setting%</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="ClickActionAttributeArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ViewContainer</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">Transition</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="FontSize">NormalList</Attribute>
+          <Attribute name="IconSize">NormalList</Attribute>
+          <Attribute name="VisualStyle">Normal</Attribute>
+          <Attribute name="OnManeuver">this.view.parent.view.SubView_ViewContainer.openView(
+{
+ file: 'shared:\si_cb\views\subview\%subview5_file%',
+ name: 'SubView5_Button_View',
+ openedFrom: this,
+ transition: args.transition
+}
+,
+{
+ ControllerSelected: '%ControllerSelected%',
+ System: '%System%',
+ SubView_Title: '%SubView5_Title%',
+ SubView_Controller: '%SubView5_Controller%',
+ SubView_Object: '%SubView5_Object%',
+ SubView_Setting: '%SubView5_Setting%'
+}
+);</Attribute>
+        </Object>
+        <Object type="Static">
+          <Attribute name="Name">SubView6_Button</Attribute>
+          <Attribute name="Title">%SubView6_Title%</Attribute>
+          <Attribute name="ManeuverStyle">Select</Attribute>
+          <Attribute name="ClickAction">OpenView</Attribute>
+          <Attribute name="File">Shared:\SI_CB\Views\SubView\%SubView6_File%</Attribute>
+          <Attribute name="FileArgumentArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ControllerSelected</Attribute>
+              <Attribute name="Value">%ControllerSelected%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">System</Attribute>
+              <Attribute name="Value">%System%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Title</Attribute>
+              <Attribute name="Value">%SubView6_Title%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Controller</Attribute>
+              <Attribute name="Value">%SubView6_Controller%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Object</Attribute>
+              <Attribute name="Value">%SubView6_Object%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Setting</Attribute>
+              <Attribute name="Value">%SubView6_Setting%</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="ClickActionAttributeArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ViewContainer</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">Transition</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="FontSize">NormalList</Attribute>
+          <Attribute name="IconSize">NormalList</Attribute>
+          <Attribute name="VisualStyle">Normal</Attribute>
+          <Attribute name="OnManeuver">this.view.parent.view.SubView_ViewContainer.openView(
+{
+ file: 'shared:\si_cb\views\subview\%subview6_file%',
+ name: 'SubView6_Button_View',
+ openedFrom: this,
+ transition: args.transition
+}
+,
+{
+ ControllerSelected: '%ControllerSelected%',
+ System: '%System%',
+ SubView_Title: '%SubView6_Title%',
+ SubView_Controller: '%SubView6_Controller%',
+ SubView_Object: '%SubView6_Object%',
+ SubView_Setting: '%SubView6_Setting%'
+}
+);</Attribute>
+        </Object>
+        <Object type="Static">
+          <Attribute name="Name">SubView7_Button</Attribute>
+          <Attribute name="Title">%SubView7_Title%</Attribute>
+          <Attribute name="ManeuverStyle">Select</Attribute>
+          <Attribute name="ClickAction">OpenView</Attribute>
+          <Attribute name="File">Shared:\SI_CB\Views\SubView\%SubView7_File%</Attribute>
+          <Attribute name="FileArgumentArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ControllerSelected</Attribute>
+              <Attribute name="Value">%ControllerSelected%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">System</Attribute>
+              <Attribute name="Value">%System%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Title</Attribute>
+              <Attribute name="Value">%SubView7_Title%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Controller</Attribute>
+              <Attribute name="Value">%SubView7_Controller%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Object</Attribute>
+              <Attribute name="Value">%SubView7_Object%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Setting</Attribute>
+              <Attribute name="Value">%SubView7_Setting%</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="ClickActionAttributeArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ViewContainer</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">Transition</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="FontSize">NormalList</Attribute>
+          <Attribute name="IconSize">NormalList</Attribute>
+          <Attribute name="VisualStyle">Normal</Attribute>
+          <Attribute name="OnManeuver">this.view.parent.view.SubView_ViewContainer.openView(
+{
+ file: 'shared:\si_cb\views\subview\%subview7_file%',
+ name: 'SubView7_Button_View',
+ openedFrom: this,
+ transition: args.transition
+}
+,
+{
+ ControllerSelected: '%ControllerSelected%',
+ System: '%System%',
+ SubView_Title: '%SubView7_Title%',
+ SubView_Controller: '%SubView7_Controller%',
+ SubView_Object: '%SubView7_Object%',
+ SubView_Setting: '%SubView7_Setting%'
+}
+);</Attribute>
+        </Object>
+        <Object type="Static">
+          <Attribute name="Name">SubView8_Button</Attribute>
+          <Attribute name="Title">%SubView8_Title%</Attribute>
+          <Attribute name="ManeuverStyle">Select</Attribute>
+          <Attribute name="ClickAction">OpenView</Attribute>
+          <Attribute name="File">Shared:\SI_CB\Views\SubView\%SubView8_File%</Attribute>
+          <Attribute name="FileArgumentArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ControllerSelected</Attribute>
+              <Attribute name="Value">%ControllerSelected%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">System</Attribute>
+              <Attribute name="Value">%System%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Title</Attribute>
+              <Attribute name="Value">%SubView8_Title%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Controller</Attribute>
+              <Attribute name="Value">%SubView8_Controller%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Object</Attribute>
+              <Attribute name="Value">%SubView8_Object%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Setting</Attribute>
+              <Attribute name="Value">%SubView8_Setting%</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="ClickActionAttributeArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ViewContainer</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">Transition</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="FontSize">NormalList</Attribute>
+          <Attribute name="IconSize">NormalList</Attribute>
+          <Attribute name="VisualStyle">Normal</Attribute>
+          <Attribute name="OnManeuver">this.view.parent.view.SubView_ViewContainer.openView(
+{
+ file: 'shared:\si_cb\views\subview\%subview8_file%',
+ name: 'SubView8_Button_View',
+ openedFrom: this,
+ transition: args.transition
+}
+,
+{
+ ControllerSelected: '%ControllerSelected%',
+ System: '%System%',
+ SubView_Title: '%SubView8_Title%',
+ SubView_Controller: '%SubView8_Controller%',
+ SubView_Object: '%SubView8_Object%',
+ SubView_Setting: '%SubView8_Setting%'
+}
+);</Attribute>
+        </Object>
+        <Object type="Static">
+          <Attribute name="Name">SubView9_Button</Attribute>
+          <Attribute name="Title">%SubView9_Title%</Attribute>
+          <Attribute name="ManeuverStyle">Select</Attribute>
+          <Attribute name="ClickAction">OpenView</Attribute>
+          <Attribute name="File">Shared:\SI_CB\Views\SubView\%SubView9_File%</Attribute>
+          <Attribute name="FileArgumentArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ControllerSelected</Attribute>
+              <Attribute name="Value">%ControllerSelected%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">System</Attribute>
+              <Attribute name="Value">%System%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Title</Attribute>
+              <Attribute name="Value">%SubView9_Title%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Controller</Attribute>
+              <Attribute name="Value">%SubView9_Controller%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Object</Attribute>
+              <Attribute name="Value">%SubView9_Object%</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">SubView_Setting</Attribute>
+              <Attribute name="Value">%SubView9_Setting%</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="ClickActionAttributeArray">
+            <Attribute name="Argument">
+              <Attribute name="Name">ViewContainer</Attribute>
+            </Attribute>
+            <Attribute name="Argument">
+              <Attribute name="Name">Transition</Attribute>
+            </Attribute>
+          </Attribute>
+          <Attribute name="FontSize">NormalList</Attribute>
+          <Attribute name="IconSize">NormalList</Attribute>
+          <Attribute name="VisualStyle">Normal</Attribute>
+          <Attribute name="OnManeuver">this.view.parent.view.SubView_ViewContainer.openView(
+{
+ file: 'shared:\si_cb\views\subview\%subview9_file%',
+ name: 'SubView9_Button_View',
+ openedFrom: this,
+ transition: args.transition
+}
+,
+{
+ ControllerSelected: '%ControllerSelected%',
+ System: '%System%',
+ SubView_Title: '%SubView9_Title%',
+ SubView_Controller: '%SubView9_Controller%',
+ SubView_Object: '%SubView9_Object%',
+ SubView_Setting: '%SubView9_Setting%'
+}
+);</Attribute>
+        </Object>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

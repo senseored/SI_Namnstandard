@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwlv" version="2024.1.100.20">
+  <Object type="ListView">
+    <Attribute name="Name">VarmvattenVVCReglering</Attribute>
+    <Attribute name="MoreCommandIcon"></Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the listview file. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+        <Attribute name="Default">VV_1</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System_Namn</Attribute>
+        <Attribute name="Default">VV1</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">Tillopp_Namn</Attribute>
+        <Attribute name="Default">GT11</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">Retur_Namn</Attribute>
+        <Attribute name="Default">GT41</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">Pump_Namn</Attribute>
+        <Attribute name="Default">P1</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all elements for the listview file.</Attribute>
+      <Object type="List">
+        <Attribute name="Name">ListElements</Attribute>
+        <Object type="Numeric">
+          <Attribute name="Name">Tillopp</Attribute>
+          <Attribute name="Icon">Shared:\SI_CB\Symbols\GivareGul1.svg</Attribute>
+          <Attribute name="Title">Tillopp %Tillopp_Namn%</Attribute>
+          <Attribute name="Value">*%Controller%.%System%_GT_TILL_1_Output</Attribute>
+          <Attribute name="Unit">°C</Attribute>
+          <Attribute name="Format">1</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Tillopp_BV</Attribute>
+          <Attribute name="Title">Tillopp %Tillopp_Namn% Börvärde:</Attribute>
+          <Attribute name="Value">*%Controller%.%System%_GT_TILL_1_SetPoint</Attribute>
+          <Attribute name="Unit">°C</Attribute>
+          <Attribute name="Format">1</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Retur</Attribute>
+          <Attribute name="Icon">Shared:\SI_CB\Symbols\GivareGul1.svg</Attribute>
+          <Attribute name="Title">Retur %Retur_Namn%</Attribute>
+          <Attribute name="Value">*%Controller%.%System%_GT_RETUR_1_Output</Attribute>
+          <Attribute name="Unit">°C</Attribute>
+          <Attribute name="Format">1</Attribute>
+        </Object>
+        <Object type="Numeric">
+          <Attribute name="Name">Retur_BV</Attribute>
+          <Attribute name="Title">Retur %Retur_Namn% Börvärde:</Attribute>
+          <Attribute name="Value">*%Controller%.%System%_GT_RETUR_1_SetPoint</Attribute>
+          <Attribute name="Unit">°C</Attribute>
+          <Attribute name="Format">1</Attribute>
+        </Object>
+      </Object>
+      <Object type="List">
+        <Attribute name="Name">SymbolElements</Attribute>
+        <Object type="Symbol">
+          <Attribute name="Name">Pump</Attribute>
+          <Attribute name="Title">%System_Namn%-%Pump_Namn%</Attribute>
+          <Attribute name="ShowTitle">Yes</Attribute>
+          <Attribute name="Value">*%Controller%.%System%_P_1_Running</Attribute>
+          <Attribute name="Pictures">Shared:\SI1\Symbols\Pump_Vit.svg,Shared:\SI1\Symbols\Pump_Gron.svg,Shared:\SI1\Symbols\Pump_Rod.svg</Attribute>
+        </Object>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

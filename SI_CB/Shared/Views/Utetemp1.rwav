@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwav" version="2023.1.100.75">
+  <Object type="View">
+    <Attribute name="Name">Utetemp1</Attribute>
+    <Attribute name="Width">150</Attribute>
+    <Attribute name="Height">70</Attribute>
+    <Attribute name="Zoom">100%</Attribute>
+    <Attribute name="ScaleValue">1.00</Attribute>
+    <Attribute name="ServerSideFunctionRPC">accounts.%account%.services.ssf.execute</Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the view. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+        <Attribute name="Default">%Controller%</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">GT_UTE</Attribute>
+        <Attribute name="Default">GT_UTE</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">GT_UTE_MEDEL_24</Attribute>
+        <Attribute name="Default">GT_UTE_MEDEL_24</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all visual elements for the view.</Attribute>
+      <Object type="Symbol">
+        <Attribute name="Name">Controller_Driftfall_NattkRum_Symbol</Attribute>
+        <Attribute name="Pictures">Shared:\SI1\Symbols\banner1.svg</Attribute>
+        <Attribute name="SizeMode">Stretch</Attribute>
+        <Attribute name="Left">0</Attribute>
+        <Attribute name="Top">0</Attribute>
+        <Attribute name="Width">150</Attribute>
+        <Attribute name="Height">70</Attribute>
+      </Object>
+      <Object type="Text">
+        <Attribute name="Name">TxtDesign</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">Utetemperatur</Attribute>
+        <Attribute name="FontSize">ExtraFont3</Attribute>
+        <Attribute name="Transparency">100</Attribute>
+        <Attribute name="Left">5</Attribute>
+        <Attribute name="Top">5</Attribute>
+        <Attribute name="Width">140</Attribute>
+        <Attribute name="Height">20</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">UnnamedNumeric_1</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">*%ControllerSelected%.%GT_UTE%</Attribute>
+        <Attribute name="Unit">°C</Attribute>
+        <Attribute name="Format">1</Attribute>
+        <Attribute name="FontSize">ExtraFont1</Attribute>
+        <Attribute name="Transparency">100</Attribute>
+        <Attribute name="Left">5</Attribute>
+        <Attribute name="Top">25</Attribute>
+        <Attribute name="Width">140</Attribute>
+        <Attribute name="Height">20</Attribute>
+      </Object>
+      <Object type="Numeric">
+        <Attribute name="Name">UnnamedNumeric_2</Attribute>
+        <Attribute name="ShowTitle">No</Attribute>
+        <Attribute name="Value">*%ControllerSelected%.%GT_UTE_MEDEL_24%</Attribute>
+        <Attribute name="Unit">°C Medel/24 h</Attribute>
+        <Attribute name="Format">1</Attribute>
+        <Attribute name="FontSize">ExtraFont1</Attribute>
+        <Attribute name="Transparency">100</Attribute>
+        <Attribute name="Left">5</Attribute>
+        <Attribute name="Top">45</Attribute>
+        <Attribute name="Width">140</Attribute>
+        <Attribute name="Height">20</Attribute>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>

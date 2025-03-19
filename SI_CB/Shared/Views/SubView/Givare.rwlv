@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EXOconfigData format="Rwlv" version="2024.1.100.32">
+  <Object type="ListView">
+    <Attribute name="Name">Givare</Attribute>
+    <Attribute name="Title">%Subview_Title%</Attribute>
+    <Attribute name="ShowLines">Yes</Attribute>
+    <Attribute name="MaxColumnWidth">565</Attribute>
+    <Attribute name="AllowViewColumns">Yes</Attribute>
+    <Attribute name="AlwaysShowSpaceForIcons">No</Attribute>
+    <Attribute name="MoreCommandIcon"></Attribute>
+    <Object type="ArgumentsFolder">
+      <Attribute name="Name">Arguments</Attribute>
+      <Attribute name="Comment">This folder contains all arguments for the listview file. The arguments can be sent to the view when it is used in run-time.</Attribute>
+      <Object type="Argument">
+        <Attribute name="Name">ControllerSelected</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">System</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Object</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Title</Attribute>
+        <Attribute name="Suggests">Man/Auto,Motionering,Drifttid/Starter,Börvärde,Kurva,Larmgränser,Regulator</Attribute>
+      </Object>
+      <Object type="Argument">
+        <Attribute name="Name">SubView_Setting</Attribute>
+      </Object>
+    </Object>
+    <Object type="ElementsFolder">
+      <Attribute name="Name">Elements</Attribute>
+      <Attribute name="Comment">This folder contains all elements for the listview file.</Attribute>
+      <Object type="Table">
+        <Attribute name="Name">UnnamedTable_1</Attribute>
+        <Attribute name="NoOfValueColumns">1</Attribute>
+        <Object type="TableValueColumn">
+          <Attribute name="Name">UnnamedTableValueColumn_1</Attribute>
+          <Attribute name="Column">1</Attribute>
+        </Object>
+        <Object type="TableRow">
+          <Attribute name="Name">UnnamedTableRow_2</Attribute>
+          <Object type="Numeric">
+            <Attribute name="Name">Raw_4</Attribute>
+            <Attribute name="ValueColumn">1</Attribute>
+            <Attribute name="Title">Råvärde:</Attribute>
+            <Attribute name="ShowTitle">No</Attribute>
+            <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Raw</Attribute>
+            <Attribute name="Format">2</Attribute>
+            <Attribute name="Enabled">Yes</Attribute>
+            <Attribute name="FontSize"></Attribute>
+            <Attribute name="IconSize"></Attribute>
+            <Attribute name="OnOpen"></Attribute>
+          </Object>
+        </Object>
+      </Object>
+      <Object type="Table">
+        <Attribute name="Name">UnnamedTable_2</Attribute>
+        <Attribute name="CurrentSelection">None</Attribute>
+        <Attribute name="NoOfValueColumns">1</Attribute>
+        <Object type="TableValueColumn">
+          <Attribute name="Name">UnnamedTableValueColumn_1</Attribute>
+          <Attribute name="Column">1</Attribute>
+          <Attribute name="Alignment">Right</Attribute>
+        </Object>
+        <Object type="TableRow">
+          <Attribute name="Name">UnnamedTableRow_1</Attribute>
+          <Object type="Numeric">
+            <Attribute name="Name">Raw_3</Attribute>
+            <Attribute name="ValueColumn">2</Attribute>
+            <Attribute name="Title">Råvärde:</Attribute>
+            <Attribute name="ShowTitle">No</Attribute>
+            <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Raw</Attribute>
+            <Attribute name="Format">2</Attribute>
+            <Attribute name="Enabled">Yes</Attribute>
+            <Attribute name="FontSize"></Attribute>
+            <Attribute name="IconSize"></Attribute>
+            <Attribute name="OnOpen"></Attribute>
+          </Object>
+        </Object>
+      </Object>
+      <Object type="List">
+        <Attribute name="Name">UnnamedList_1</Attribute>
+        <Object type="Numeric">
+          <Attribute name="Name">Raw</Attribute>
+          <Attribute name="Title">Råvärde:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Raw</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+      </Object>
+      <Object type="List">
+        <Attribute name="Name">UnnamedList_2</Attribute>
+        <Object type="Numeric">
+          <Attribute name="Name">Raw_1</Attribute>
+          <Attribute name="Title">Råvärde:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Raw</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+      </Object>
+      <Object type="List">
+        <Attribute name="Name">UnnamedList_3</Attribute>
+        <Object type="Numeric">
+          <Attribute name="Name">Raw_2</Attribute>
+          <Attribute name="Title">Råvärde:</Attribute>
+          <Attribute name="Value">*%SubView_Object%.AI_%SubView_Setting%Raw</Attribute>
+          <Attribute name="Format">2</Attribute>
+          <Attribute name="Enabled">Yes</Attribute>
+          <Attribute name="OnOpen"></Attribute>
+        </Object>
+      </Object>
+    </Object>
+  </Object>
+</EXOconfigData>
