@@ -27,7 +27,7 @@ Flödesreglering:  Välj (1=Flöde) och knyt in önskat flödesbörvärde på ti
 
 | Inställningar | Signaltyp | Beskrivning |
 | --- | --- | --- |
-| Name	S	Namn på blocket (ex. CLIMATIX_IV) |
+| Name | S | Namn på blocket (ex. CLIMATIX_IV) |
 | User title | S | Används ej- namn hämtas från huvudblock (ex. LB_1, Sub system title "LA01") |
 | TemperatureSetpoint | R | Börvärde tilluftstemperatur |
 | SupplyPressureSetpointStep1 | R | Börvärde tilluftstryck Steg 1 |
@@ -51,27 +51,29 @@ Flödesreglering:  Välj (1=Flöde) och knyt in önskat flödesbörvärde på ti
 | SupplyFlowMin | R | Driftindikeringsgräns tilluftsflöde |
 | ExhaustFlowMin | R | Driftindikeringsgräns frånluftsflöde |
 
+
 | Larm | Beskrivning |
-| --- | --- | --- |
-| ALARM_A1	Summalarm A1 |
-| ALARM_A2	Summalarm A2 |
-| ALARM_B	Summalarm B |
-| ALARM_C	Summalarm C |
-| ALARM_VVX_1	VVX Summalarm |
-| ALARM_TA1	Summalarm tilluftsfläkt  |
-| ALARM_FA1	Summalarm frånluftsfläkt |
-| LARM_VVX_1_VERKN	Låg Verkn.grad |
-| ALARM_P1_LV	Summalarm CP1 Cirkulationspump Värme |
-| ALARM_P2_LV	Summalarm CP2 Cirkulationspump Kyla |
-| ALARM_FRYSV_1	Frysvakt |
-| ALARM_AVV_GT_TILL_1	GT1 Avvikelse tilluft |
-| ALARM_AVV_GT_FRAN_1	GT2 Avvikelse frånluft |
-| ALARM_AVV_GFP_TILL_1	GP1 Hög Avvikelse |
-| ALARM_AVV_GFP_FRAN_1	GP2 Hög Avvikelse |
-| ALARM_TF1_FILTERV1	GP5 Filtervakt tilluft |
-| ALARM_FF1_FILTERV1	GP6 Filtervakt frånluft |
-| ALARM_BRAND	Rök/Brandlarm |
-| ManualAlarm	Handställningslarm |
+| --- | --- |
+| ALARM_A1 | Summalarm A1 |
+| ALARM_A2 | Summalarm A2 |
+| ALARM_B | Summalarm B |
+| ALARM_C | Summalarm C |
+| ALARM_VVX_1 | VVX Summalarm |
+| ALARM_TA1 | Summalarm tilluftsfläkt  |
+| ALARM_FA1 | Summalarm frånluftsfläkt |
+| LARM_VVX_1_VERKN | Låg Verkn.grad |
+| ALARM_P1_LV | Summalarm CP1 Cirkulationspump Värme |
+| ALARM_P2_LV | Summalarm CP2 Cirkulationspump Kyla |
+| ALARM_FRYSV_1 | Frysvakt |
+| ALARM_AVV_GT_TILL_1 | GT1 Avvikelse tilluft |
+| ALARM_AVV_GT_FRAN_1 | GT2 Avvikelse frånluft |
+| ALARM_AVV_GFP_TILL_1 | GP1 Hög Avvikelse |
+| ALARM_AVV_GFP_FRAN_1 | GP2 Hög Avvikelse |
+| ALARM_TF1_FILTERV1 | GP5 Filtervakt tilluft |
+| ALARM_FF1_FILTERV1 | GP6 Filtervakt frånluft |
+| ALARM_BRAND | Rök/Brandlarm |
+| ManualAlarm | Handställningslarm |
+
 
 | Utgångar | Signaltyp | Beskrivning |
 | --- | --- | --- |
