@@ -53,7 +53,7 @@ Flödesreglering:  Välj (1=Flöde) och knyt in önskat flödesbörvärde på ti
 
 
 | Larm | Beskrivning |
-| --- | --- | --- |
+| --- | --- |
 | ALARM_A1 | Summalarm A1 |
 | ALARM_A2 | Summalarm A2 |
 | ALARM_B | Summalarm B |
