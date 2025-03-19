@@ -51,6 +51,7 @@ Flödesreglering:  Välj (1=Flöde) och knyt in önskat flödesbörvärde på ti
 | SupplyFlowMin | R | Driftindikeringsgräns tilluftsflöde |
 | ExhaustFlowMin | R | Driftindikeringsgräns frånluftsflöde |
 
+
 | Larm | Beskrivning |
 | --- | --- | --- |
 | ALARM_A1 | Summalarm A1 |
@@ -72,6 +73,7 @@ Flödesreglering:  Välj (1=Flöde) och knyt in önskat flödesbörvärde på ti
 | ALARM_FF1_FILTERV1 | GP6 Filtervakt frånluft |
 | ALARM_BRAND | Rök/Brandlarm |
 | ManualAlarm | Handställningslarm |
+
 
 | Utgångar | Signaltyp | Beskrivning |
 | --- | --- | --- |
